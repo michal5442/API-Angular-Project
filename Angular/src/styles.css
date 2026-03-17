@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Add top margin to all main content to account for sticky header */
+.admin-dashboard,
+.songs-container,
+.artists-container,
+.about-container,
+.contact-container,
+.home-container,
+.cart-container,
+.checkout-container,
+.profile-container,
+.login-container,
+.register-container,
+.song-detail-container {
+  padding-top: 120px !important;
+}

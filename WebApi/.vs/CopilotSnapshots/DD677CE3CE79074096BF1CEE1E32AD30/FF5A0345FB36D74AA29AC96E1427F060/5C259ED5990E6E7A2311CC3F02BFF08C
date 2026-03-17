@@ -1,0 +1,13 @@
+﻿using DTOs;
+using Entities;
+using Microsoft.AspNetCore.Mvc;
+
+namespace Services
+{
+    public interface IOrderService
+    {
+        Task<OrderDTO> addOrder(Order order);
+        Task<OrderDTO> getOrderByID(int id);
+        Task<IEnumerable<OrderDTO>> getOrdersByUserId(int userId);
+    }
+}

@@ -1,0 +1,164 @@
+.login-container {
+  min-height: calc(100vh - 64px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #4B2152 0%, #C2185B 100%);
+  padding: 20px;
+}
+
+.login-card-wrapper {
+  width: 100%;
+  max-width: 450px;
+  animation: fadeInUp 0.6s ease;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.login-card {
+  padding: 48px 40px !important;
+  border-radius: 24px !important;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3) !important;
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.login-icon {
+  font-size: 80px !important;
+  width: 80px !important;
+  height: 80px !important;
+  color: #4B2152;
+  margin-bottom: 16px;
+}
+
+.login-header h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #4B2152;
+  margin: 0 0 8px;
+}
+
+.login-header p {
+  font-size: 16px;
+  color: #666;
+  margin: 0;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+::ng-deep .login-form .mat-mdc-form-field {
+  direction: ltr;
+}
+
+::ng-deep .login-form .mat-mdc-text-field-wrapper {
+  background: #f9f9f9;
+  border-radius: 12px;
+}
+
+::ng-deep .login-form .mdc-notched-outline__leading,
+::ng-deep .login-form .mdc-notched-outline__notch,
+::ng-deep .login-form .mdc-notched-outline__trailing {
+  border-color: rgba(75, 33, 82, 0.2) !important;
+}
+
+::ng-deep .login-form .mat-mdc-form-field.mat-focused .mdc-notched-outline__leading,
+::ng-deep .login-form .mat-mdc-form-field.mat-focused .mdc-notched-outline__notch,
+::ng-deep .login-form .mat-mdc-form-field.mat-focused .mdc-notched-outline__trailing {
+  border-color: #4B2152 !important;
+  border-width: 2px !important;
+}
+
+::ng-deep .login-form .mat-mdc-form-field-icon-prefix {
+  color: #4B2152;
+  margin-left: 12px;
+}
+
+.form-options {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -8px;
+}
+
+.forgot-link {
+  color: #C2185B;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.forgot-link:hover {
+  color: #4B2152;
+  text-decoration: underline;
+}
+
+.login-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #4B2152, #C2185B) !important;
+  color: white !important;
+  padding: 14px 0 !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 16px rgba(75, 33, 82, 0.3) !important;
+  transition: all 0.3s ease;
+  margin-top: 8px;
+}
+
+.login-btn:hover {
+  box-shadow: 0 6px 24px rgba(75, 33, 82, 0.4) !important;
+  transform: translateY(-2px);
+}
+
+.login-btn mat-icon {
+  margin-left: 8px;
+}
+
+.register-link {
+  text-align: center;
+  color: #666;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+.register-link a {
+  color: #C2185B;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.register-link a:hover {
+  color: #4B2152;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .login-card {
+    padding: 32px 24px !important;
+  }
+
+  .login-header h1 {
+    font-size: 28px;
+  }
+}

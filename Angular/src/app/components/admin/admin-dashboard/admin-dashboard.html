@@ -1,0 +1,62 @@
+<div class="admin-dashboard">
+  <div class="dashboard-header">
+    <div class="header-content">
+      <h1>Admin Dashboard</h1>
+      <p class="subtitle">Manage your music platform</p>
+    </div>
+    <button mat-fab extended color="warn" (click)="logout()">
+      <mat-icon>logout</mat-icon>
+      Logout
+    </button>
+  </div>
+
+  <div class="dashboard-cards">
+    <mat-card class="dashboard-card" routerLink="/admin/songs">
+      <div class="card-glow"></div>
+      <mat-card-header>
+        <div class="icon-wrapper">
+          <mat-icon class="card-icon">music_note</mat-icon>
+        </div>
+      </mat-card-header>
+      <mat-card-content>
+        <h2>Songs Management</h2>
+        <p>Add, edit and delete songs</p>
+        <div class="card-arrow">
+          <mat-icon>arrow_forward</mat-icon>
+        </div>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card class="dashboard-card" routerLink="/admin/artists">
+      <div class="card-glow"></div>
+      <mat-card-header>
+        <div class="icon-wrapper">
+          <mat-icon class="card-icon">person</mat-icon>
+        </div>
+      </mat-card-header>
+      <mat-card-content>
+        <h2>Artists Management</h2>
+        <p>Add, edit and delete artists</p>
+        <div class="card-arrow">
+          <mat-icon>arrow_forward</mat-icon>
+        </div>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card class="dashboard-card" routerLink="/admin/users">
+      <div class="card-glow"></div>
+      <mat-card-header>
+        <div class="icon-wrapper">
+          <mat-icon class="card-icon">group</mat-icon>
+        </div>
+      </mat-card-header>
+      <mat-card-content>
+        <h2>Users Management</h2>
+        <p>View and manage users</p>
+        <div class="card-arrow">
+          <mat-icon>arrow_forward</mat-icon>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

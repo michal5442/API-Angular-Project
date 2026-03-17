@@ -1,0 +1,13 @@
+namespace DTOs
+{
+    public record UserDTO
+        (
+            int UserId,  
+            string UserName,
+            string FirstName,
+            string LastName
+        )
+    {
+        public int Id => UserId;
+    }
+}

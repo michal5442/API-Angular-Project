@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        .newUser {
+            display: flex;
+            flex-direction: column;
+            width: 20vw;
+        }
+    </style>
+    <script defer src="update.js"></script>
+</head>
+<body>
+    <div class="newUser">
+        <label for="userName1">שם משתמש</label>
+        <input type="email" id="userName" name="userName1" required />
+        <label for="pass1">סיסמא</label>
+        <input type="password" id="pass" name="pass1" required />
+        <label for="firstName">שם פרטי</label>
+        <input type="text" id="firstName" name="firstName" required />
+        <label for="lastName">שם משפחה</label>
+        <input type="text" id="lastName" name="lastName" required /><br />
+        <button onclick="Update()">עדכן</button>
+    </div>
+</body>
+</html>

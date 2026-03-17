@@ -1,0 +1,50 @@
+<div class="register-container">
+  <div class="register-card-wrapper">
+    <mat-card class="register-card">
+      <div class="register-header">
+        <mat-icon class="register-icon">person_add</mat-icon>
+        <h1>Create Account</h1>
+        <p>Join us today</p>
+      </div>
+
+      <form class="register-form">
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>First Name</mat-label>
+          <input matInput type="text" placeholder="Enter your first name" [(ngModel)]="newUser.firstName" name="firstName">
+          <mat-icon matPrefix>person</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Last Name</mat-label>
+          <input matInput type="text" placeholder="Enter your last name" [(ngModel)]="newUser.lastName" name="lastName">
+          <mat-icon matPrefix>person_outline</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Email</mat-label>
+          <input matInput type="email" placeholder="Enter your email" [(ngModel)]="newUser.userName" name="email">
+          <mat-icon matPrefix>email</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Password</mat-label>
+          <input matInput type="password" placeholder="Enter your password" [(ngModel)]="newUser.password" name="password">
+          <mat-icon matPrefix>lock</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Confirm Password</mat-label>
+          <input matInput type="password" placeholder="Confirm your password" [(ngModel)]="confirmPassword" name="confirmPassword">
+          <mat-icon matPrefix>lock_outline</mat-icon>
+        </mat-form-field>
+
+        <button mat-raised-button class="register-btn" type="button" (click)="onRegister()">
+          <mat-icon>person_add</mat-icon>
+          Sign Up
+        </button>
+
+        <div class="login-link">
+          Already have an account? <a routerLink="/login">Login</a>
+        </div>
+      </form>
+    </mat-card>

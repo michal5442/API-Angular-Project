@@ -1,0 +1,79 @@
+@if (song(); as s) {
+<div class="song-detail-container">
+  <div class="song-detail-wrapper">
+    <mat-card class="song-card">
+      
+      <div class="song-image-wrapper">
+        <img [src]="s.imageUrl && s.imageUrl.length > 0 ? 'https://localhost:44393/' + s.imageUrl : 'https://placehold.co/400x400/4B2152/white?text=No+Image'" 
+             [alt]="s.songName" 
+             class="song-image"
+             (error)="$event.target.src='https://placehold.co/400x400/4B2152/white?text=No+Image'">
+        <div class="play-overlay">
+          <button mat-fab class="play-btn" (click)="togglePlay()">
+            <mat-icon>{{ isPlaying() ? 'pause' : 'play_arrow' }}</mat-icon>
+          </button>
+        </div>
+      </div>
+
+      <audio #audioPlayer (ended)="onSongEnded()" (timeupdate)="onTimeUpdate()" type="audio/mpeg"></audio>
+
+      <!-- Progress Bar -->
+      <div class="progress-container">
+        <div class="progress-bar" (click)="seekTo($event)" style="cursor: pointer;">
+          <div class="progress-fill" [style.width.%]="progressPercentage()"></div>
+        </div>
+        <div class="time-display">
+          <span>{{ formatDuration(currentTime()) }}</span>
+          <span>{{ formatDuration(song()?.duration || 0) }}</span>
+        </div>
+      </div>
+
+      <div class="song-info">
+        <div class="song-header">
+          <h1 class="song-title">{{ s.songName }}</h1>
+          <div class="song-price">
+            <mat-icon>attach_money</mat-icon>
+            <span>{{ s.price }}</span>
+          </div>
+        </div>
+
+        <div class="song-meta">
+          <div class="meta-item">
+            <mat-icon>person</mat-icon>
+            <span class="meta-label">Artist:</span>
+            <span class="meta-value">{{ s.artist }}</span>
+          </div>
+
+          <div class="meta-item">
+            <mat-icon>schedule</mat-icon>
+            <span class="meta-label">Duration:</span>
+            <span class="meta-value">{{ formatDuration(s.duration) }}</span>
+          </div>
+        </div>
+
+        <div class="song-description">
+          <h3>Description</h3>
+          <p>{{ s.description }}</p>
+        </div>
+
+        <div class="song-actions">
+          <button mat-raised-button class="add-cart-btn" (click)="addSongToCart()">
+            <mat-icon>shopping_cart</mat-icon>
+            Add to Cart
+          </button>
+          <button mat-raised-button class="favorite-btn" (click)="addSongToFavorites()">
+            <mat-icon>favorite_border</mat-icon>
+            Add to Favorites
+          </button>
+        </div>
+      </div>
+
+    </mat-card>
+  </div>
+</div>
+} @else {
+  <div class="loading-container">
+    <mat-spinner></mat-spinner>
+    <p>Loading song data...</p>
+  </div>
+}

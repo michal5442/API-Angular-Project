@@ -1,0 +1,156 @@
+.admin-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f8f4f9 0%, #fef5f9 100%);
+  padding: 20px;
+  padding-top: 120px;
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+  max-width: 1400px;
+  margin: 0 auto 3rem;
+}
+
+.back-button {
+  background: white !important;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1) !important;
+  transition: all 0.3s ease !important;
+}
+
+.back-button:hover {
+  transform: translateX(-5px);
+  box-shadow: 0 6px 20px rgba(75, 33, 82, 0.2) !important;
+}
+
+.back-button mat-icon {
+  color: #4B2152 !important;
+}
+
+.header-content {
+  flex: 1;
+  text-align: center;
+}
+
+.header-content h1 {
+  margin: 0;
+  background: linear-gradient(135deg, #4B2152, #C2185B);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+  line-height: 1.2;
+}
+
+.subtitle {
+  margin: 0.5rem 0 0;
+  color: #888;
+  font-size: 1.1rem;
+}
+
+.spacer {
+  width: 56px;
+}
+
+.users-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.user-card {
+  background: white !important;
+  border-radius: 24px !important;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.08) !important;
+  transition: all 0.3s ease !important;
+  overflow: hidden;
+}
+
+.user-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 50px rgba(75, 33, 82, 0.25) !important;
+}
+
+.user-card mat-card-content {
+  padding: 1rem 1.25rem !important;
+}
+
+.user-info {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.user-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #4B2152, #C2185B);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.user-avatar mat-icon {
+  font-size: 28px;
+  width: 28px;
+  height: 28px;
+  color: white;
+}
+
+.user-details {
+  flex: 1;
+  min-width: 0;
+}
+
+.user-details h3 {
+  margin: 0 0 0.25rem 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #4B2152;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.username {
+  margin: 0 0 0.4rem 0;
+  color: #C2185B;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.user-id {
+  margin: 0;
+  color: #888;
+  font-size: 0.8rem;
+}
+
+.user-card mat-card-actions {
+  padding: 0.6rem 1.25rem !important;
+  display: flex;
+  justify-content: flex-end;
+  border-top: 2px solid #f5f5f5;
+}
+
+.delete-btn {
+  background: linear-gradient(135deg, #C2185B, #a01549) !important;
+  box-shadow: 0 4px 15px rgba(194, 24, 91, 0.3) !important;
+  transition: all 0.3s ease !important;
+}
+
+.delete-btn:hover {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 6px 20px rgba(194, 24, 91, 0.5) !important;
+}
+
+.delete-btn mat-icon {
+  color: white !important;
+}

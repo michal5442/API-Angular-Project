@@ -1,0 +1,39 @@
+﻿using AutoMapper;
+using DTOs;
+using Entities;
+
+namespace Services
+{
+    public class MappingProfile : Profile
+    {
+        public MappingProfile()
+        {
+            // Rating mappings
+            CreateMap<RatingDTO, Rating>();
+            CreateMap<Rating, RatingDTO>();
+            // Other entity -> DTO mappings
+            CreateMap<Song, SongDTO>();
+            CreateMap<SongDTO, Song>();
+
+            CreateMap<Order, OrderDTO>();
+            CreateMap<OrderDTO, Order>();
+
+            // OrderItem mapping
+            CreateMap<OrderItem, OrderItemDTO>();
+            CreateMap<OrderItemDTO, OrderItem>();
+
+            CreateMap<User, UserDTO>();
+            CreateMap<UserDTO, User>();
+
+            // Artist mapping - property names differ (ArtistId/ArtistName vs Id/Name)
+            CreateMap<Artist, ArtistDTO>()
+                .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.ArtistId))
+                .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.ArtistName));
+            CreateMap<ArtistDTO, Artist>()
+                .ForMember(dest => dest.ArtistId, opt => opt.MapFrom(src => src.Id))
+                .ForMember(dest => dest.ArtistName, opt => opt.MapFrom(src => src.Name));
+
+            // Add other mappings as needed in future
+        }
+    }
+}

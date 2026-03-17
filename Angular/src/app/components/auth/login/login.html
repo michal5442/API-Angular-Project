@@ -1,0 +1,34 @@
+<div class="login-container">
+  <div class="login-card-wrapper">
+    <mat-card class="login-card">
+      <div class="login-header">
+        <mat-icon class="login-icon">account_circle</mat-icon>
+        <h1>Welcome Back</h1>
+        <p>Login to your account</p>
+      </div>
+
+      <form class="login-form">
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Email</mat-label>
+          <input matInput type="email" placeholder="Enter your email" [(ngModel)]="user.userName" name="email">
+          <mat-icon matPrefix>email</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Password</mat-label>
+          <input matInput type="password" placeholder="Enter your password" [(ngModel)]="user.password" name="password">
+          <mat-icon matPrefix>lock</mat-icon>
+        </mat-form-field>
+
+        <button mat-raised-button class="login-btn" type="button" (click)="onLogin()">
+          <mat-icon>login</mat-icon>
+          Login
+        </button>
+
+        <div class="register-link">
+          Don't have an account? <a routerLink="/register">Sign Up</a>
+        </div>
+      </form>
+    </mat-card>
+  </div>
+</div>

@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>webApi</title>
+    <script src="script.js" defer></script>
+    <style>
+        .cont {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .existUser {
+            display: flex;
+            flex-direction: column;
+            width: 20vw;
+            margin: 2vw;
+        }
+
+        .newUser {
+            display: flex;
+            flex-direction: column;
+            width: 20vw;
+            margin: 2vw;
+        }
+    </style>
+</head>
+<body>
+    <div class="cont">
+        <div class="existUser">
+            <h3>משתמש רשום</h3>
+            <lable for="e_userName">שם משתמש</lable>
+            <input type="email" id="e_userName" required />
+            <lable for="e_password">סיסמא</lable>
+            <input type="password" id="e_password" required />
+            <button onclick="Login()">התחברות</button>
+        </div>
+
+        <div class="newUser">
+            <h3>משתמש חדש</h3>
+            <lable for="userName">שם משתמש</lable>
+            <input type="email" id="userName" name="userName" required />
+            <lable for="firstName">שם פרטי</lable>
+            <input type="text" id="firstName" name="firstName" required />
+            <lable for="lastName">שם משפחה</lable>
+            <input type="text" id="lastName" name="lastName" required />
+            <lable for="password">סיסמא</lable>
+            <input type="password" id="password" name="password" required />
+            <button onclick="CheckPassword()">בדוק חוזק סיסמא</button>
+            <progress value="0"></progress>
+            <button onclick="Register()">רישום</button>
+
+        </div>
+
+    </div>
+</body>
+</html>

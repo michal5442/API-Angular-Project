@@ -1,0 +1,28 @@
+﻿using Entities;
+using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Repositories
+{
+    public class ArtistRepository : IArtistRepository
+    {
+        UserContext _userContext;
+        public ArtistRepository(UserContext userContext)
+        {
+            _userContext = userContext;
+        }
+        public async Task<List<Artist>> getArtists()
+        {
+            return await _userContext.Artists.ToListAsync();
+        }
+
+        public async Task<Artist> getArtistById(int id)
+        {
+            return await _userContext.Artists.FindAsync(id);
+        }
+    }
+}

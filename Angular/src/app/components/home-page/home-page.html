@@ -1,0 +1,89 @@
+<div class="home-container">
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-content">
+      <div class="hero-icon-wrapper">
+        <mat-icon class="hero-icon">headphones</mat-icon>
+      </div>
+      <h1 class="hero-title">Welcome to MY Music</h1>
+      <p class="hero-subtitle">Discover, Stream, and Enjoy Your Favorite Music</p>
+      <div class="hero-buttons">
+        <button mat-raised-button routerLink="/songs" class="primary-btn">
+          <mat-icon>play_circle</mat-icon>
+          Explore Music
+        </button>
+        <button mat-raised-button routerLink="/artists" class="secondary-btn">
+          <mat-icon>person</mat-icon>
+          Browse Artists
+        </button>
+      </div>
+    </div>
+    <div class="hero-wave"></div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features-section">
+    <h2 class="section-title">Why Choose MY Music?</h2>
+    <div class="features-grid">
+      <mat-card class="feature-card">
+        <mat-icon class="feature-icon">library_music</mat-icon>
+        <h3>Vast Library</h3>
+        <p>Access thousands of songs from various genres and artists worldwide</p>
+      </mat-card>
+
+      <mat-card class="feature-card">
+        <mat-icon class="feature-icon">high_quality</mat-icon>
+        <h3>HD Quality</h3>
+        <p>Stream music in crystal clear high-definition audio quality</p>
+      </mat-card>
+
+      <mat-card class="feature-card">
+        <mat-icon class="feature-icon">playlist_play</mat-icon>
+        <h3>Custom Playlists</h3>
+        <p>Create and manage your personalized playlists effortlessly</p>
+      </mat-card>
+
+      <mat-card class="feature-card">
+        <mat-icon class="feature-icon">devices</mat-icon>
+        <h3>Multi-Device</h3>
+        <p>Listen anywhere on mobile, tablet, or desktop seamlessly</p>
+      </mat-card>
+    </div>
+  </section>
+
+  <!-- Popular Categories -->
+  <section class="categories-section">
+    <h2 class="section-title">Popular Categories</h2>
+    <div class="categories-grid">
+      <div class="category-card" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+        <mat-icon>music_note</mat-icon>
+        <h3>Pop</h3>
+      </div>
+      <div class="category-card" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+        <mat-icon>album</mat-icon>
+        <h3>Rock</h3>
+      </div>
+      <div class="category-card" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+        <mat-icon>piano</mat-icon>
+        <h3>Classical</h3>
+      </div>
+      <div class="category-card" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
+        <mat-icon>graphic_eq</mat-icon>
+        <h3>Electronic</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="cta-content">
+      <mat-icon class="cta-icon">music_video</mat-icon>
+      <h2>Start Your Musical Journey Today</h2>
+      <p>Join thousands of music lovers and discover your next favorite song</p>
+      <button mat-raised-button routerLink="/songs" class="cta-btn">
+        <mat-icon>play_arrow</mat-icon>
+        Get Started Now
+      </button>
+    </div>
+  </section>
+</div>

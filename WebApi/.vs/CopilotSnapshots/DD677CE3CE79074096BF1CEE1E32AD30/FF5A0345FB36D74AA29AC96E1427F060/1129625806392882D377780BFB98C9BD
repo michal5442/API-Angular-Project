@@ -1,0 +1,59 @@
+﻿using DTOs;
+using Entities;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Services;
+
+namespace WebAopiShop.Controllers
+{
+    [Route("api/[controller]")]
+    [ApiController]
+    public class ProductController : Controller
+    {
+        IProductService service;
+        public ProductController(IProductService service)
+        {
+            this.service= service;
+        }
+
+        [HttpGet]
+        public async Task<ActionResult<ProductDTO>> getProducts(int[]? categoryId,string description, int? minPrice, int? maxPrice, int? limit, int? page)
+        {
+            var (products,total)  = await service.GetProducts(categoryId, description,minPrice, maxPrice,limit,page);
+            if (products == null)
+            {
+                return NoContent();
+            }
+            return Ok(products);
+        }
+
+        [HttpPost]
+        public async Task<ActionResult<ProductDTO>> addProduct([FromBody] Product product)
+        {
+            ProductDTO productDTO = await service.addProduct(product);
+            return CreatedAtAction(nameof(getProducts), new { productDTO.ProductId }, productDTO);
+        }
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Put(int id, [FromBody] Product value)
+        {
+            bool updateProduct = await service.updateProduct(value, id);
+            if (!updateProduct)
+            {
+                return NotFound($"Product with ID {id} not found.");
+            }
+            return Ok(updateProduct);
+        }
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(int id)
+        {
+            bool success = await service.deleteProduct(id);
+
+            if (!success)
+            {
+                return NotFound();
+            }
+            return NoContent();
+        }
+
+    }
+}

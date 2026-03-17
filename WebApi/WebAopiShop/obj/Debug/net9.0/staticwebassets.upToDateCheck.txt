@@ -1,0 +1,82 @@
+C:\Users\user1\Desktop\api-angular\MostlyMusic\WebAopiShop\WebAopiShop\wwwroot\script.js
+C:\Users\user1\Desktop\api-angular\MostlyMusic\WebAopiShop\WebAopiShop\wwwroot\update.html
+C:\Users\user1\Desktop\api-angular\MostlyMusic\WebAopiShop\WebAopiShop\wwwroot\index.html
+C:\Users\user1\Desktop\api-angular\MostlyMusic\WebAopiShop\WebAopiShop\wwwroot\update.js
+wwwroot\img\a.png
+wwwroot\img\aa.png
+wwwroot\img\b.png
+wwwroot\img\c.png
+wwwroot\img\d.png
+wwwroot\img\e.png
+wwwroot\img\f.png
+wwwroot\img\g.png
+wwwroot\img\h.png
+wwwroot\img\i.png
+wwwroot\img\j.png
+wwwroot\index.html
+wwwroot\music\amichai_plesser\a.mp3
+wwwroot\music\amichai_plesser\חיי נשמות ∙ עמיחי פלסר.mp3
+wwwroot\music\amichai_plesser\נפתלי קמפה, עמיחי פלסר - הדור נאה.mp3
+wwwroot\music\amichai_plesser\עמיחי פלסר - בלבב שלם.mp3
+wwwroot\music\amichai_plesser\עמיחי פלסר - הולך תמים.mp3
+wwwroot\music\amichai_plesser\עמיחי פלסר - נחמת ציון.mp3
+wwwroot\music\amichai_plesser\עמיחי_פלסר,_ישיבת_נווה_בלבב_שלם_קולעולם.mp3
+wwwroot\music\avraham_frid\בכורה אבא - אברהם פריד מארח את ארי היל.mp3
+wwwroot\music\avraham_frid\שבורי לב - אברהם פריד.mp3
+wwwroot\music\avraham_frid\שבת קודש אברהם פריד 12 שבת קודש.mp3
+wwwroot\music\ishay_ribo\ישי ריבו - אחת ולתמיד _ Ishay Ribo - Ahat Uletamid.mp3
+wwwroot\music\ishay_ribo\ישי ריבו - אין לי מלבדך.mp3
+wwwroot\music\ishay_ribo\ישי ריבו - אני שייך לעם.mp3
+wwwroot\music\ishay_ribo\ישי ריבו - ארץ ישראל.mp3
+wwwroot\music\ishay_ribo\ישי ריבו - יהי רצון.mp3
+wwwroot\music\ishay_ribo\ישי ריבו - כאן אתה.mp3
+wwwroot\music\ishay_ribo\ישי ריבו - לא נפסיק לחלום.mp3
+wwwroot\music\ishay_ribo\ישי ריבו - לולא תורתך.mp3
+wwwroot\music\ishay_ribo\ישי ריבו - לים _ Ishay Ribo - Layam.mp3
+wwwroot\music\ishay_ribo\ישי ריבו - למה לנו לדבר מאחרים.mp3
+wwwroot\music\ishay_ribo\ישי ריבו - לשוב הביתה _ ishay Ribo - Lashuv Habaita.mp3
+wwwroot\music\ishay_ribo\ישי ריבו - פורחים לשובם.mp3
+wwwroot\music\ishay_ribo\ישי ריבו - רבי שמעון.mp3
+wwwroot\music\ishay_ribo\ישי ריבו - תהילתך ברבים.mp3
+wwwroot\music\ishay_ribo\ישי ריבו - תיכף יפתח.mp3
+wwwroot\music\ishay_ribo\ישי ריבו-מקשה אחת זהב-חדשות המוזיקה.mp3
+wwwroot\music\ishay_ribo\שמואל פרדניק & ישי ריבו - כל פעם מחדש.mp3
+wwwroot\music\itzik_dadya\07 בואי בשלום-איציק דדיה.mp3
+wwwroot\music\itzik_dadya\איציק דדיה - כיסא המלך.mp3
+wwwroot\music\itzik_dadya\איציק_דדיה_בסינגל_חדש_נכספתי.mp3
+wwwroot\music\mamtak_leshabat\״אני שבת״ אבי ריימי & יאיר בודנר מארחים את בנצי קלצקין & יענקי לוינגר מתוך פרויקט ״ממתק לשבת״.mp4
+wwwroot\music\mamtak_leshabat\״ושמרו״ אבי ריימי & יאיר בודנר מארחים את מאיר גפני מתוך פרויקט ״ממתק לשבת״.mp4
+wwwroot\music\mamtak_leshabat\אבי ריימי & יאיר בודנר מארחים את אלחנן שטיינמץ - ואני תפילתי.mp3
+wwwroot\music\mamtak_leshabat\אבי ריימי & יאיר בודנר מארחים את אלי פרידמן - ויכולו.mp3
+wwwroot\music\moshe_klain\משה קליין - בדרך אמונה בחרתי.mp3
+wwwroot\music\moshe_klain\משה קליין - להביט קדימה.mp3
+wwwroot\music\moshe_klain\משה קליין - מי יאהב.mp3
+wwwroot\music\moshe_klain\משה קליין - שמחה שלמה - רמיקס (Dj Daniel Malka).mp3
+wwwroot\music\moshe_klain\משה קליין - תבוא.mp3
+wwwroot\music\moshe_klain\משה קליין & הראל טל - ואני אשיר.mp3
+wwwroot\music\moti_vais\מוטי_וייס___היום_הרת___חסידי.mp3
+wwwroot\music\moti_vais\מוטי_וייס___הנה_זה_בא___מקורי.mp3
+wwwroot\music\moti_vais\מוטי_וייס___יוסף_מוקיר_שבת___מקורי.mp3
+wwwroot\music\moti_vais\מוטי_וייס___עננו_לייב___מקורי.mp3
+wwwroot\music\shmulik_sukot\שמוליק סוכות - באה השמחה.mp4
+wwwroot\music\shmulik_sukot\שמוליק סוכות - הקב״ה איתי.mp3
+wwwroot\music\shmulik_sukot\שמוליק סוכות, בנצי שטיין, יואלי דיקמן - עברתי בחושך - קולולחן.mp3
+wwwroot\music\yakov_shweky\_-_יעקב_שוואקי_ושמעון_לוי_-_אין_דבר_רע_-_מקורי.mp3
+wwwroot\music\zanvil_vainberger\01-הללוהו.mp3
+wwwroot\music\zanvil_vainberger\02-ברכנו.mp3
+wwwroot\music\zanvil_vainberger\03-ותחזינה.mp3
+wwwroot\music\zanvil_vainberger\04-זוכרי_זמירות.mp3
+wwwroot\music\zanvil_vainberger\05-אנא_ה.mp3
+wwwroot\music\zanvil_vainberger\06-כלל_ישראל.mp3
+wwwroot\music\zanvil_vainberger\07-יתומים_היינו.mp3
+wwwroot\music\zanvil_vainberger\08-ואזכה.mp3
+wwwroot\music\zanvil_vainberger\09-ישראל_נושע.mp3
+wwwroot\music\zanvil_vainberger\10-מי_ימלל.mp3
+wwwroot\music\zanvil_vainberger\11-להתענג.mp3
+wwwroot\music\zanvil_vainberger\12-מן_השמים.mp3
+wwwroot\music\zanvil_vainberger\אהרון_רזאל,_לוי_פלקוביץ,_נפתלי_קמפה,_זאנויל_וינברגר,_מקהלת_מלכות.mp3
+wwwroot\music\zanvil_vainberger\זאנוויל ויינברגר ואהרלה סמט – כי ירבו ויוסיפו לך שנות חיים.mp3
+wwwroot\music\zanvil_vainberger\זאנוויל ויינברגר, הערשי סגל, מקהלת מלכות - מחרוזת ריקודים.mp3
+wwwroot\script.js
+wwwroot\update.html
+wwwroot\update.js

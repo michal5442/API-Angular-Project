@@ -1,0 +1,16 @@
+<div class="artists-container">
+  <h1>Artists</h1>
+  <div class="artists-grid">
+    @for (artist of artists(); track artist.id){
+      <mat-card class="artist-card" (click)="goToArtistSongs(artist.id)" style="cursor: pointer;">
+        <img mat-card-image 
+            [src]="'https://localhost:44393/' + artist.imageUrl.split('&quot;').join('')" 
+            [alt]="artist.name">
+        <mat-card-content>
+          <h2>{{ artist.name }}</h2>
+          <p>{{ artist.songsCount }} Songs</p>
+        </mat-card-content>
+      </mat-card>
+    }
+  </div>
+</div>

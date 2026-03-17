@@ -1,0 +1,14 @@
+﻿using DTOs;
+using Entities;
+
+
+namespace Services
+{
+    public interface IUserService
+    {
+        Task<User> addUser(User user);
+        Task<UserDTO> getUserByID(int id);
+        Task<UserDTO> login(User user);
+        Task<bool> updateUser(User user, int id);
+    }
+}

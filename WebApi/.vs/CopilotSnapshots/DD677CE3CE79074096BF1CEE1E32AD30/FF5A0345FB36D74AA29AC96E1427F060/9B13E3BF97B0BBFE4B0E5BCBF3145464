@@ -1,0 +1,37 @@
+﻿using AutoMapper;
+using DTOs;
+using Entities;
+using Microsoft.AspNetCore.Mvc;
+using Repositories;
+namespace Services
+{
+    public class OrderService : IOrderService
+    {
+        IOrderRepository repository;
+        IMapper mapper;
+        public OrderService(IOrderRepository repository,IMapper mapper)
+        {
+            this.repository = repository;
+            this.mapper=mapper;
+        }
+        public async Task<OrderDTO> getOrderByID(int id)
+        {
+            Order order= await repository.getOrderByID(id);
+            OrderDTO orderDTO=mapper.Map<Order,OrderDTO>(order);
+            return orderDTO;
+        }
+        public async Task<OrderDTO> addOrder(Order newOrder)
+        {
+           Order order = await repository.addOrder(newOrder);
+           OrderDTO orderDTO = mapper.Map<Order, OrderDTO>(order);
+           return orderDTO;
+        }
+        public async Task<IEnumerable<OrderDTO>> getOrdersByUserId(int userId)
+        {
+            var orders = await repository.getOrdersByUserId(userId);
+            if (orders == null) 
+                return null;
+            return mapper.Map<IEnumerable<OrderDTO>>(orders);
+        }
+    }
+}

@@ -1,0 +1,18 @@
+﻿using AutoMapper;
+using DTOs;
+using Entities;
+
+namespace Services
+{
+    public class MappingProfile : Profile
+    {
+        public MappingProfile()
+        {
+            // Rating mappings
+            CreateMap<RatingDTO, Rating>();
+            CreateMap<Rating, RatingDTO>();
+
+            // Add other mappings as needed in future
+        }
+    }
+}

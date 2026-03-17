@@ -1,0 +1,61 @@
+<div class="checkout-container">
+  @if (!orderCompleted()) {
+    <h1>Complete Your Purchase</h1>
+    
+    <mat-card class="order-details">
+      <h2>Order Details</h2>
+      <div class="products-list">
+        @for (item of cartItems(); track item.id) {
+          <div class="product-item">
+            <img [src]="item.imageUrl && item.imageUrl.length > 0 ? 'https://localhost:44393/' + item.imageUrl : 'https://placehold.co/80x80/4B2152/white?text=No+Image'" 
+                 [alt]="item.songName" 
+                 class="product-image"
+                 (error)="$event.target.src='https://placehold.co/80x80/4B2152/white?text=No+Image'">
+            <div class="product-info">
+              <h3>{{ item.songName }}</h3>
+              <p class="artist">{{ item.artist }}</p>
+            </div>
+            <span class="product-price">${{ item.price }}</span>
+          </div>
+        }
+      </div>
+      
+      <div class="total-section">
+        <h3>Total Amount: ${{ totalPrice() }}</h3>
+      </div>
+    </mat-card>
+
+    <mat-card class="delivery-info">
+      <mat-icon class="info-icon">info</mat-icon>
+      <h3>Delivery Information</h3>
+      <p>Your digital products will be sent to:</p>
+      <mat-form-field class="email-field" appearance="outline">
+        <mat-label>Email Address</mat-label>
+        <input matInput [value]="userEmail()" readonly>
+        <mat-icon matSuffix>email</mat-icon>
+      </mat-form-field>
+      <p class="note">This is your registered email address and cannot be changed during checkout.</p>
+    </mat-card>
+
+    <div class="action-buttons">
+      <button mat-raised-button class="complete-btn" (click)="completeOrder()">
+        <mat-icon>check_circle</mat-icon>
+        Complete Purchase
+      </button>
+    </div>
+  } @else {
+    <div class="success-message">
+      <mat-card class="success-card">
+        <mat-icon class="success-icon">check_circle</mat-icon>
+        <h1>Order Completed Successfully!</h1>
+        <p class="success-text">Thank you for your purchase!</p>
+        <p class="email-info">Your digital products have been sent to: <strong>{{ userEmail() }}</strong></p>
+        <p class="check-email">Please check your email inbox for the download links.</p>
+        <button mat-raised-button (click)="backToSongs()">
+          <mat-icon>library_music</mat-icon>
+          Continue Shopping
+        </button>
+      </mat-card>
+    </div>
+  }
+</div>

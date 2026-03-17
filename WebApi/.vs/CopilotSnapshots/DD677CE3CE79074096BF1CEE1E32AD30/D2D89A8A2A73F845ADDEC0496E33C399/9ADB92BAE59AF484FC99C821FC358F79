@@ -1,0 +1,84 @@
+﻿
+
+using Microsoft.EntityFrameworkCore;
+// NLog is optional. If you want to use it, add the NLog.Web package to the project and enable the using below.
+// using NLog.Web;
+using Repositories;
+using Services;
+using AutoMapper;
+using WebAopiShop.Middlewares;
+
+
+var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IPasswordService, PasswordService>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<IArtistRepository, ArtistRepository>();
+builder.Services.AddScoped<IArtistService, ArtistService>();
+builder.Services.AddScoped<ISongRepository, SongRepository>();
+builder.Services.AddScoped<ISongService, SongService>();
+builder.Services.AddScoped<IOrderRepository, OrderRepository>();
+builder.Services.AddScoped<IOrderService, OrderService>();
+builder.Services.AddScoped<IRatingRepository, RatingRepository>();
+builder.Services.AddScoped<IRatingService, RatingService>();
+// Register AutoMapper profiles (scan assemblies so any profile is picked up)
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+// Add services to the container.
+
+builder.Services.AddControllers();
+builder.Services.AddOpenApi();
+builder.Services.AddDbContext<UserContext>(option => option.UseSqlServer(builder.Configuration.GetConnectionString("School")));
+// Comment out UseNLog when NLog package is not installed to avoid build errors.
+// builder.Host.UseNLog();
+builder.Services.AddCors(options =>
+{
+  options.AddDefaultPolicy(policy =>
+  {
+    policy.WithOrigins("http://localhost:4200") // הכתובת של האנגולר
+          .AllowAnyHeader()
+          .AllowAnyMethod();
+  });
+});
+var app = builder.Build();
+
+// Validate AutoMapper configuration at startup and log errors without crashing the app
+try
+{
+    var mapper = app.Services.GetRequiredService<IMapper>();
+    mapper.ConfigurationProvider.AssertConfigurationIsValid();
+}
+catch (AutoMapper.AutoMapperConfigurationException ex)
+{
+    // Log full details but do not throw to allow the app to start for debugging
+    Console.WriteLine("AutoMapper configuration error:");
+    Console.WriteLine(ex.ToString());
+}
+catch (Exception ex)
+{
+    Console.WriteLine($"Unexpected error validating AutoMapper configuration: {ex.Message}");
+}
+
+if (app.Environment.IsDevelopment())
+{
+    app.MapOpenApi();
+    app.UseSwaggerUI(options =>
+    {
+        options.SwaggerEndpoint("/openapi/v1.json", "My API V1");
+    });
+}
+
+
+// Configure the HTTP request pipeline.
+
+app.UseHttpsRedirection();
+
+app.UseStaticFiles();
+app.UseCors();
+
+app.UseMiddleware<RatingMiddleware>();
+
+app.UseAuthorization();
+
+app.MapControllers();
+
+app.Run();

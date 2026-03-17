@@ -1,0 +1,6 @@
+@WebAopiShop_HostAddress = http://localhost:5217
+
+GET {{WebAopiShop_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

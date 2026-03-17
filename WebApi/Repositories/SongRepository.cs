@@ -1,0 +1,72 @@
+using Entities;
+using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Repositories
+{
+    public class SongRepository : ISongRepository
+    {
+        UserContext _userContext;
+        public SongRepository(UserContext userContext)
+        {
+            _userContext = userContext;
+        }
+        public async Task<(IEnumerable<Song> songs, int total)> getSongs(int? artistId,string description,int? minPrice, int? maxPrice, int? skip, int? position)
+        {
+            int pageSize = skip ?? 10;
+            int page = position ?? 1;
+
+            var query = _userContext.Songs
+                        .Where(song =>
+                            (description == null ? true : song.Description.Contains(description))
+                            && (minPrice == null ? true : song.Price >= minPrice)
+                            && (maxPrice == null ? true : song.Price <= maxPrice)
+                            && (artistId == null ? true : song.ArtistId == artistId))
+                        .OrderBy(song => song.Price)
+                        .Include(song => song.ArtistNavigation);
+
+            Console.WriteLine(query.ToQueryString());
+
+            int total = await query.CountAsync();
+            List<Song> songs = await query.Skip((page - 1) * pageSize)
+                                           .Take(pageSize)
+                                           .ToListAsync();
+
+            return (songs, total);
+        }
+        public async Task<Song> addSong(Song newSong)
+        {
+            await _userContext.Songs.AddAsync(newSong);
+            await _userContext.SaveChangesAsync();
+            return newSong;
+        }
+        public async Task<bool> updateSong(Song song, int id)
+        {
+            song.SongId = id;
+            _userContext.Songs.Update(song);
+            int rowsAffected = await _userContext.SaveChangesAsync();
+            return rowsAffected > 0;
+        }
+        public async Task<bool> deleteSong(int id)
+        {
+            var song = await _userContext.Songs.FindAsync(id);
+            if (song == null)
+            {
+                return false; 
+            }
+            _userContext.Songs.Remove(song);
+            await _userContext.SaveChangesAsync();
+            return true;
+        }
+        public async Task<Song> getSongById(int id)
+        {
+            return await _userContext.Songs.FindAsync(id);
+        }
+        
+
+    }
+}

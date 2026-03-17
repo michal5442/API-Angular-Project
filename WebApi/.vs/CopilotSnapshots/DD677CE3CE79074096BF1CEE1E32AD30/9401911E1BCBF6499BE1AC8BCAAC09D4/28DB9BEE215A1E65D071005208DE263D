@@ -1,0 +1,45 @@
+﻿using Repositories;
+using Entities;
+using DTOs;
+using AutoMapper;
+namespace Services
+{
+    public class UserService : IUserService
+    {
+        IUserRepository _iUserRepository;
+        IPasswordService _iPasswordService;
+        IMapper _mapper;
+        public UserService(IUserRepository iUserRepository,IPasswordService iPasswordService,IMapper mapper)
+        {
+            _iUserRepository = iUserRepository;
+            _iPasswordService = iPasswordService;
+            _mapper = mapper;
+        }
+        public async Task<UserDTO> getUserByID(int id)
+        {
+            User user=await _iUserRepository.getUserByID(id);
+            UserDTO userDTO=_mapper.Map<User,UserDTO>(user);
+            return userDTO;
+        }
+        public async Task<User> addUser(User newUser)
+        {
+            if ((_iPasswordService.Check(newUser.Password)).Strength < 2)
+                return null;
+            return await _iUserRepository.addUser(newUser);
+        }
+        public async Task<UserDTO> login(User LoginUser)
+        {
+            User user =await _iUserRepository.login(LoginUser) ;
+            UserDTO userDTO = _mapper.Map<User, UserDTO>(user);
+            return userDTO;
+            
+        }
+        public async Task<bool> updateUser(User user, int id)
+        {
+            if ((_iPasswordService.Check(user.Password)).Strength < 2)
+                return false;
+            await _iUserRepository.updateUser(user, id);
+            return true;
+        }
+    }
+}

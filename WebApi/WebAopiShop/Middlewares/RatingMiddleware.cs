@@ -1,0 +1,29 @@
+using DTOs;
+using Services;
+
+namespace WebAopiShop.Middlewares
+{
+    public class RatingMiddleware
+    {
+        private readonly RequestDelegate _next;
+        public RatingMiddleware(RequestDelegate next) 
+        {
+            _next = next;
+        }
+
+        public async Task Invoke(HttpContext context, IRatingService ratingService)
+        {
+            var ratingDto = new RatingDTO(
+              0,
+            context.Request.Host.Value,
+            context.Request.Method,
+            context.Request.Path,
+            context.Request.Headers["Referer"].ToString(),
+            context.Request.Headers["User-Agent"].ToString(),
+            DateTime.Now
+            );
+            await ratingService.EnterToDB(ratingDto);
+            await _next(context);
+        }
+    }
+}

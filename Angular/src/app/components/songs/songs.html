@@ -1,0 +1,51 @@
+<div class="songs-container">
+  <h1>{{ title() }}</h1>
+  
+  @if (mode !== 'favorites') {
+    <div class="filter-section">
+      <div class="price-filter">
+        <div class="filter-header">
+          <span class="filter-title">Price Range: ${{ minPrice() }} - ${{ maxPrice() }}</span>
+        </div>
+        <mat-slider 
+          min="0" 
+          max="100" 
+          step="1" 
+          discrete
+          class="price-slider">
+          <input matSliderStartThumb [value]="minPrice()" (valueChange)="minPrice.set($event); onPriceChange()">
+          <input matSliderEndThumb [value]="maxPrice()" (valueChange)="maxPrice.set($event); onPriceChange()">
+        </mat-slider>
+      </div>
+    </div>
+  }
+
+<div class="songs-grid">
+  @for (song of songs(); track song.id) {
+    <mat-card class="song-card" (click)="goToDetail(song.id)">
+      <img mat-card-image 
+           [src]="getImageUrl(song)" 
+           [alt]="song.songName"
+           (error)="$event.target.src='https://placehold.co/300x200/4B2152/white?text=No+Image'">
+      <mat-card-content>
+        <h3>{{ song.songName }}</h3>
+        <p>{{ song.artist }}</p>
+        <p class="price">${{ song.price }}</p>
+        <span class="duration">{{ formatDuration(song.duration) }}</span>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-icon-button (click)="togglePlay(song, $event)">
+          <mat-icon>{{ isPlaying(song.id) ? 'pause' : 'play_arrow' }}</mat-icon>
+        </button>
+        <button mat-icon-button (click)="addToCart(song, $event)">
+          <mat-icon>shopping_cart</mat-icon>
+        </button>
+        <button mat-icon-button (click)="addToFavorites(song, $event)">
+          <mat-icon>{{ mode === 'favorites' ? 'delete' : 'favorite' }}</mat-icon>
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  }
+</div>
+  
+</div>

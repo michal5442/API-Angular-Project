@@ -1,0 +1,36 @@
+﻿using Entities;
+using Repositories;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Services
+{
+    public class PasswordService : IPasswordService
+    {
+        public CheckPassword Check(string pass)
+        {
+            // Guard against null/empty input and protect against library exceptions
+            if (string.IsNullOrEmpty(pass))
+            {
+                return new CheckPassword { Password = pass, Strength = 0 };
+            }
+
+            try
+            {
+                var result = Zxcvbn.Core.EvaluatePassword(pass);
+                int strength = result?.Score ?? 0;
+                // Ensure strength is within expected bounds (0-4)
+                strength = Math.Clamp(strength, 0, 4);
+                return new CheckPassword { Password = pass, Strength = strength };
+            }
+            catch (Exception)
+            {
+                // On any unexpected error from the evaluation library return a safe default
+                return new CheckPassword { Password = pass, Strength = 0 };
+            }
+        }
+    }
+}

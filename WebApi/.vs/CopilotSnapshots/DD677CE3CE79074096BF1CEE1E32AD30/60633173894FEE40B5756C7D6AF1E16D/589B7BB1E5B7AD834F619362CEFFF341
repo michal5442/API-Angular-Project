@@ -1,0 +1,58 @@
+﻿using Entities;
+using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Repositories
+{
+    public class ProductRepository : IProductRepository
+    {
+        UserContext _userContext;
+        public ProductRepository(UserContext userContext)
+        {
+            _userContext = userContext;
+        }
+        public async Task<(IEnumerable<Product> products, int total)> getProducts(int[]? categoryId,string description,int? minPrice, int? maxPrice, int? skip, int? position)
+        {
+            var query = _userContext.Products.Where(product =>
+                        (description == null ? (true) : (product.Description.Contains(description)))
+                        && ((minPrice == null) ? (true) : (product.Price >= minPrice))
+                        && ((maxPrice == null) ? (true) : (product.Price <= maxPrice))
+                        && (categoryId == null || categoryId.Length == 0 || categoryId.Contains(product.CategoryId)))
+                            .OrderBy(product => product.Price);
+
+            Console.WriteLine(query.ToQueryString());
+            List<Product> products = await query.Skip((position - 1) * skip)
+            .Take(skip).Include(product => product.Category).ToListAsync();
+            var total = await query.CountAsync();
+            return (products, total);
+        }
+        public async Task<Product> addProduct(Product newProduct)
+        {
+            await _userContext.Products.AddAsync(newProduct);
+            await _userContext.SaveChangesAsync();
+            return newProduct;
+        }
+        public async Task<bool> updateProduct(Product product, int id)
+        {
+            product.ProductId = id;
+            _userContext.Products.Update(product);
+            int rowsAffected = await _userContext.SaveChangesAsync();
+            return rowsAffected > 0;
+        }
+        public async Task<bool> deleteProduct(int id)
+        {
+            var product = await _userContext.Products.FindAsync(id);
+            if (product == null)
+            {
+                return false; 
+            }
+            _userContext.Products.Remove(product);
+            await _userContext.SaveChangesAsync();
+            return true;
+        }
+    }
+}

@@ -1,0 +1,112 @@
+<div class="contact-container">
+  <div class="hero-section">
+    <mat-icon class="hero-icon">mail</mat-icon>
+    <h1>Contact Us</h1>
+    <p class="hero-subtitle">We'd love to hear from you</p>
+  </div>
+
+  <div class="content-wrapper">
+    <div class="contact-grid">
+      <!-- Contact Info -->
+      <div class="info-section">
+        <mat-card class="info-card">
+          <mat-icon>location_on</mat-icon>
+          <h3>Address</h3>
+          <p>123 Music Street<br>Tel Aviv, Israel</p>
+        </mat-card>
+
+        <mat-card class="info-card">
+          <mat-icon>phone</mat-icon>
+          <h3>Phone</h3>
+          <p>+972-3-1234567<br>Sun-Thu: 9AM-6PM</p>
+        </mat-card>
+
+        <mat-card class="info-card">
+          <mat-icon>email</mat-icon>
+          <h3>Email</h3>
+          <p>support@mymusic.com<br>info@mymusic.com</p>
+        </mat-card>
+
+        <mat-card class="social-card">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <button mat-icon-button>
+              <mat-icon>facebook</mat-icon>
+            </button>
+            <button mat-icon-button>
+              <mat-icon>camera_alt</mat-icon>
+            </button>
+            <button mat-icon-button>
+              <mat-icon>music_note</mat-icon>
+            </button>
+          </div>
+        </mat-card>
+      </div>
+
+      <!-- Contact Form -->
+      <mat-card class="form-card">
+        <h2>Send us a message</h2>
+        <p class="form-subtitle">Fill out the form below and we'll get back to you soon</p>
+
+        @if (submitted()) {
+          <div class="success-message">
+            <mat-icon>check_circle</mat-icon>
+            <p>Thank you! Your message has been sent successfully.</p>
+          </div>
+        } @else {
+          <form (ngSubmit)="onSubmit()">
+            <mat-form-field appearance="outline" class="full-width">
+              <mat-label>Name</mat-label>
+              <input 
+                matInput 
+                [value]="name()"
+                (input)="name.set($any($event.target).value)"
+                required
+              >
+              <mat-icon matPrefix>person</mat-icon>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="full-width">
+              <mat-label>Email</mat-label>
+              <input 
+                matInput 
+                type="email"
+                [value]="email()"
+                (input)="email.set($any($event.target).value)"
+                required
+              >
+              <mat-icon matPrefix>email</mat-icon>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="full-width">
+              <mat-label>Subject</mat-label>
+              <input 
+                matInput 
+                [value]="subject()"
+                (input)="subject.set($any($event.target).value)"
+              >
+              <mat-icon matPrefix>subject</mat-icon>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="full-width">
+              <mat-label>Message</mat-label>
+              <textarea 
+                matInput 
+                rows="6"
+                [value]="message()"
+                (input)="message.set($any($event.target).value)"
+                required
+              ></textarea>
+              <mat-icon matPrefix>message</mat-icon>
+            </mat-form-field>
+
+            <button mat-raised-button type="submit" class="submit-btn">
+              <mat-icon>send</mat-icon>
+              Send Message
+            </button>
+          </form>
+        }
+      </mat-card>
+    </div>
+  </div>
+</div>

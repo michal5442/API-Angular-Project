@@ -1,0 +1,112 @@
+<div class="songs-container">
+  <div class="header-section">
+    <button mat-fab class="back-button" (click)="goBack()">
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+    <div class="header-content">
+      <h1>Songs Management</h1>
+      <p class="subtitle">Manage your music collection</p>
+    </div>
+    <button mat-fab extended color="primary" class="add-button" (click)="openAddModal()">
+      <mat-icon>add</mat-icon>
+      Add Song
+    </button>
+  </div>
+
+  <div class="songs-grid">
+    <mat-card class="song-card" *ngFor="let song of songs()">
+      <mat-card-content>
+        <div class="song-info">
+          <div class="song-avatar">
+            <mat-icon>music_note</mat-icon>
+          </div>
+          <div class="song-details">
+            <h3>{{ song.songName }}</h3>
+            <p class="artist-name">{{ song.artist }}</p>
+            <div class="song-meta">
+              <span class="price-badge">₪{{ song.price }}</span>
+              <span class="duration-badge" *ngIf="song.duration">{{ formatDuration(song.duration) }}</span>
+            </div>
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-mini-fab (click)="playSong(song)" 
+                [class.playing]="playingSongId === song.id" 
+                class="play-btn" 
+                *ngIf="song.songUrl">
+          <mat-icon>{{ playingSongId === song.id ? 'pause' : 'play_arrow' }}</mat-icon>
+        </button>
+        <button mat-mini-fab color="primary" (click)="openEditModal(song)" class="edit-btn">
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button mat-mini-fab color="warn" (click)="deleteSong(song.id)" class="delete-btn">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+
+  <div class="modal" *ngIf="showModal" (click)="closeModal()">
+    <div class="modal-content" (click)="$event.stopPropagation()">
+      <div class="modal-header">
+        <h2>{{ isEditMode ? 'Edit Song' : 'Add New Song' }}</h2>
+        <button mat-icon-button (click)="closeModal()" class="close-btn">
+          <mat-icon>close</mat-icon>
+        </button>
+      </div>
+      <form (ngSubmit)="saveSong()">
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Song Name</mat-label>
+          <input matInput [(ngModel)]="currentSong.songName" name="songName" required>
+          <mat-icon matPrefix>music_note</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Artist</mat-label>
+          <input matInput [(ngModel)]="currentSong.artist" name="artist" required>
+          <mat-icon matPrefix>person</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Artist ID</mat-label>
+          <input matInput type="number" [(ngModel)]="currentSong.artistId" name="artistId">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Price</mat-label>
+          <input matInput type="number" [(ngModel)]="currentSong.price" name="price" required>
+          <mat-icon matPrefix>attach_money</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Duration (seconds)</mat-label>
+          <input matInput type="number" [(ngModel)]="currentSong.duration" name="duration">
+          <mat-icon matPrefix>schedule</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Description</mat-label>
+          <textarea matInput [(ngModel)]="currentSong.description" name="description" rows="3"></textarea>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Image URL</mat-label>
+          <input matInput [(ngModel)]="currentSong.imageUrl" name="imageUrl">
+          <mat-icon matPrefix>image</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Song URL</mat-label>
+          <input matInput [(ngModel)]="currentSong.songUrl" name="songUrl">
+          <mat-icon matPrefix>link</mat-icon>
+        </mat-form-field>
+
+        <div class="modal-actions">
+          <button mat-stroked-button type="button" (click)="closeModal()">Cancel</button>
+          <button mat-raised-button color="primary" type="submit">Save</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

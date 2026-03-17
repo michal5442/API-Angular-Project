@@ -1,0 +1,30 @@
+﻿using AutoMapper;
+using DTOs;
+using Entities;
+
+namespace Services
+{
+    public class MappingProfile : Profile
+    {
+        public MappingProfile()
+        {
+            // Rating mappings
+            CreateMap<RatingDTO, Rating>();
+            CreateMap<Rating, RatingDTO>();
+            // Other entity -> DTO mappings
+            CreateMap<Song, SongDTO>();
+            CreateMap<SongDTO, Song>();
+
+            CreateMap<Order, OrderDTO>();
+            CreateMap<OrderDTO, Order>();
+
+            CreateMap<User, UserDTO>();
+            CreateMap<UserDTO, User>();
+
+            CreateMap<Artist, ArtistDTO>();
+            CreateMap<ArtistDTO, Artist>();
+
+            // Add other mappings as needed in future
+        }
+    }
+}

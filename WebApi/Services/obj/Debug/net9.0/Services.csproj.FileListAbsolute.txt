@@ -1,0 +1,164 @@
+M:\WebAopiShop\Services\bin\Debug\net9.0\Services.deps.json
+M:\WebAopiShop\Services\bin\Debug\net9.0\Services.dll
+M:\WebAopiShop\Services\bin\Debug\net9.0\Services.pdb
+M:\WebAopiShop\Services\bin\Debug\net9.0\Entities.dll
+M:\WebAopiShop\Services\bin\Debug\net9.0\Repositories.dll
+M:\WebAopiShop\Services\bin\Debug\net9.0\Repositories.pdb
+M:\WebAopiShop\Services\bin\Debug\net9.0\Entities.pdb
+M:\WebAopiShop\Services\obj\Debug\net9.0\Services.csproj.AssemblyReference.cache
+M:\WebAopiShop\Services\obj\Debug\net9.0\Services.GeneratedMSBuildEditorConfig.editorconfig
+M:\WebAopiShop\Services\obj\Debug\net9.0\Services.AssemblyInfoInputs.cache
+M:\WebAopiShop\Services\obj\Debug\net9.0\Services.AssemblyInfo.cs
+M:\WebAopiShop\Services\obj\Debug\net9.0\Services.csproj.CoreCompileInputs.cache
+M:\WebAopiShop\Services\obj\Debug\net9.0\Services.csproj.Up2Date
+M:\WebAopiShop\Services\obj\Debug\net9.0\Services.dll
+M:\WebAopiShop\Services\obj\Debug\net9.0\refint\Services.dll
+M:\WebAopiShop\Services\obj\Debug\net9.0\Services.pdb
+M:\WebAopiShop\Services\obj\Debug\net9.0\ref\Services.dll
+D:\WebAopiShop\Services\bin\Debug\net9.0\Services.deps.json
+D:\WebAopiShop\Services\bin\Debug\net9.0\Services.dll
+D:\WebAopiShop\Services\bin\Debug\net9.0\Services.pdb
+D:\WebAopiShop\Services\bin\Debug\net9.0\Entities.dll
+D:\WebAopiShop\Services\bin\Debug\net9.0\Repositories.dll
+D:\WebAopiShop\Services\bin\Debug\net9.0\Repositories.pdb
+D:\WebAopiShop\Services\bin\Debug\net9.0\Entities.pdb
+D:\WebAopiShop\Services\obj\Debug\net9.0\Services.csproj.AssemblyReference.cache
+D:\WebAopiShop\Services\obj\Debug\net9.0\Services.GeneratedMSBuildEditorConfig.editorconfig
+D:\WebAopiShop\Services\obj\Debug\net9.0\Services.AssemblyInfoInputs.cache
+D:\WebAopiShop\Services\obj\Debug\net9.0\Services.AssemblyInfo.cs
+D:\WebAopiShop\Services\obj\Debug\net9.0\Services.csproj.CoreCompileInputs.cache
+D:\WebAopiShop\Services\obj\Debug\net9.0\Services.csproj.Up2Date
+D:\WebAopiShop\Services\obj\Debug\net9.0\Services.dll
+D:\WebAopiShop\Services\obj\Debug\net9.0\refint\Services.dll
+D:\WebAopiShop\Services\obj\Debug\net9.0\Services.pdb
+D:\WebAopiShop\Services\obj\Debug\net9.0\ref\Services.dll
+D:\לימודים\Web Api\WebAopiShop\Services\obj\Debug\net9.0\Services.csproj.AssemblyReference.cache
+D:\לימודים\Web Api\WebAopiShop\Services\obj\Debug\net9.0\Services.GeneratedMSBuildEditorConfig.editorconfig
+D:\לימודים\Web Api\WebAopiShop\Services\obj\Debug\net9.0\Services.AssemblyInfoInputs.cache
+D:\לימודים\Web Api\WebAopiShop\Services\obj\Debug\net9.0\Services.AssemblyInfo.cs
+D:\לימודים\Web Api\WebAopiShop\Services\obj\Debug\net9.0\Services.csproj.CoreCompileInputs.cache
+D:\לימודים\Web Api\WebAopiShop\Services\obj\Debug\net9.0\Services.dll
+D:\לימודים\Web Api\WebAopiShop\Services\obj\Debug\net9.0\refint\Services.dll
+D:\לימודים\Web Api\WebAopiShop\Services\obj\Debug\net9.0\Services.pdb
+D:\לימודים\Web Api\WebAopiShop\Services\bin\Debug\net9.0\Services.deps.json
+D:\לימודים\Web Api\WebAopiShop\Services\bin\Debug\net9.0\Services.dll
+D:\לימודים\Web Api\WebAopiShop\Services\bin\Debug\net9.0\Services.pdb
+D:\לימודים\Web Api\WebAopiShop\Services\bin\Debug\net9.0\Entities.dll
+D:\לימודים\Web Api\WebAopiShop\Services\bin\Debug\net9.0\Repositories.dll
+D:\לימודים\Web Api\WebAopiShop\Services\bin\Debug\net9.0\Repositories.pdb
+D:\לימודים\Web Api\WebAopiShop\Services\bin\Debug\net9.0\Entities.pdb
+D:\לימודים\Web Api\WebAopiShop\Services\obj\Debug\net9.0\Services.csproj.Up2Date
+D:\לימודים\Web Api\WebAopiShop\Services\obj\Debug\net9.0\ref\Services.dll
+E:\לימודים\Web Api - Copy\WebAopiShop\Services\bin\Debug\net9.0\Services.deps.json
+E:\לימודים\Web Api - Copy\WebAopiShop\Services\bin\Debug\net9.0\Services.dll
+E:\לימודים\Web Api - Copy\WebAopiShop\Services\bin\Debug\net9.0\Services.pdb
+E:\לימודים\Web Api - Copy\WebAopiShop\Services\bin\Debug\net9.0\Entities.dll
+E:\לימודים\Web Api - Copy\WebAopiShop\Services\bin\Debug\net9.0\Repositories.dll
+E:\לימודים\Web Api - Copy\WebAopiShop\Services\bin\Debug\net9.0\Repositories.pdb
+E:\לימודים\Web Api - Copy\WebAopiShop\Services\bin\Debug\net9.0\Entities.pdb
+E:\לימודים\Web Api - Copy\WebAopiShop\Services\obj\Debug\net9.0\Services.csproj.AssemblyReference.cache
+E:\לימודים\Web Api - Copy\WebAopiShop\Services\obj\Debug\net9.0\Services.GeneratedMSBuildEditorConfig.editorconfig
+E:\לימודים\Web Api - Copy\WebAopiShop\Services\obj\Debug\net9.0\Services.AssemblyInfoInputs.cache
+E:\לימודים\Web Api - Copy\WebAopiShop\Services\obj\Debug\net9.0\Services.AssemblyInfo.cs
+E:\לימודים\Web Api - Copy\WebAopiShop\Services\obj\Debug\net9.0\Services.csproj.CoreCompileInputs.cache
+E:\לימודים\Web Api - Copy\WebAopiShop\Services\obj\Debug\net9.0\Services.csproj.Up2Date
+E:\לימודים\Web Api - Copy\WebAopiShop\Services\obj\Debug\net9.0\Services.dll
+E:\לימודים\Web Api - Copy\WebAopiShop\Services\obj\Debug\net9.0\refint\Services.dll
+E:\לימודים\Web Api - Copy\WebAopiShop\Services\obj\Debug\net9.0\Services.pdb
+E:\לימודים\Web Api - Copy\WebAopiShop\Services\obj\Debug\net9.0\ref\Services.dll
+F:\לימודים\Web-API\WebAopiShop\Services\obj\Debug\net9.0\Services.dll
+F:\לימודים\Web-API\WebAopiShop\Services\obj\Debug\net9.0\refint\Services.dll
+F:\לימודים\Web-API\WebAopiShop\Services\obj\Debug\net9.0\Services.pdb
+F:\לימודים\Web-API\WebAopiShop\Services\bin\Debug\net9.0\Services.deps.json
+F:\לימודים\Web-API\WebAopiShop\Services\bin\Debug\net9.0\Services.dll
+F:\לימודים\Web-API\WebAopiShop\Services\bin\Debug\net9.0\Services.pdb
+F:\לימודים\Web-API\WebAopiShop\Services\bin\Debug\net9.0\Entities.dll
+F:\לימודים\Web-API\WebAopiShop\Services\bin\Debug\net9.0\Repositories.dll
+F:\לימודים\Web-API\WebAopiShop\Services\bin\Debug\net9.0\Repositories.pdb
+F:\לימודים\Web-API\WebAopiShop\Services\bin\Debug\net9.0\Entities.pdb
+F:\לימודים\Web-API\WebAopiShop\Services\obj\Debug\net9.0\Services.csproj.AssemblyReference.cache
+F:\לימודים\Web-API\WebAopiShop\Services\obj\Debug\net9.0\Services.GeneratedMSBuildEditorConfig.editorconfig
+F:\לימודים\Web-API\WebAopiShop\Services\obj\Debug\net9.0\Services.AssemblyInfoInputs.cache
+F:\לימודים\Web-API\WebAopiShop\Services\obj\Debug\net9.0\Services.AssemblyInfo.cs
+F:\לימודים\Web-API\WebAopiShop\Services\obj\Debug\net9.0\Services.csproj.CoreCompileInputs.cache
+F:\לימודים\Web-API\WebAopiShop\Services\obj\Debug\net9.0\Services.csproj.Up2Date
+F:\לימודים\Web-API\WebAopiShop\Services\obj\Debug\net9.0\ref\Services.dll
+E:\לימודים\Web-API\WebAopiShop\Services\bin\Debug\net9.0\Services.deps.json
+E:\לימודים\Web-API\WebAopiShop\Services\bin\Debug\net9.0\Services.dll
+E:\לימודים\Web-API\WebAopiShop\Services\bin\Debug\net9.0\Services.pdb
+E:\לימודים\Web-API\WebAopiShop\Services\bin\Debug\net9.0\DTOs.dll
+E:\לימודים\Web-API\WebAopiShop\Services\bin\Debug\net9.0\Entities.dll
+E:\לימודים\Web-API\WebAopiShop\Services\bin\Debug\net9.0\Repositories.dll
+E:\לימודים\Web-API\WebAopiShop\Services\bin\Debug\net9.0\DTOs.pdb
+E:\לימודים\Web-API\WebAopiShop\Services\bin\Debug\net9.0\Repositories.pdb
+E:\לימודים\Web-API\WebAopiShop\Services\bin\Debug\net9.0\Entities.pdb
+E:\לימודים\Web-API\WebAopiShop\Services\obj\Debug\net9.0\Services.csproj.AssemblyReference.cache
+E:\לימודים\Web-API\WebAopiShop\Services\obj\Debug\net9.0\Services.GeneratedMSBuildEditorConfig.editorconfig
+E:\לימודים\Web-API\WebAopiShop\Services\obj\Debug\net9.0\Services.AssemblyInfoInputs.cache
+E:\לימודים\Web-API\WebAopiShop\Services\obj\Debug\net9.0\Services.AssemblyInfo.cs
+E:\לימודים\Web-API\WebAopiShop\Services\obj\Debug\net9.0\Services.csproj.CoreCompileInputs.cache
+E:\לימודים\Web-API\WebAopiShop\Services\obj\Debug\net9.0\Services.csproj.Up2Date
+E:\לימודים\Web-API\WebAopiShop\Services\obj\Debug\net9.0\Services.dll
+E:\לימודים\Web-API\WebAopiShop\Services\obj\Debug\net9.0\refint\Services.dll
+E:\לימודים\Web-API\WebAopiShop\Services\obj\Debug\net9.0\Services.pdb
+E:\לימודים\Web-API\WebAopiShop\Services\obj\Debug\net9.0\ref\Services.dll
+F:\לימודים\Web-API\WebAopiShop\Services\bin\Debug\net9.0\DTOs.dll
+F:\לימודים\Web-API\WebAopiShop\Services\bin\Debug\net9.0\DTOs.pdb
+F:\MostlyMusic\WebAopiShop\Services\obj\Debug\net9.0\Services.csproj.AssemblyReference.cache
+F:\MostlyMusic\WebAopiShop\Services\obj\Debug\net9.0\Services.GeneratedMSBuildEditorConfig.editorconfig
+F:\MostlyMusic\WebAopiShop\Services\obj\Debug\net9.0\Services.AssemblyInfoInputs.cache
+F:\MostlyMusic\WebAopiShop\Services\obj\Debug\net9.0\Services.AssemblyInfo.cs
+F:\MostlyMusic\WebAopiShop\Services\obj\Debug\net9.0\Services.csproj.CoreCompileInputs.cache
+F:\MostlyMusic\WebAopiShop\Services\obj\Debug\net9.0\Services.dll
+F:\MostlyMusic\WebAopiShop\Services\obj\Debug\net9.0\refint\Services.dll
+F:\MostlyMusic\WebAopiShop\Services\obj\Debug\net9.0\Services.pdb
+F:\MostlyMusic\WebAopiShop\Services\bin\Debug\net9.0\Services.deps.json
+F:\MostlyMusic\WebAopiShop\Services\bin\Debug\net9.0\Services.dll
+F:\MostlyMusic\WebAopiShop\Services\bin\Debug\net9.0\Services.pdb
+F:\MostlyMusic\WebAopiShop\Services\bin\Debug\net9.0\DTOs.dll
+F:\MostlyMusic\WebAopiShop\Services\bin\Debug\net9.0\Entities.dll
+F:\MostlyMusic\WebAopiShop\Services\bin\Debug\net9.0\Repositories.dll
+F:\MostlyMusic\WebAopiShop\Services\bin\Debug\net9.0\DTOs.pdb
+F:\MostlyMusic\WebAopiShop\Services\bin\Debug\net9.0\Repositories.pdb
+F:\MostlyMusic\WebAopiShop\Services\bin\Debug\net9.0\Entities.pdb
+F:\MostlyMusic\WebAopiShop\Services\obj\Debug\net9.0\Services.csproj.Up2Date
+F:\MostlyMusic\WebAopiShop\Services\obj\Debug\net9.0\ref\Services.dll
+F:\MostlyMusic\WebAopiShop\Services\obj\Debug\net9.0\Services.sourcelink.json
+C:\Users\user1\Desktop\MostlyMusic\WebAopiShop\Services\bin\Debug\net9.0\Services.deps.json
+C:\Users\user1\Desktop\MostlyMusic\WebAopiShop\Services\bin\Debug\net9.0\Services.dll
+C:\Users\user1\Desktop\MostlyMusic\WebAopiShop\Services\bin\Debug\net9.0\Services.pdb
+C:\Users\user1\Desktop\MostlyMusic\WebAopiShop\Services\bin\Debug\net9.0\DTOs.dll
+C:\Users\user1\Desktop\MostlyMusic\WebAopiShop\Services\bin\Debug\net9.0\Entities.dll
+C:\Users\user1\Desktop\MostlyMusic\WebAopiShop\Services\bin\Debug\net9.0\Repositories.dll
+C:\Users\user1\Desktop\MostlyMusic\WebAopiShop\Services\bin\Debug\net9.0\DTOs.pdb
+C:\Users\user1\Desktop\MostlyMusic\WebAopiShop\Services\bin\Debug\net9.0\Repositories.pdb
+C:\Users\user1\Desktop\MostlyMusic\WebAopiShop\Services\bin\Debug\net9.0\Entities.pdb
+C:\Users\user1\Desktop\MostlyMusic\WebAopiShop\Services\obj\Debug\net9.0\Services.csproj.AssemblyReference.cache
+C:\Users\user1\Desktop\MostlyMusic\WebAopiShop\Services\obj\Debug\net9.0\Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user1\Desktop\MostlyMusic\WebAopiShop\Services\obj\Debug\net9.0\Services.AssemblyInfoInputs.cache
+C:\Users\user1\Desktop\MostlyMusic\WebAopiShop\Services\obj\Debug\net9.0\Services.AssemblyInfo.cs
+C:\Users\user1\Desktop\MostlyMusic\WebAopiShop\Services\obj\Debug\net9.0\Services.csproj.CoreCompileInputs.cache
+C:\Users\user1\Desktop\MostlyMusic\WebAopiShop\Services\obj\Debug\net9.0\Services.csproj.Up2Date
+C:\Users\user1\Desktop\MostlyMusic\WebAopiShop\Services\obj\Debug\net9.0\Services.dll
+C:\Users\user1\Desktop\MostlyMusic\WebAopiShop\Services\obj\Debug\net9.0\refint\Services.dll
+C:\Users\user1\Desktop\MostlyMusic\WebAopiShop\Services\obj\Debug\net9.0\Services.pdb
+C:\Users\user1\Desktop\MostlyMusic\WebAopiShop\Services\obj\Debug\net9.0\ref\Services.dll
+C:\Users\user1\Desktop\api-angular\MostlyMusic\WebAopiShop\Services\obj\Debug\net9.0\Services.csproj.AssemblyReference.cache
+C:\Users\user1\Desktop\api-angular\MostlyMusic\WebAopiShop\Services\obj\Debug\net9.0\Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user1\Desktop\api-angular\MostlyMusic\WebAopiShop\Services\obj\Debug\net9.0\Services.AssemblyInfoInputs.cache
+C:\Users\user1\Desktop\api-angular\MostlyMusic\WebAopiShop\Services\obj\Debug\net9.0\Services.AssemblyInfo.cs
+C:\Users\user1\Desktop\api-angular\MostlyMusic\WebAopiShop\Services\obj\Debug\net9.0\Services.csproj.CoreCompileInputs.cache
+C:\Users\user1\Desktop\api-angular\MostlyMusic\WebAopiShop\Services\obj\Debug\net9.0\Services.dll
+C:\Users\user1\Desktop\api-angular\MostlyMusic\WebAopiShop\Services\obj\Debug\net9.0\refint\Services.dll
+C:\Users\user1\Desktop\api-angular\MostlyMusic\WebAopiShop\Services\obj\Debug\net9.0\Services.pdb
+C:\Users\user1\Desktop\api-angular\MostlyMusic\WebAopiShop\Services\bin\Debug\net9.0\Services.deps.json
+C:\Users\user1\Desktop\api-angular\MostlyMusic\WebAopiShop\Services\bin\Debug\net9.0\Services.dll
+C:\Users\user1\Desktop\api-angular\MostlyMusic\WebAopiShop\Services\bin\Debug\net9.0\Services.pdb
+C:\Users\user1\Desktop\api-angular\MostlyMusic\WebAopiShop\Services\bin\Debug\net9.0\DTOs.dll
+C:\Users\user1\Desktop\api-angular\MostlyMusic\WebAopiShop\Services\bin\Debug\net9.0\Entities.dll
+C:\Users\user1\Desktop\api-angular\MostlyMusic\WebAopiShop\Services\bin\Debug\net9.0\Repositories.dll
+C:\Users\user1\Desktop\api-angular\MostlyMusic\WebAopiShop\Services\bin\Debug\net9.0\DTOs.pdb
+C:\Users\user1\Desktop\api-angular\MostlyMusic\WebAopiShop\Services\bin\Debug\net9.0\Repositories.pdb
+C:\Users\user1\Desktop\api-angular\MostlyMusic\WebAopiShop\Services\bin\Debug\net9.0\Entities.pdb
+C:\Users\user1\Desktop\api-angular\MostlyMusic\WebAopiShop\Services\obj\Debug\net9.0\Services.csproj.Up2Date
+C:\Users\user1\Desktop\api-angular\MostlyMusic\WebAopiShop\Services\obj\Debug\net9.0\ref\Services.dll

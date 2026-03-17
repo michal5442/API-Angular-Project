@@ -1,0 +1,710 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\user1\\Desktop\\api-angular\\MostlyMusic\\WebAopiShop\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{222FF2EA-8B45-481F-963F-8FB3F8D442D2}|WebAopiShop\\WebAopiShop.csproj|c:\\users\\user1\\desktop\\api-angular\\mostlymusic\\webaopishop\\webaopishop\\controllers\\ordercontroller .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{222FF2EA-8B45-481F-963F-8FB3F8D442D2}|WebAopiShop\\WebAopiShop.csproj|solutionrelative:webaopishop\\controllers\\ordercontroller .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97207750-6972-232F-BB7B-6106666106AF}|Services\\Services.csproj|c:\\users\\user1\\desktop\\api-angular\\mostlymusic\\webaopishop\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97207750-6972-232F-BB7B-6106666106AF}|Services\\Services.csproj|solutionrelative:services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A5B3CFA1-410E-B31F-F804-4CC6C048FE3E}|Repositories\\Repositories.csproj|c:\\users\\user1\\desktop\\api-angular\\mostlymusic\\webaopishop\\repositories\\orderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A5B3CFA1-410E-B31F-F804-4CC6C048FE3E}|Repositories\\Repositories.csproj|solutionrelative:repositories\\orderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A5B3CFA1-410E-B31F-F804-4CC6C048FE3E}|Repositories\\Repositories.csproj|c:\\users\\user1\\desktop\\api-angular\\mostlymusic\\webaopishop\\repositories\\iorderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A5B3CFA1-410E-B31F-F804-4CC6C048FE3E}|Repositories\\Repositories.csproj|solutionrelative:repositories\\iorderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A5B3CFA1-410E-B31F-F804-4CC6C048FE3E}|Repositories\\Repositories.csproj|c:\\users\\user1\\desktop\\api-angular\\mostlymusic\\webaopishop\\repositories\\isongrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A5B3CFA1-410E-B31F-F804-4CC6C048FE3E}|Repositories\\Repositories.csproj|solutionrelative:repositories\\isongrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A5B3CFA1-410E-B31F-F804-4CC6C048FE3E}|Repositories\\Repositories.csproj|c:\\users\\user1\\desktop\\api-angular\\mostlymusic\\webaopishop\\repositories\\songrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A5B3CFA1-410E-B31F-F804-4CC6C048FE3E}|Repositories\\Repositories.csproj|solutionrelative:repositories\\songrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97207750-6972-232F-BB7B-6106666106AF}|Services\\Services.csproj|c:\\users\\user1\\desktop\\api-angular\\mostlymusic\\webaopishop\\services\\iorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97207750-6972-232F-BB7B-6106666106AF}|Services\\Services.csproj|solutionrelative:services\\iorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A157D173-CAB1-46A7-99DC-D6CFE4D0C850}|Entities\\Entities.csproj|c:\\users\\user1\\desktop\\api-angular\\mostlymusic\\webaopishop\\entities\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A157D173-CAB1-46A7-99DC-D6CFE4D0C850}|Entities\\Entities.csproj|solutionrelative:entities\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{222FF2EA-8B45-481F-963F-8FB3F8D442D2}|WebAopiShop\\WebAopiShop.csproj|c:\\users\\user1\\desktop\\api-angular\\mostlymusic\\webaopishop\\webaopishop\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{222FF2EA-8B45-481F-963F-8FB3F8D442D2}|WebAopiShop\\WebAopiShop.csproj|solutionrelative:webaopishop\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A157D173-CAB1-46A7-99DC-D6CFE4D0C850}|Entities\\Entities.csproj|c:\\users\\user1\\desktop\\api-angular\\mostlymusic\\webaopishop\\entities\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A157D173-CAB1-46A7-99DC-D6CFE4D0C850}|Entities\\Entities.csproj|solutionrelative:entities\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A5B3CFA1-410E-B31F-F804-4CC6C048FE3E}|Repositories\\Repositories.csproj|c:\\users\\user1\\desktop\\api-angular\\mostlymusic\\webaopishop\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A5B3CFA1-410E-B31F-F804-4CC6C048FE3E}|Repositories\\Repositories.csproj|solutionrelative:repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97207750-6972-232F-BB7B-6106666106AF}|Services\\Services.csproj|c:\\users\\user1\\desktop\\api-angular\\mostlymusic\\webaopishop\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97207750-6972-232F-BB7B-6106666106AF}|Services\\Services.csproj|solutionrelative:services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A5B3CFA1-410E-B31F-F804-4CC6C048FE3E}|Repositories\\Repositories.csproj|c:\\users\\user1\\desktop\\api-angular\\mostlymusic\\webaopishop\\repositories\\raitingrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A5B3CFA1-410E-B31F-F804-4CC6C048FE3E}|Repositories\\Repositories.csproj|solutionrelative:repositories\\raitingrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{222FF2EA-8B45-481F-963F-8FB3F8D442D2}|WebAopiShop\\WebAopiShop.csproj|c:\\users\\user1\\desktop\\api-angular\\mostlymusic\\webaopishop\\webaopishop\\controllers\\songcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{222FF2EA-8B45-481F-963F-8FB3F8D442D2}|WebAopiShop\\WebAopiShop.csproj|solutionrelative:webaopishop\\controllers\\songcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{222FF2EA-8B45-481F-963F-8FB3F8D442D2}|WebAopiShop\\WebAopiShop.csproj|c:\\users\\user1\\desktop\\api-angular\\mostlymusic\\webaopishop\\webaopishop\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{222FF2EA-8B45-481F-963F-8FB3F8D442D2}|WebAopiShop\\WebAopiShop.csproj|solutionrelative:webaopishop\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A5B3CFA1-410E-B31F-F804-4CC6C048FE3E}|Repositories\\Repositories.csproj|c:\\users\\user1\\desktop\\api-angular\\mostlymusic\\webaopishop\\repositories\\usercontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A5B3CFA1-410E-B31F-F804-4CC6C048FE3E}|Repositories\\Repositories.csproj|solutionrelative:repositories\\usercontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97207750-6972-232F-BB7B-6106666106AF}|Services\\Services.csproj|c:\\users\\user1\\desktop\\api-angular\\mostlymusic\\webaopishop\\services\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97207750-6972-232F-BB7B-6106666106AF}|Services\\Services.csproj|solutionrelative:services\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{222FF2EA-8B45-481F-963F-8FB3F8D442D2}|WebAopiShop\\WebAopiShop.csproj|c:\\users\\user1\\desktop\\api-angular\\mostlymusic\\webaopishop\\webaopishop\\controllers\\artistcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{222FF2EA-8B45-481F-963F-8FB3F8D442D2}|WebAopiShop\\WebAopiShop.csproj|solutionrelative:webaopishop\\controllers\\artistcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{222FF2EA-8B45-481F-963F-8FB3F8D442D2}|WebAopiShop\\WebAopiShop.csproj|c:\\users\\user1\\desktop\\api-angular\\mostlymusic\\webaopishop\\webaopishop\\controllers\\passwordcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{222FF2EA-8B45-481F-963F-8FB3F8D442D2}|WebAopiShop\\WebAopiShop.csproj|solutionrelative:webaopishop\\controllers\\passwordcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A157D173-CAB1-46A7-99DC-D6CFE4D0C850}|Entities\\Entities.csproj|c:\\users\\user1\\desktop\\api-angular\\mostlymusic\\webaopishop\\entities\\artist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A157D173-CAB1-46A7-99DC-D6CFE4D0C850}|Entities\\Entities.csproj|solutionrelative:entities\\artist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{222FF2EA-8B45-481F-963F-8FB3F8D442D2}|WebAopiShop\\WebAopiShop.csproj|c:\\users\\user1\\desktop\\api-angular\\mostlymusic\\webaopishop\\webaopishop\\middlewares\\ratingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{222FF2EA-8B45-481F-963F-8FB3F8D442D2}|WebAopiShop\\WebAopiShop.csproj|solutionrelative:webaopishop\\middlewares\\ratingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{222FF2EA-8B45-481F-963F-8FB3F8D442D2}|WebAopiShop\\WebAopiShop.csproj|c:\\users\\user1\\desktop\\api-angular\\mostlymusic\\webaopishop\\webaopishop\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{222FF2EA-8B45-481F-963F-8FB3F8D442D2}|WebAopiShop\\WebAopiShop.csproj|solutionrelative:webaopishop\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D6345E83-699B-4413-9F22-3E381DE0201B}|TestProject\\TestProject.csproj|c:\\users\\user1\\desktop\\api-angular\\mostlymusic\\webaopishop\\testproject\\productrepositoryintegrationtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D6345E83-699B-4413-9F22-3E381DE0201B}|TestProject\\TestProject.csproj|solutionrelative:testproject\\productrepositoryintegrationtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA26D087-22D9-4A49-91D6-B2FF4B3B9C64}|DTOs\\DTOs.csproj|c:\\users\\user1\\desktop\\api-angular\\mostlymusic\\webaopishop\\dtos\\artistdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA26D087-22D9-4A49-91D6-B2FF4B3B9C64}|DTOs\\DTOs.csproj|solutionrelative:dtos\\artistdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA26D087-22D9-4A49-91D6-B2FF4B3B9C64}|DTOs\\DTOs.csproj|c:\\users\\user1\\desktop\\api-angular\\mostlymusic\\webaopishop\\dtos\\songdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA26D087-22D9-4A49-91D6-B2FF4B3B9C64}|DTOs\\DTOs.csproj|solutionrelative:dtos\\songdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA26D087-22D9-4A49-91D6-B2FF4B3B9C64}|DTOs\\DTOs.csproj|c:\\users\\user1\\desktop\\api-angular\\mostlymusic\\webaopishop\\dtos\\ratingdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA26D087-22D9-4A49-91D6-B2FF4B3B9C64}|DTOs\\DTOs.csproj|solutionrelative:dtos\\ratingdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA26D087-22D9-4A49-91D6-B2FF4B3B9C64}|DTOs\\DTOs.csproj|c:\\users\\user1\\desktop\\api-angular\\mostlymusic\\webaopishop\\dtos\\orderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA26D087-22D9-4A49-91D6-B2FF4B3B9C64}|DTOs\\DTOs.csproj|solutionrelative:dtos\\orderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA26D087-22D9-4A49-91D6-B2FF4B3B9C64}|DTOs\\DTOs.csproj|c:\\users\\user1\\desktop\\api-angular\\mostlymusic\\webaopishop\\dtos\\orderitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA26D087-22D9-4A49-91D6-B2FF4B3B9C64}|DTOs\\DTOs.csproj|solutionrelative:dtos\\orderitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A157D173-CAB1-46A7-99DC-D6CFE4D0C850}|Entities\\Entities.csproj|c:\\users\\user1\\desktop\\api-angular\\mostlymusic\\webaopishop\\entities\\song.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A157D173-CAB1-46A7-99DC-D6CFE4D0C850}|Entities\\Entities.csproj|solutionrelative:entities\\song.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D6345E83-699B-4413-9F22-3E381DE0201B}|TestProject\\TestProject.csproj|c:\\users\\user1\\desktop\\api-angular\\mostlymusic\\webaopishop\\testproject\\databasefixture.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D6345E83-699B-4413-9F22-3E381DE0201B}|TestProject\\TestProject.csproj|solutionrelative:testproject\\databasefixture.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\user1\\Desktop\\MostlyMusic\\WebAopiShop\\Sevices\\ISongService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\user1\\Desktop\\MostlyMusic\\WebAopiShop\\Sevices\\UserService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\user1\\Desktop\\\u05E9\u05DE\u05D9\u05E8\u05D4\\WebAopiShop\\Repositories\\UserRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\user1\\Desktop\\\u05E9\u05DE\u05D9\u05E8\u05D4\\WebAopiShop\\Repositories\\SongRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\user1\\Desktop\\\u05E9\u05DE\u05D9\u05E8\u05D4\\WebAopiShop\\Repositories\\RatingRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\user1\\Desktop\\\u05E9\u05DE\u05D9\u05E8\u05D4\\WebAopiShop\\Repositories\\OrderRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\studies\\api\\WebAopiShop\\Entities\\Product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\studies\\api\\WebAopiShop\\DTOs\\ProductDTO.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\user1\\Desktop\\MostlyMusic\\WebAopiShop\\Sevices\\SongService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\user1\\Desktop\\MostlyMusic\\WebAopiShop\\Sevices\\IUserService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\user1\\Desktop\\MostlyMusic\\WebAopiShop\\Sevices\\ArtistService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\user1\\Desktop\\MostlyMusic\\WebAopiShop\\Sevices\\RaitingService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\user1\\Desktop\\MostlyMusic\\WebAopiShop\\Sevices\\OrderService .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IOrderRepository.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\api-angular\\MostlyMusic\\WebAopiShop\\Repositories\\IOrderRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\IOrderRepository.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\api-angular\\MostlyMusic\\WebAopiShop\\Repositories\\IOrderRepository.cs",
+              "RelativeToolTip": "Repositories\\IOrderRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-17T14:59:13.459Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SongRepository.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\api-angular\\MostlyMusic\\WebAopiShop\\Repositories\\SongRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\SongRepository.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\api-angular\\MostlyMusic\\WebAopiShop\\Repositories\\SongRepository.cs",
+              "RelativeToolTip": "Repositories\\SongRepository.cs",
+              "ViewState": "AgIAABQAAACAzczMzAwnwAMAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-17T14:14:44.644Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "OrderService.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\api-angular\\MostlyMusic\\WebAopiShop\\Services\\OrderService.cs",
+              "RelativeDocumentMoniker": "Services\\OrderService.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\api-angular\\MostlyMusic\\WebAopiShop\\Services\\OrderService.cs",
+              "RelativeToolTip": "Services\\OrderService.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAmwDwAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-17T14:11:33.315Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "OrderRepository.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\api-angular\\MostlyMusic\\WebAopiShop\\Repositories\\OrderRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\OrderRepository.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\api-angular\\MostlyMusic\\WebAopiShop\\Repositories\\OrderRepository.cs",
+              "RelativeToolTip": "Repositories\\OrderRepository.cs",
+              "ViewState": "AgIAAAEAAABMAAAAAIAZwAYAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-26T02:32:26.614Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "OrderController .cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\api-angular\\MostlyMusic\\WebAopiShop\\WebAopiShop\\Controllers\\OrderController .cs",
+              "RelativeDocumentMoniker": "WebAopiShop\\Controllers\\OrderController .cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\api-angular\\MostlyMusic\\WebAopiShop\\WebAopiShop\\Controllers\\OrderController .cs",
+              "RelativeToolTip": "WebAopiShop\\Controllers\\OrderController .cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAqwCMAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-25T12:03:36.323Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ISongRepository.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\api-angular\\MostlyMusic\\WebAopiShop\\Repositories\\ISongRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\ISongRepository.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\api-angular\\MostlyMusic\\WebAopiShop\\Repositories\\ISongRepository.cs",
+              "RelativeToolTip": "Repositories\\ISongRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-17T15:00:25.313Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IOrderService.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\api-angular\\MostlyMusic\\WebAopiShop\\Services\\IOrderService.cs",
+              "RelativeDocumentMoniker": "Services\\IOrderService.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\api-angular\\MostlyMusic\\WebAopiShop\\Services\\IOrderService.cs",
+              "RelativeToolTip": "Services\\IOrderService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-17T14:33:18.866Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "OrderItem.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\api-angular\\MostlyMusic\\WebAopiShop\\Entities\\OrderItem.cs",
+              "RelativeDocumentMoniker": "Entities\\OrderItem.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\api-angular\\MostlyMusic\\WebAopiShop\\Entities\\OrderItem.cs",
+              "RelativeToolTip": "Entities\\OrderItem.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwAwAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-26T02:26:42.112Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\api-angular\\MostlyMusic\\WebAopiShop\\Repositories\\UserRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\UserRepository.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\api-angular\\MostlyMusic\\WebAopiShop\\Repositories\\UserRepository.cs",
+              "RelativeToolTip": "Repositories\\UserRepository.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAxwDEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-26T01:14:02.512Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\api-angular\\MostlyMusic\\WebAopiShop\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "Services\\UserService.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\api-angular\\MostlyMusic\\WebAopiShop\\Services\\UserService.cs",
+              "RelativeToolTip": "Services\\UserService.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAAAD8AAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-26T01:12:52.753Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "MappingProfile.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\api-angular\\MostlyMusic\\WebAopiShop\\Services\\MappingProfile.cs",
+              "RelativeDocumentMoniker": "Services\\MappingProfile.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\api-angular\\MostlyMusic\\WebAopiShop\\Services\\MappingProfile.cs",
+              "RelativeToolTip": "Services\\MappingProfile.cs",
+              "ViewState": "AgIAAAAAAACiZWZmZqYpwBYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-25T12:40:17.957Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\api-angular\\MostlyMusic\\WebAopiShop\\WebAopiShop\\Program.cs",
+              "RelativeDocumentMoniker": "WebAopiShop\\Program.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\api-angular\\MostlyMusic\\WebAopiShop\\WebAopiShop\\Program.cs",
+              "RelativeToolTip": "WebAopiShop\\Program.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-25T12:03:38.254Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Order.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\api-angular\\MostlyMusic\\WebAopiShop\\Entities\\Order.cs",
+              "RelativeDocumentMoniker": "Entities\\Order.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\api-angular\\MostlyMusic\\WebAopiShop\\Entities\\Order.cs",
+              "RelativeToolTip": "Entities\\Order.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-26T02:27:47.444Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "RatingMiddleware.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\api-angular\\MostlyMusic\\WebAopiShop\\WebAopiShop\\Middlewares\\RatingMiddleware.cs",
+              "RelativeDocumentMoniker": "WebAopiShop\\Middlewares\\RatingMiddleware.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\api-angular\\MostlyMusic\\WebAopiShop\\WebAopiShop\\Middlewares\\RatingMiddleware.cs",
+              "RelativeToolTip": "WebAopiShop\\Middlewares\\RatingMiddleware.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwA0AAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-25T12:03:14.36Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "SongController.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\api-angular\\MostlyMusic\\WebAopiShop\\WebAopiShop\\Controllers\\SongController.cs",
+              "RelativeDocumentMoniker": "WebAopiShop\\Controllers\\SongController.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\api-angular\\MostlyMusic\\WebAopiShop\\WebAopiShop\\Controllers\\SongController.cs",
+              "RelativeToolTip": "WebAopiShop\\Controllers\\SongController.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAADgvxQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-25T12:05:53.905Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "RaitingRepository.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\api-angular\\MostlyMusic\\WebAopiShop\\Repositories\\RaitingRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\RaitingRepository.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\api-angular\\MostlyMusic\\WebAopiShop\\Repositories\\RaitingRepository.cs",
+              "RelativeToolTip": "Repositories\\RaitingRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-25T12:11:00.358Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "PasswordController.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\api-angular\\MostlyMusic\\WebAopiShop\\WebAopiShop\\Controllers\\PasswordController.cs",
+              "RelativeDocumentMoniker": "WebAopiShop\\Controllers\\PasswordController.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\api-angular\\MostlyMusic\\WebAopiShop\\WebAopiShop\\Controllers\\PasswordController.cs",
+              "RelativeToolTip": "WebAopiShop\\Controllers\\PasswordController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-25T12:02:54.879Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "UserContext.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\api-angular\\MostlyMusic\\WebAopiShop\\Repositories\\UserContext.cs",
+              "RelativeDocumentMoniker": "Repositories\\UserContext.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\api-angular\\MostlyMusic\\WebAopiShop\\Repositories\\UserContext.cs",
+              "RelativeToolTip": "Repositories\\UserContext.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAYwB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-25T15:43:39.229Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\api-angular\\MostlyMusic\\WebAopiShop\\WebAopiShop\\appsettings.json",
+              "RelativeDocumentMoniker": "WebAopiShop\\appsettings.json",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\api-angular\\MostlyMusic\\WebAopiShop\\WebAopiShop\\appsettings.json",
+              "RelativeToolTip": "WebAopiShop\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-02-25T12:56:52.725Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ArtistController.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\api-angular\\MostlyMusic\\WebAopiShop\\WebAopiShop\\Controllers\\ArtistController.cs",
+              "RelativeDocumentMoniker": "WebAopiShop\\Controllers\\ArtistController.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\api-angular\\MostlyMusic\\WebAopiShop\\WebAopiShop\\Controllers\\ArtistController.cs",
+              "RelativeToolTip": "WebAopiShop\\Controllers\\ArtistController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-25T12:03:11.522Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Artist.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\api-angular\\MostlyMusic\\WebAopiShop\\Entities\\Artist.cs",
+              "RelativeDocumentMoniker": "Entities\\Artist.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\api-angular\\MostlyMusic\\WebAopiShop\\Entities\\Artist.cs",
+              "RelativeToolTip": "Entities\\Artist.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-25T12:14:03.092Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\api-angular\\MostlyMusic\\WebAopiShop\\WebAopiShop\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "WebAopiShop\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\api-angular\\MostlyMusic\\WebAopiShop\\WebAopiShop\\Controllers\\UserController.cs",
+              "RelativeToolTip": "WebAopiShop\\Controllers\\UserController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-25T12:02:32.043Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "ProductRepositoryIntegrationTests.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\api-angular\\MostlyMusic\\WebAopiShop\\TestProject\\ProductRepositoryIntegrationTests.cs",
+              "RelativeDocumentMoniker": "TestProject\\ProductRepositoryIntegrationTests.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\api-angular\\MostlyMusic\\WebAopiShop\\TestProject\\ProductRepositoryIntegrationTests.cs",
+              "RelativeToolTip": "TestProject\\ProductRepositoryIntegrationTests.cs",
+              "ViewState": "AgIAAA8AAABAMzMzM1M7wCIAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-25T12:22:45.088Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "SongDTO.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\api-angular\\MostlyMusic\\WebAopiShop\\DTOs\\SongDTO.cs",
+              "RelativeDocumentMoniker": "DTOs\\SongDTO.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\api-angular\\MostlyMusic\\WebAopiShop\\DTOs\\SongDTO.cs",
+              "RelativeToolTip": "DTOs\\SongDTO.cs",
+              "ViewState": "AgIAAAMAAACgZmZmZiYgwA0AAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-25T12:17:34.355Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Song.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\api-angular\\MostlyMusic\\WebAopiShop\\Entities\\Song.cs",
+              "RelativeDocumentMoniker": "Entities\\Song.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\api-angular\\MostlyMusic\\WebAopiShop\\Entities\\Song.cs",
+              "RelativeToolTip": "Entities\\Song.cs",
+              "ViewState": "AgIAAAYAAADAmZmZmdkzwBAAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-25T12:17:41.018Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "OrderItemDTO.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\api-angular\\MostlyMusic\\WebAopiShop\\DTOs\\OrderItemDTO.cs",
+              "RelativeDocumentMoniker": "DTOs\\OrderItemDTO.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\api-angular\\MostlyMusic\\WebAopiShop\\DTOs\\OrderItemDTO.cs",
+              "RelativeToolTip": "DTOs\\OrderItemDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-25T12:18:28.849Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "OrderDTO.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\api-angular\\MostlyMusic\\WebAopiShop\\DTOs\\OrderDTO.cs",
+              "RelativeDocumentMoniker": "DTOs\\OrderDTO.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\api-angular\\MostlyMusic\\WebAopiShop\\DTOs\\OrderDTO.cs",
+              "RelativeToolTip": "DTOs\\OrderDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-25T12:18:33.04Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "ArtistDTO.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\api-angular\\MostlyMusic\\WebAopiShop\\DTOs\\ArtistDTO.cs",
+              "RelativeDocumentMoniker": "DTOs\\ArtistDTO.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\api-angular\\MostlyMusic\\WebAopiShop\\DTOs\\ArtistDTO.cs",
+              "RelativeToolTip": "DTOs\\ArtistDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAkwBEAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-25T12:19:59.565Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "RatingDTO.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\api-angular\\MostlyMusic\\WebAopiShop\\DTOs\\RatingDTO.cs",
+              "RelativeDocumentMoniker": "DTOs\\RatingDTO.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\api-angular\\MostlyMusic\\WebAopiShop\\DTOs\\RatingDTO.cs",
+              "RelativeToolTip": "DTOs\\RatingDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-25T12:11:04.007Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "DatabaseFixture.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\api-angular\\MostlyMusic\\WebAopiShop\\TestProject\\DatabaseFixture.cs",
+              "RelativeDocumentMoniker": "TestProject\\DatabaseFixture.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\api-angular\\MostlyMusic\\WebAopiShop\\TestProject\\DatabaseFixture.cs",
+              "RelativeToolTip": "TestProject\\DatabaseFixture.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAcwA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-25T12:07:09.631Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "ISongService.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\MostlyMusic\\WebAopiShop\\Sevices\\ISongService.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\MostlyMusic\\WebAopiShop\\Sevices\\ISongService.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\MostlyMusic\\WebAopiShop\\Sevices\\ISongService.cs",
+              "RelativeToolTip": "..\\..\\..\\MostlyMusic\\WebAopiShop\\Sevices\\ISongService.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-22T19:21:08.071Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\MostlyMusic\\WebAopiShop\\Sevices\\UserService.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\MostlyMusic\\WebAopiShop\\Sevices\\UserService.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\MostlyMusic\\WebAopiShop\\Sevices\\UserService.cs",
+              "RelativeToolTip": "..\\..\\..\\MostlyMusic\\WebAopiShop\\Sevices\\UserService.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-22T18:52:38.836Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "SongService.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\MostlyMusic\\WebAopiShop\\Sevices\\SongService.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\MostlyMusic\\WebAopiShop\\Sevices\\SongService.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\MostlyMusic\\WebAopiShop\\Sevices\\SongService.cs",
+              "RelativeToolTip": "..\\..\\..\\MostlyMusic\\WebAopiShop\\Sevices\\SongService.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-22T18:52:41.544Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05E9\u05DE\u05D9\u05E8\u05D4\\WebAopiShop\\Repositories\\UserRepository.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\\u05E9\u05DE\u05D9\u05E8\u05D4\\WebAopiShop\\Repositories\\UserRepository.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05E9\u05DE\u05D9\u05E8\u05D4\\WebAopiShop\\Repositories\\UserRepository.cs",
+              "RelativeToolTip": "..\\..\\..\\\u05E9\u05DE\u05D9\u05E8\u05D4\\WebAopiShop\\Repositories\\UserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-25T10:41:21.966Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\MostlyMusic\\WebAopiShop\\Sevices\\IUserService.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\MostlyMusic\\WebAopiShop\\Sevices\\IUserService.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\MostlyMusic\\WebAopiShop\\Sevices\\IUserService.cs",
+              "RelativeToolTip": "..\\..\\..\\MostlyMusic\\WebAopiShop\\Sevices\\IUserService.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-22T18:50:27.697Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "OrderRepository.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05E9\u05DE\u05D9\u05E8\u05D4\\WebAopiShop\\Repositories\\OrderRepository.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\\u05E9\u05DE\u05D9\u05E8\u05D4\\WebAopiShop\\Repositories\\OrderRepository.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05E9\u05DE\u05D9\u05E8\u05D4\\WebAopiShop\\Repositories\\OrderRepository.cs",
+              "RelativeToolTip": "..\\..\\..\\\u05E9\u05DE\u05D9\u05E8\u05D4\\WebAopiShop\\Repositories\\OrderRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-25T10:41:21.459Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "RatingRepository.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05E9\u05DE\u05D9\u05E8\u05D4\\WebAopiShop\\Repositories\\RatingRepository.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\\u05E9\u05DE\u05D9\u05E8\u05D4\\WebAopiShop\\Repositories\\RatingRepository.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05E9\u05DE\u05D9\u05E8\u05D4\\WebAopiShop\\Repositories\\RatingRepository.cs",
+              "RelativeToolTip": "..\\..\\..\\\u05E9\u05DE\u05D9\u05E8\u05D4\\WebAopiShop\\Repositories\\RatingRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-25T10:41:21.722Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "SongRepository.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u05E9\u05DE\u05D9\u05E8\u05D4\\WebAopiShop\\Repositories\\SongRepository.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\\u05E9\u05DE\u05D9\u05E8\u05D4\\WebAopiShop\\Repositories\\SongRepository.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\\u05E9\u05DE\u05D9\u05E8\u05D4\\WebAopiShop\\Repositories\\SongRepository.cs",
+              "RelativeToolTip": "..\\..\\..\\\u05E9\u05DE\u05D9\u05E8\u05D4\\WebAopiShop\\Repositories\\SongRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-25T10:41:21.849Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "ArtistService.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\MostlyMusic\\WebAopiShop\\Sevices\\ArtistService.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\MostlyMusic\\WebAopiShop\\Sevices\\ArtistService.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\MostlyMusic\\WebAopiShop\\Sevices\\ArtistService.cs",
+              "RelativeToolTip": "..\\..\\..\\MostlyMusic\\WebAopiShop\\Sevices\\ArtistService.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-22T17:36:51.284Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "RaitingService.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\MostlyMusic\\WebAopiShop\\Sevices\\RaitingService.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\MostlyMusic\\WebAopiShop\\Sevices\\RaitingService.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\MostlyMusic\\WebAopiShop\\Sevices\\RaitingService.cs",
+              "RelativeToolTip": "..\\..\\..\\MostlyMusic\\WebAopiShop\\Sevices\\RaitingService.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-22T17:50:23.35Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "OrderService .cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\MostlyMusic\\WebAopiShop\\Sevices\\OrderService .cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\MostlyMusic\\WebAopiShop\\Sevices\\OrderService .cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\MostlyMusic\\WebAopiShop\\Sevices\\OrderService .cs",
+              "RelativeToolTip": "..\\..\\..\\MostlyMusic\\WebAopiShop\\Sevices\\OrderService .cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-22T18:51:54.759Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "Microsoft.Common.CurrentVersion.targets",
+              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ViewState": "AgIAALQPAAAAAAAAAAAowA0VAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2026-02-22T16:01:10.393Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "Product.cs",
+              "DocumentMoniker": "F:\\studies\\api\\WebAopiShop\\Entities\\Product.cs",
+              "ToolTip": "F:\\studies\\api\\WebAopiShop\\Entities\\Product.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-16T09:42:42.586Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "ProductDTO.cs",
+              "DocumentMoniker": "F:\\studies\\api\\WebAopiShop\\DTOs\\ProductDTO.cs",
+              "ToolTip": "F:\\studies\\api\\WebAopiShop\\DTOs\\ProductDTO.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-16T09:42:24.354Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

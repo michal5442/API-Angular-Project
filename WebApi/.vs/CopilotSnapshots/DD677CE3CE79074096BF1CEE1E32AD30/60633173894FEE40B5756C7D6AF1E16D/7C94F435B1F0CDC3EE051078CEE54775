@@ -1,0 +1,29 @@
+﻿using Entities;
+using Microsoft.EntityFrameworkCore;
+using System.Text.Json;
+using System.Threading.Tasks;
+namespace Repositories
+{
+    public class OrderRepository : IOrderRepository
+    {
+        UserContext _userContext;
+        public OrderRepository(UserContext userContext)
+        {
+            _userContext = userContext;
+        }
+        public async Task<Order> getOrderByID(int id)
+        {
+            return await _userContext.Orders.FindAsync(id);
+        }
+        public async Task<IEnumerable<Order>> getOrdersByUserId(int userId)
+        {
+             return await _userContext.Orders.Where(o => o.UserId == userId).ToListAsync();
+        }
+        public async Task<Order> addOrder(Order order)
+        {
+            await _userContext.Orders.AddAsync(order);
+            await _userContext.SaveChangesAsync();
+            return order;
+        }
+    }
+}

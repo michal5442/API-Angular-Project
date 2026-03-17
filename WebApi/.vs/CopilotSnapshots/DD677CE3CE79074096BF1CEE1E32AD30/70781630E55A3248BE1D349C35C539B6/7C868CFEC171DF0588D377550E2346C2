@@ -1,0 +1,20 @@
+﻿using AutoMapper;
+using DTOs;
+using Entities;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+namespace Services
+{
+    // AutoMapping profile deprecated: mappings moved into MappingProfile.
+    // This file can be deleted to avoid duplicate AutoMapper mappings.
+    public class AutoMapping : Profile
+    {
+        public AutoMapping()
+        {
+            // Intentionally left empty to avoid duplicate mappings.
+        }
+    }
+}
