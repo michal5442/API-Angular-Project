@@ -34,7 +34,6 @@ export class HeaderComponent implements OnInit {
     this.checkLoginStatus();
     this.updateCartCount();
     
-    // האזנה לעדכוני סל
     window.addEventListener('cartUpdated', () => {
       this.updateCartCount();
     });
@@ -80,14 +79,9 @@ export class HeaderComponent implements OnInit {
   }
 
   onSearch() {
-    this.songsService.getSongs(
-      undefined, 
-      this.searchQuery(), 
-      this.minPrice(), 
-      this.maxPrice(), 
-    ).subscribe(res => {
-      this.songs.set(res.songs);
-    });
+    // Navigate to the songs list with query params so the Songs component
+    // loads and displays the filtered results.
+    this.router.navigate(['/songs'], { queryParams: { search: this.searchQuery(), minPrice: this.minPrice(), maxPrice: this.maxPrice() } });
   }
 
   onLogin() {

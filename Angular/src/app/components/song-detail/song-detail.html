@@ -10,12 +10,12 @@
              (error)="$event.target.src='https://placehold.co/400x400/4B2152/white?text=No+Image'">
         <div class="play-overlay">
           <button mat-fab class="play-btn" (click)="togglePlay()">
-            <mat-icon>{{ isPlaying() ? 'pause' : 'play_arrow' }}</mat-icon>
+            <mat-icon>{{ audioService.isPlaying() ? 'pause' : 'play_arrow' }}</mat-icon>
           </button>
         </div>
       </div>
 
-      <audio #audioPlayer (ended)="onSongEnded()" (timeupdate)="onTimeUpdate()" type="audio/mpeg"></audio>
+      <!-- Audio is handled by the shared AudioService; UI updates are attached to its element -->
 
       <!-- Progress Bar -->
       <div class="progress-container">

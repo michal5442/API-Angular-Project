@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <title>webApi</title>
-    <script src="script.js" defer></script>
+    <script src="script.js"></script>
     <style>
         .cont {
             display: flex;
@@ -39,8 +39,10 @@
 
         <div class="newUser">
             <h3>משתמש חדש</h3>
-            <lable for="userName">שם משתמש</lable>
-            <input type="email" id="userName" name="userName" required />
+            <form>
+                <lable for="userName">שם משתמש</lable>
+                <input type="email" id="userName" name="userName" required />
+            </form>
             <lable for="firstName">שם פרטי</lable>
             <input type="text" id="firstName" name="firstName" required />
             <lable for="lastName">שם משפחה</lable>

@@ -7,38 +7,43 @@
         <p>Join us today</p>
       </div>
 
-      <form class="register-form">
+      <form class="register-form" #registerForm="ngForm">
+        
         <mat-form-field appearance="outline" class="full-width">
           <mat-label>First Name</mat-label>
-          <input matInput type="text" placeholder="Enter your first name" [(ngModel)]="newUser.firstName" name="firstName">
+          <input matInput type="text" placeholder="Enter your first name" [(ngModel)]="newUser.firstName" name="firstName" required>
           <mat-icon matPrefix>person</mat-icon>
         </mat-form-field>
 
         <mat-form-field appearance="outline" class="full-width">
           <mat-label>Last Name</mat-label>
-          <input matInput type="text" placeholder="Enter your last name" [(ngModel)]="newUser.lastName" name="lastName">
+          <input matInput type="text" placeholder="Enter your last name" [(ngModel)]="newUser.lastName" name="lastName" required>
           <mat-icon matPrefix>person_outline</mat-icon>
         </mat-form-field>
 
         <mat-form-field appearance="outline" class="full-width">
           <mat-label>Email</mat-label>
-          <input matInput type="email" placeholder="Enter your email" [(ngModel)]="newUser.userName" name="email">
+          <input matInput type="email" placeholder="Enter your email" [(ngModel)]="newUser.userName" name="email" required email #emailModel="ngModel">
           <mat-icon matPrefix>email</mat-icon>
+          <mat-error *ngIf="emailModel.errors?.['email']">Please enter a valid email address</mat-error>
+          <mat-error *ngIf="emailModel.errors?.['required']">Email is required</mat-error>
         </mat-form-field>
 
         <mat-form-field appearance="outline" class="full-width">
           <mat-label>Password</mat-label>
-          <input matInput type="password" placeholder="Enter your password" [(ngModel)]="newUser.password" name="password">
+          <input matInput type="password" placeholder="Enter your password" [(ngModel)]="newUser.password" name="password" required minlength="6">
           <mat-icon matPrefix>lock</mat-icon>
         </mat-form-field>
 
         <mat-form-field appearance="outline" class="full-width">
           <mat-label>Confirm Password</mat-label>
-          <input matInput type="password" placeholder="Confirm your password" [(ngModel)]="confirmPassword" name="confirmPassword">
+          <input matInput type="password" placeholder="Confirm your password" [(ngModel)]="confirmPassword" name="confirmPassword" required>
           <mat-icon matPrefix>lock_outline</mat-icon>
         </mat-form-field>
 
-        <button mat-raised-button class="register-btn" type="button" (click)="onRegister()">
+        <button mat-raised-button class="register-btn" type="button" 
+                [disabled]="registerForm.invalid" 
+                (click)="onRegister()">
           <mat-icon>person_add</mat-icon>
           Sign Up
         </button>
@@ -48,3 +53,5 @@
         </div>
       </form>
     </mat-card>
+  </div>
+</div>

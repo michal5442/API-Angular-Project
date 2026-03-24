@@ -30,6 +30,10 @@ namespace Services
 
             CreateMap<Order, OrderDTO>();
             CreateMap<OrderDTO, Order>();
+            CreateMap<CreateOrderDTO, Order>()
+                .ForMember(dest => dest.OrderId, opt => opt.Ignore())
+                .ForMember(dest => dest.OrderDate, opt => opt.MapFrom(src => src.OrderDate ?? DateTime.UtcNow))
+                .ForMember(dest => dest.OrderSum, opt => opt.MapFrom(src => src.OrderSum ?? 0));
 
             // OrderItem mapping
             CreateMap<OrderItem, OrderItemDTO>();

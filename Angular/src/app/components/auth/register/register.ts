@@ -16,24 +16,28 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './register.html',
   styleUrl: './register.css',
 })
+
 export class Register {
   private usersService = inject(UserService);
   private router = inject(Router);
-  newUser: User ={
+
+  newUser: User = {
     userName: '',
     firstName: '',
     lastName: '',
-    password:''
+    password: ''
   };
   confirmPassword = '';
-  
-  onRegister(){
+
+  onRegister() {
+    // 1. בדיקת התאמת סיסמאות (ולידציה ידנית נוספת)
     if (this.newUser.password !== this.confirmPassword) {
       alert('Passwords do not match!');
       return;
     }
-    
-    console.log('Register button clicked', this.newUser);
+
+    console.log('Registering user...', this.newUser);
+
     this.usersService.register(this.newUser).subscribe({
       next: (response) => {
         console.log('Registration successful', response);
@@ -42,10 +46,15 @@ export class Register {
       },
       error: (error) => {
         console.error('Registration failed:', error);
+        
+        // אם השרת החזירBadRequest (400)
         if (error.status === 400) {
-          alert('Password is too weak. Use a stronger password (at least 8 characters, uppercase, lowercase and numbers).');
+          // ב-Angular, הטקסט שהשרת מחזיר (כמו "Password too weak") נמצא ב-error.error
+          // אם זה טקסט פשוט, נציג אותו. אם זה אובייקט, נציג הודעה כללית.
+          const serverMessage = typeof error.error === 'string' ? error.error : 'Invalid input data';
+          alert('Error: ' + serverMessage);
         } else {
-          alert('Registration failed. Please try again.');
+          alert('Server error. Please try again later.');
         }
       }
     });

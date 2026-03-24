@@ -1,6 +1,7 @@
 
 
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.HttpLogging;
 using NLog.Web;
 using Repositories;
 using Services;
@@ -23,6 +24,13 @@ builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 // Add services to the container.
 
 builder.Services.AddControllers();
+builder.Services.AddHttpLogging(options =>
+{
+  options.LoggingFields = HttpLoggingFields.RequestMethod |
+              HttpLoggingFields.RequestPath |
+              HttpLoggingFields.ResponseStatusCode |
+              HttpLoggingFields.Duration;
+});
 builder.Services.AddOpenApi();
 builder.Services.AddDbContext<UserContext>(option => option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 builder.Host.UseNLog();
@@ -49,6 +57,8 @@ if (app.Environment.IsDevelopment())
 
 // Configure the HTTP request pipeline.
 
+app.UseMiddleware<ErrorHandlingMiddleware>();
+app.UseHttpLogging();
 app.UseHttpsRedirection();
 
 app.UseStaticFiles();

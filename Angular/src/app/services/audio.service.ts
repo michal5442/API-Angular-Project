@@ -14,6 +14,11 @@ export class AudioService {
     });
   }
 
+  // Expose the underlying audio element so components can attach UI listeners
+  getAudioElement(): HTMLAudioElement {
+    return this.audio;
+  }
+
   togglePlay(song: Song) {
     if (this.currentPlayingId() === song.id) {
       if (this.audio.paused) {

@@ -1,4 +1,4 @@
-import { Component, OnInit, signal } from '@angular/core';
+import { Component, OnInit, signal, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -10,6 +10,7 @@ import { MatInputModule } from '@angular/material/input';
 import { SongService } from '../../../services/song.service';
 import { AdminService } from '../../../services/admin.service';
 import { Song } from '../../../models/song.model';
+import { AudioService } from '../../../services/audio.service';
 
 @Component({
   selector: 'app-admin-songs',
@@ -23,8 +24,7 @@ export class AdminSongs implements OnInit {
   showModal = false;
   isEditMode = false;
   currentSong: any = {};
-  currentAudio: HTMLAudioElement | null = null;
-  playingSongId: number | null = null;
+  public audioService = inject(AudioService);
 
   constructor(
     private songService: SongService,
@@ -143,44 +143,7 @@ export class AdminSongs implements OnInit {
       alert('No song URL available');
       return;
     }
-
-    // If same song is playing, pause it
-    if (this.playingSongId === song.id && this.currentAudio) {
-      if (this.currentAudio.paused) {
-        this.currentAudio.play();
-      } else {
-        this.currentAudio.pause();
-      }
-      return;
-    }
-
-    // Stop current audio if playing
-    if (this.currentAudio) {
-      this.currentAudio.pause();
-      this.currentAudio = null;
-    }
-
-    // Build full URL if relative
-    let url = song.songUrl;
-    if (!url.startsWith('http')) {
-      url = `https://localhost:44393${url.startsWith('/') ? url : '/' + url}`;
-    }
-
-    // Create and play new audio
-    this.currentAudio = new Audio(url);
-    this.playingSongId = song.id;
-    
-    this.currentAudio.play().catch(error => {
-      console.error('Error playing song:', error);
-      alert('Cannot play this song. Check the URL.');
-      this.currentAudio = null;
-      this.playingSongId = null;
-    });
-
-    // Reset when song ends
-    this.currentAudio.onended = () => {
-      this.playingSongId = null;
-      this.currentAudio = null;
-    };
+    // Delegate playback to the shared AudioService so only one audio plays
+    this.audioService.togglePlay(song);
   }
 }

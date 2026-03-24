@@ -33,13 +33,13 @@ namespace Services
             return _mapper.Map<List<User>, List<UserDTO>>(users);
         }
 
-        public async Task<User> AddUser(User newUser)
+        public async Task<UserDTO> AddUser(User newUser)
         {
             if ((_iPasswordService.Check(newUser.Password)).Strength < 2)
                 return null;
+            
             var user = await _iUserRepository.addUser(newUser);
-            // map to DTO is expected by controller, but interface AddUser originally returned User.
-            return user;
+            return _mapper.Map<User, UserDTO>(user);
         }
         public async Task<UserDTO> login(User LoginUser)
         {

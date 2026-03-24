@@ -42,7 +42,7 @@ namespace WebApiShop.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<OrderDTO>> AddOrder([FromBody] Order order)
+        public async Task<ActionResult<OrderDTO>> AddOrder([FromBody] CreateOrderDTO order)
         {
             OrderDTO order2 = await service.AddOrder(order);
             return CreatedAtAction(nameof(Get), new {order2.Id}, order2);

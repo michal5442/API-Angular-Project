@@ -29,7 +29,7 @@
         firstName: firstName.value,
         lastName: lastName.value
     };
-    const updateData = await fetch(`https://localhost:44393/api/users/${currentUserId}`, {
+    const updateData = await fetch(`https://localhost:44393/api/user/${currentUserId}`, {
         method: 'Put',
         headers: {
             'Content-type': 'application/json'

@@ -47,7 +47,7 @@
     <div class="success-message">
       <mat-card class="success-card">
         <mat-icon class="success-icon">check_circle</mat-icon>
-        <h1>Order Completed Successfully!</h1>
+        <h1>Order Completed Successfully! @if (orderId()) { #{{ orderId() }} }</h1>
         <p class="success-text">Thank you for your purchase!</p>
         <p class="email-info">Your digital products have been sent to: <strong>{{ userEmail() }}</strong></p>
         <p class="check-email">Please check your email inbox for the download links.</p>

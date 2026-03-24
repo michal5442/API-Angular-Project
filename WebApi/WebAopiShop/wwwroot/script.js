@@ -1,9 +1,27 @@
-﻿// JavaScript source code
+﻿//async function Register() {
+//    const userName = document.querySelector("#userName");
+
+//    // בדיקה: האם האימייל תקין לפי חוקי ה-HTML?
+//    if (!userName.checkValidity()) {
+//        alert("כתובת האימייל אינה תקינה!");
+//        userName.reportValidity(); // גורם להופעת הבועה של הדפדפן
+//        return; // עוצר את הפונקציה ולא שולח לשרת
+//    }
+
+//    // ... שאר הקוד של ה-Fetch יבוא כאן רק אם הכל תקין
+//}
+
+// JavaScript source code
 async function Register() {
     const userName = document.querySelector("#userName")
     const firstName = document.querySelector("#firstName")
     const lastName = document.querySelector("#lastName")
     const password = document.querySelector("#password")
+    if (!userName.checkValidity()) {
+        alert("כתובת האימייל אינה תקינה!");
+        userName.reportValidity(); 
+        return; 
+    }
     if (userName.value == "" || password.value == "") {
         alert("Please fill in required fields.")
         return;
@@ -14,7 +32,7 @@ async function Register() {
         firstName: firstName.value,
         lastName: lastName.value
     };
-    const postResponse = await fetch('api/users/Register', {
+    const postResponse = await fetch('api/user/Register', {
         method: 'Post',
         headers: {
             'Content-type': 'application/json'
@@ -38,7 +56,7 @@ async function Login() {
         alert("Please fill in required fields.")
         return;
     }
-    const postResponse = await fetch('api/users/Login', {
+    const postResponse = await fetch('api/user/Login', {
         method: 'Post',
         headers: {
             'Content-type': 'application/json'

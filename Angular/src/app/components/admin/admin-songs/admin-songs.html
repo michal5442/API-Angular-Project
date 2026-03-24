@@ -32,10 +32,10 @@
       </mat-card-content>
       <mat-card-actions>
         <button mat-mini-fab (click)="playSong(song)" 
-                [class.playing]="playingSongId === song.id" 
-                class="play-btn" 
-                *ngIf="song.songUrl">
-          <mat-icon>{{ playingSongId === song.id ? 'pause' : 'play_arrow' }}</mat-icon>
+          [class.playing]="audioService.currentPlayingId() === song.id" 
+          class="play-btn" 
+          *ngIf="song.songUrl">
+          <mat-icon>{{ audioService.currentPlayingId() === song.id ? 'pause' : 'play_arrow' }}</mat-icon>
         </button>
         <button mat-mini-fab color="primary" (click)="openEditModal(song)" class="edit-btn">
           <mat-icon>edit</mat-icon>

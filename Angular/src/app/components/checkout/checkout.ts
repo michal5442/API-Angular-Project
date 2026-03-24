@@ -25,7 +25,7 @@ export class Checkout implements OnInit {
   totalPrice = signal<number>(0);
   userEmail = signal<string>('');
   orderCompleted = signal<boolean>(false);
-
+  orderId = signal<number | null>(null);
   ngOnInit() {
     this.loadCart();
     this.loadUserEmail();
@@ -74,7 +74,9 @@ export class Checkout implements OnInit {
     };
 
     this.orderService.createOrder(order).subscribe({
-      next: (response) => {
+      next: (response: any) => {
+        const createdOrderId = response?.orderId ?? response?.id ?? response?.OrderId ?? response?.Id ?? null;
+        this.orderId.set(createdOrderId);
         const key = `cart_${userId}`;
         localStorage.setItem(key, '[]');
         this.orderCompleted.set(true);

@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Text.Json.Serialization;
 
 namespace Entities;
 
@@ -16,6 +15,5 @@ public partial class Order
 
     public virtual ICollection<OrderItem> OrderItems { get; set; } = new List<OrderItem>();
 
-    [JsonIgnore(Condition = JsonIgnoreCondition.Always)]
     public virtual User? User { get; set; }
 }

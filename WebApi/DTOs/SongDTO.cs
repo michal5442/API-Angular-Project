@@ -15,7 +15,7 @@ namespace DTOs
         string Description,
         string ImageUrl,
         string SongUrl,
-        int? ArtistId, // Updated ArtistId to nullable int
+        int? ArtistId, 
         string Artist,
         double Duration
         )

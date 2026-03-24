@@ -1,4 +1,4 @@
-import { Component, signal, inject, viewChild, ElementRef } from '@angular/core';
+import { Component, signal, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
@@ -10,6 +10,7 @@ import { Song } from '../../models/song.model';
 import { ActivatedRoute } from '@angular/router';
 import { UserService } from '../../services/user';
 import { ArtistService } from '../../services/artist';
+import { AudioService } from '../../services/audio.service';
 
 @Component({
   selector: 'app-song-detail',
@@ -23,6 +24,7 @@ export class SongDetail {
   private route = inject(ActivatedRoute);
   private userService = inject(UserService);
   private snackBar = inject(MatSnackBar); 
+  public audioService = inject(AudioService);
   
   song = signal<Song | undefined>(undefined);
   artistName = signal<string>('');
@@ -30,12 +32,21 @@ export class SongDetail {
   currentTime = signal<number>(0);
   progressPercentage = signal<number>(0);
   audioInitialized = signal<boolean>(false);
-  audioPlayer = viewChild<ElementRef<HTMLAudioElement>>('audioPlayer');
+  private audioEl: HTMLAudioElement | null = null;
 
   ngOnInit() {
     const id = this.route.snapshot.paramMap.get('id');
     if (id) {
       this.loadSong(Number(id));
+    }
+
+    // Attach to shared audio element for progress updates
+    try {
+      this.audioEl = this.audioService.getAudioElement();
+      this.audioEl.addEventListener('timeupdate', () => this.onTimeUpdate());
+      this.audioEl.addEventListener('ended', () => this.onSongEnded());
+    } catch (e) {
+      console.error('Error attaching to audio element:', e);
     }
   }
 
@@ -109,52 +120,24 @@ export class SongDetail {
   }
 
   togglePlay() {
-    const audio = this.audioPlayer()?.nativeElement;
-    if (!audio) return;
-    
     const currentSong = this.song();
-    if (!currentSong?.songUrl) return;
-    
-    // Set src only once
-    if (!this.audioInitialized()) {
-      const relativePath = currentSong.songUrl.substring(currentSong.songUrl.indexOf('music')).replace(/\\/g, '/').replace(/"/g, '');
-      const fullUrl = `https://localhost:44393/${relativePath}`;
-      audio.src = fullUrl;
-      this.audioInitialized.set(true);
-      console.log('Audio initialized with:', fullUrl);
-    }
-    
-    console.log('Audio paused state:', audio.paused);
-    
-    if (audio.paused) {
-      audio.play().then(() => {
-        this.isPlaying.set(true);
-        console.log('Started playing');
-      }).catch(error => {
-        console.error('Error playing audio:', error);
-      });
-    } else {
-      audio.pause();
-      this.isPlaying.set(false);
-      console.log('Paused');
-    }
+    if (!currentSong) return;
+    this.audioService.togglePlay(currentSong);
+    this.isPlaying.set(this.audioService.isPlaying());
   }
 
   onSongEnded() {
     this.isPlaying.set(false);
     this.currentTime.set(0);
     this.progressPercentage.set(0);
-    // Don't reset audioInitialized so the song continues from where it stopped
   }
 
   onTimeUpdate() {
-    const audio = this.audioPlayer()?.nativeElement;
+    const audio = this.audioEl;
     if (audio) {
       const currentTime = Math.floor(audio.currentTime);
       const duration = this.song()?.duration || 0;
-      
       this.currentTime.set(currentTime);
-      
       if (duration > 0) {
         const percentage = (audio.currentTime / duration) * 100;
         this.progressPercentage.set(percentage);
@@ -163,7 +146,7 @@ export class SongDetail {
   }
 
   seekTo(event: MouseEvent) {
-    const audio = this.audioPlayer()?.nativeElement;
+    const audio = this.audioEl;
     const duration = this.song()?.duration;
     if (!audio || !duration) return;
     

@@ -1,4 +1,4 @@
-import { Component, signal, OnInit, inject, viewChild, ElementRef } from '@angular/core';
+import { Component, signal, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { MatCardModule } from '@angular/material/card';
@@ -6,6 +6,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { Song } from '../../models/song.model';
 import { CartService } from '../../services/cart.service';
+import { AudioService } from '../../services/audio.service';
 
 @Component({
   selector: 'app-cart',
@@ -18,8 +19,7 @@ export class Cart implements OnInit {
   private cartService = inject(CartService);
   cartItems = signal<Song[]>([]);
   totalPrice = signal<number>(0);
-  currentPlayingId = signal<number | null>(null);
-  audioPlayer = viewChild<ElementRef<HTMLAudioElement>>('audioPlayer');
+  public audioService = inject(AudioService);
 
   ngOnInit() {
     this.loadCart();
@@ -56,31 +56,11 @@ export class Cart implements OnInit {
   }
 
   togglePlay(song: Song) {
-    const audio = this.audioPlayer()?.nativeElement;
-    if (!audio) return;
-
-    if (this.currentPlayingId() === song.id) {
-      // If it's the same song - just pause/resume
-      if (audio.paused) {
-        audio.play().catch(error => {
-          console.error('Error playing audio:', error);
-        });
-      } else {
-        audio.pause();
-      }
-    } else {
-      // If it's a new song - switch song
-      const fullUrl = `https://localhost:44393/${song.songUrl}`;
-      console.log('Playing song:', fullUrl);
-      audio.src = fullUrl;
-      audio.play().catch(error => {
-        console.error('Error playing audio:', error);
-      });
-      this.currentPlayingId.set(song.id);
-    }
+    this.audioService.togglePlay(song);
   }
 
   onSongEnded() {
-    this.currentPlayingId.set(null);
+    // kept for compatibility; main audio element's ended handler will reset service
+    // no-op when using AudioService
   }
 }

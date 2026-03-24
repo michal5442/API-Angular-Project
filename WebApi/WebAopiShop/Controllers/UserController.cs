@@ -49,9 +49,18 @@ namespace WebApiShop.Controllers
 
         // POST api/<UsersController>
         [HttpPost("Login")]
-        public async Task<ActionResult<UserDTO>> Login([FromBody] User val)
+        public async Task<ActionResult<UserDTO>> Login([FromBody] UserInputDTO val)
         {
-            UserDTO user = await service.LogIn(val);
+            var userEntity = new User
+            {
+                UserId = val.UserId ?? 0,
+                UserName = val.UserName,
+                FirstName = val.FirstName,
+                LastName = val.LastName,
+                Password = val.Password
+            };
+
+            UserDTO user = await service.LogIn(userEntity);
             if (user == null)
             {
                 return Unauthorized("Invalid email or password");
@@ -61,23 +70,39 @@ namespace WebApiShop.Controllers
         }
 
         [HttpPost("Register")]
-        public async Task<ActionResult<UserDTO>> Register([FromBody] User val)
+        public async Task<ActionResult<UserDTO>> Register([FromBody] UserInputDTO val)
         {
-            // AddUser in IUserService currently returns User; call service and map to DTO
-            var created = await service.AddUser(val);
+            var userEntity = new User
+            {
+                UserId = val.UserId ?? 0,
+                UserName = val.UserName,
+                FirstName = val.FirstName,
+                LastName = val.LastName,
+                Password = val.Password
+            };
+
+            var created = await service.AddUser(userEntity);
             if (created == null)
             {
                 return BadRequest("Password too weak");
             }
-            var dto = new UserDTO(created.UserId, created.UserName, created.FirstName, created.LastName);
-            return CreatedAtAction(nameof(Get), new { id = dto.UserId }, dto);
+            return CreatedAtAction(nameof(Get), new { id = created.UserId }, created);
         }
 
         // PUT api/<UsersController>/5
         [HttpPut("{id}")]
-        public async Task<ActionResult<UserDTO>> Put(int id, [FromBody] User value)
+        public async Task<ActionResult<UserDTO>> Put(int id, [FromBody] UserInputDTO value)
         {
-           bool success = await service.UpdateUser(value,id);
+           var userEntity = new User
+           {
+               UserId = value.UserId ?? id,
+               UserName = value.UserName,
+               FirstName = value.FirstName,
+               LastName = value.LastName,
+               Password = value.Password
+           };
+
+           bool success = await service.UpdateUser(userEntity,id);
            if(!success)
             {
                 return BadRequest("Password too weak");
