@@ -231,6 +231,18 @@
 
         .switch-hint a:hover { text-decoration: underline; }
 
+        .msg {
+            padding: 12px 16px;
+            border-radius: 10px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 14px;
+            text-align: center;
+        }
+
+        .msg.error { background: #fef2f2; color: #dc2626; border: 1px solid #fecaca; }
+        .msg.success { background: #f0fdf4; color: #16a34a; border: 1px solid #bbf7d0; }
+
         @media (max-width: 768px) { .side-panel { display: none; } }
     </style>
 </head>
@@ -267,6 +279,7 @@
                     <label for="e_password">סיסמא</label>
                     <input type="password" id="e_password" placeholder="הכנס סיסמא" required />
                 </div>
+                <div id="msg-login" class="msg" style="display:none"></div>
                 <button class="btn-main" onclick="Login()">התחברות</button>
                 <div class="switch-hint">
                     עדיין אין לך חשבון?
@@ -297,7 +310,8 @@
                     <progress value="0" max="1"></progress>
                 </div>
                 <button class="btn-outline" onclick="CheckPassword()">בדוק חוזק סיסמא</button>
-                <button class="btn-main" onclick="Register()">יצירת חשבון</button>
+                <div id="msg-register" class="msg" style="display:none"></div>
+            <button class="btn-main" onclick="Register()">יצירת חשבון</button>
                 <div class="switch-hint">
                     כבר יש לך חשבון?
                     <a onclick="switchTab('login', document.querySelectorAll('.tab-btn')[0])">התחבר</a>

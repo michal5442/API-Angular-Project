@@ -140,6 +140,18 @@
             color: #9ca3af;
         }
 
+        .msg {
+            padding: 12px 16px;
+            border-radius: 10px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 14px;
+            text-align: center;
+        }
+
+        .msg.error { background: #fef2f2; color: #dc2626; border: 1px solid #fecaca; }
+        .msg.success { background: #f0fdf4; color: #16a34a; border: 1px solid #bbf7d0; }
+
         @media (max-width: 768px) { .side-panel { display: none; } }
     </style>
 </head>
@@ -178,6 +190,7 @@
                 <input type="text" id="lastName" name="lastName" placeholder="ישראלי" />
             </div>
 
+            <div id="msg-update" class="msg" style="display:none"></div>
             <button class="btn-main" onclick="Update()">שמור שינויים</button>
             <p class="hint">שדות ריקים ישמרו את הערכים הקיימים</p>
         </div>

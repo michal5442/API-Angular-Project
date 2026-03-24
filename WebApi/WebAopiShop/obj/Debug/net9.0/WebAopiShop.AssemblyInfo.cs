@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WebAopiShop")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+22fbe25d5016815e18b291891434a3f3d857ebc5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fcc6b0a6a5a11ecd5cc3a393e572306adb9ff48b")]
 [assembly: System.Reflection.AssemblyProductAttribute("WebAopiShop")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WebAopiShop")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

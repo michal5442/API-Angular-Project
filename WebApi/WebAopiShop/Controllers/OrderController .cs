@@ -21,15 +21,7 @@ namespace WebApiShop.Controllers
             this.service = service;
         }
 
-        // GET: api/<UsersController>
-        [HttpGet]
-        public IEnumerable<string> Get()
-        {
-            return new string[] { "value1", "value2" };
-
-        }
-
-        // GET api/<UsersController>/5
+// GET api/<UsersController>/5
         [HttpGet("{id}")]
         public async Task<ActionResult<OrderDTO>> Get(int id)
         {

@@ -1,4 +1,13 @@
-﻿async function Update() {
+﻿function showMsg(id, text, type) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.textContent = text;
+    el.className = 'msg ' + type;
+    el.style.display = 'block';
+    if (type === 'success') setTimeout(() => el.style.display = 'none', 4000);
+}
+
+async function Update() {
     const userName = document.querySelector("#userName")
     const firstName = document.querySelector("#firstName")
     const lastName = document.querySelector("#lastName")
@@ -38,8 +47,8 @@
     });
     if (updateData.ok) {
         sessionStorage.setItem('currentUser', JSON.stringify(putData));
-        alert("User update successfully👍👍!");
+        showMsg('msg-update', '!הפרטים עודכנו בהצלחה 👍', 'success');
     } else {
-        alert("User update failed!");
+        showMsg('msg-update', 'העדכון נכשל, נסה שוב.', 'error');
     }
 }

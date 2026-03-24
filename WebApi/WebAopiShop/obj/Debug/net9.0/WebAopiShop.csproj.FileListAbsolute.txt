@@ -1017,8 +1017,6 @@ C:\Users\יהודית תם\Downloads\api&angular project\API-Angular-Project\Web
 C:\Users\יהודית תם\Downloads\api&angular project\API-Angular-Project\WebApi\WebAopiShop\obj\Debug\net9.0\rjsmrazor.dswa.cache.json
 C:\Users\יהודית תם\Downloads\api&angular project\API-Angular-Project\WebApi\WebAopiShop\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json
 C:\Users\יהודית תם\Downloads\api&angular project\API-Angular-Project\WebApi\WebAopiShop\obj\Debug\net9.0\scopedcss\bundle\WebAopiShop.styles.css
-C:\Users\יהודית תם\Downloads\api&angular project\API-Angular-Project\WebApi\WebAopiShop\obj\Debug\net9.0\compressed\3egwhgjfg2-{0}-v40md65rmb-v40md65rmb.gz
-C:\Users\יהודית תם\Downloads\api&angular project\API-Angular-Project\WebApi\WebAopiShop\obj\Debug\net9.0\compressed\fl0h9kqx9z-{0}-nucp5ugztk-nucp5ugztk.gz
 C:\Users\יהודית תם\Downloads\api&angular project\API-Angular-Project\WebApi\WebAopiShop\obj\Debug\net9.0\staticwebassets.build.json
 C:\Users\יהודית תם\Downloads\api&angular project\API-Angular-Project\WebApi\WebAopiShop\obj\Debug\net9.0\staticwebassets.build.json.cache
 C:\Users\יהודית תם\Downloads\api&angular project\API-Angular-Project\WebApi\WebAopiShop\obj\Debug\net9.0\staticwebassets.development.json
@@ -1028,5 +1026,7 @@ C:\Users\יהודית תם\Downloads\api&angular project\API-Angular-Project\Web
 C:\Users\יהודית תם\Downloads\api&angular project\API-Angular-Project\WebApi\WebAopiShop\obj\Debug\net9.0\WebAopiS.AD0B4DD4.Up2Date
 C:\Users\יהודית תם\Downloads\api&angular project\API-Angular-Project\WebApi\WebAopiShop\obj\Debug\net9.0\WebAopiShop.genruntimeconfig.cache
 C:\Users\יהודית תם\Downloads\api&angular project\API-Angular-Project\WebApi\WebAopiShop\obj\Debug\net9.0\ref\WebAopiShop.dll
-C:\Users\יהודית תם\Downloads\api&angular project\API-Angular-Project\WebApi\WebAopiShop\obj\Debug\net9.0\compressed\0xofihmcaz-{0}-p7q8bpwj28-p7q8bpwj28.gz
-C:\Users\יהודית תם\Downloads\api&angular project\API-Angular-Project\WebApi\WebAopiShop\obj\Debug\net9.0\compressed\pb5hdj09dl-{0}-35a7wxluv3-35a7wxluv3.gz
+C:\Users\יהודית תם\Downloads\api&angular project\API-Angular-Project\WebApi\WebAopiShop\obj\Debug\net9.0\compressed\0xofihmcaz-{0}-q261mg5r8d-q261mg5r8d.gz
+C:\Users\יהודית תם\Downloads\api&angular project\API-Angular-Project\WebApi\WebAopiShop\obj\Debug\net9.0\compressed\3egwhgjfg2-{0}-0v0inyqxge-0v0inyqxge.gz
+C:\Users\יהודית תם\Downloads\api&angular project\API-Angular-Project\WebApi\WebAopiShop\obj\Debug\net9.0\compressed\pb5hdj09dl-{0}-kxulpifqd5-kxulpifqd5.gz
+C:\Users\יהודית תם\Downloads\api&angular project\API-Angular-Project\WebApi\WebAopiShop\obj\Debug\net9.0\compressed\fl0h9kqx9z-{0}-3bqapfmid5-3bqapfmid5.gz
