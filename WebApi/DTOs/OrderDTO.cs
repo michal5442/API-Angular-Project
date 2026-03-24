@@ -8,7 +8,7 @@ namespace DTOs
     public record OrderDTO
     (
         int OrderId,
-        // Use DateTime? to align with Entities.Order.OrderDate
+        int UserId,
         DateTime? OrderDate,
         double? OrderSum,
         ICollection<OrderItemDTO> OrderItems

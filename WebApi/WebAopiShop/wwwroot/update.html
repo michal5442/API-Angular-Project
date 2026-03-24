@@ -1,28 +1,187 @@
-﻿<!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html dir="rtl" lang="he">
 <head>
     <meta charset="utf-8" />
-    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>עדכון פרטים</title>
+    <script defer src="update.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        .newUser {
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            min-height: 100vh;
+            background: #f5f7fa;
+            display: flex;
+            font-family: 'Heebo', Arial, sans-serif;
+        }
+
+        .side-panel {
+            width: 45%;
+            background: linear-gradient(160deg, #4f46e5 0%, #7c3aed 60%, #a855f7 100%);
             display: flex;
             flex-direction: column;
-            width: 20vw;
+            align-items: center;
+            justify-content: center;
+            padding: 60px;
+            color: white;
+            position: sticky;
+            top: 0;
+            height: 100vh;
         }
+
+        .side-panel .logo { font-size: 3.5rem; margin-bottom: 24px; }
+
+        .side-panel h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            text-align: center;
+        }
+
+        .side-panel p {
+            font-size: 1.05rem;
+            opacity: 0.85;
+            text-align: center;
+            line-height: 1.8;
+            max-width: 300px;
+        }
+
+        .side-dots { display: flex; gap: 8px; margin-top: 50px; }
+        .side-dots span {
+            width: 10px; height: 10px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.35);
+        }
+        .side-dots span.active {
+            background: white;
+            width: 28px;
+            border-radius: 5px;
+        }
+
+        .form-panel {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 40px;
+        }
+
+        .form-box { width: 100%; max-width: 400px; }
+
+        .form-box h2 {
+            font-size: 1.9rem;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 6px;
+        }
+
+        .subtitle {
+            color: #6b7280;
+            font-size: 0.95rem;
+            margin-bottom: 30px;
+        }
+
+        .field { margin-bottom: 18px; }
+
+        label {
+            display: block;
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: #374151;
+            margin-bottom: 7px;
+        }
+
+        input {
+            width: 100%;
+            padding: 13px 16px;
+            border: 1.5px solid #e5e7eb;
+            border-radius: 10px;
+            font-size: 0.95rem;
+            color: #111827;
+            background: white;
+            outline: none;
+            transition: border-color 0.2s, box-shadow 0.2s;
+            font-family: 'Heebo', Arial, sans-serif;
+        }
+
+        input:focus {
+            border-color: #4f46e5;
+            box-shadow: 0 0 0 3px rgba(79,70,229,0.12);
+        }
+
+        input::placeholder { color: #9ca3af; }
+
+        .btn-main {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(135deg, #4f46e5, #7c3aed);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.25s;
+            margin-top: 8px;
+            font-family: 'Heebo', Arial, sans-serif;
+        }
+
+        .btn-main:hover {
+            background: linear-gradient(135deg, #4338ca, #6d28d9);
+            box-shadow: 0 6px 20px rgba(79,70,229,0.35);
+            transform: translateY(-1px);
+        }
+
+        .hint {
+            text-align: center;
+            margin-top: 14px;
+            font-size: 0.82rem;
+            color: #9ca3af;
+        }
+
+        @media (max-width: 768px) { .side-panel { display: none; } }
     </style>
-    <script defer src="update.js"></script>
 </head>
 <body>
-    <div class="newUser">
-        <label for="userName1">שם משתמש</label>
-        <input type="email" id="userName" name="userName1" required />
-        <label for="pass1">סיסמא</label>
-        <input type="password" id="pass" name="pass1" required />
-        <label for="firstName">שם פרטי</label>
-        <input type="text" id="firstName" name="firstName" required />
-        <label for="lastName">שם משפחה</label>
-        <input type="text" id="lastName" name="lastName" required /><br />
-        <button onclick="Update()">עדכן</button>
+
+    <div class="side-panel">
+        <div class="logo">✏️</div>
+        <h1>עדכון פרטים</h1>
+        <p>עדכן את פרטי החשבון שלך בקלות — שדות ריקים ישמרו את הערכים הקיימים.</p>
+        <div class="side-dots">
+            <span></span>
+            <span></span>
+            <span class="active"></span>
+        </div>
     </div>
+
+    <div class="form-panel">
+        <div class="form-box">
+            <h2>עדכן את הפרטים שלך 🙂</h2>
+            <p class="subtitle">השאר שדה ריק כדי לשמור את הערך הנוכחי</p>
+
+            <div class="field">
+                <label for="userName">אימייל</label>
+                <input type="email" id="userName" name="userName1" placeholder="example@email.com" />
+            </div>
+            <div class="field">
+                <label for="pass">סיסמא</label>
+                <input type="password" id="pass" name="pass1" placeholder="סיסמא חדשה" />
+            </div>
+            <div class="field">
+                <label for="firstName">שם פרטי</label>
+                <input type="text" id="firstName" name="firstName" placeholder="ישראל" />
+            </div>
+            <div class="field">
+                <label for="lastName">שם משפחה</label>
+                <input type="text" id="lastName" name="lastName" placeholder="ישראלי" />
+            </div>
+
+            <button class="btn-main" onclick="Update()">שמור שינויים</button>
+            <p class="hint">שדות ריקים ישמרו את הערכים הקיימים</p>
+        </div>
+    </div>
+
 </body>
 </html>

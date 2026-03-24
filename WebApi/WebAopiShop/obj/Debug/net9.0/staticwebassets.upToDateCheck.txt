@@ -1,7 +1,7 @@
-C:\Users\user1\Desktop\api-angular\MostlyMusic\WebAopiShop\WebAopiShop\wwwroot\script.js
-C:\Users\user1\Desktop\api-angular\MostlyMusic\WebAopiShop\WebAopiShop\wwwroot\update.html
-C:\Users\user1\Desktop\api-angular\MostlyMusic\WebAopiShop\WebAopiShop\wwwroot\index.html
-C:\Users\user1\Desktop\api-angular\MostlyMusic\WebAopiShop\WebAopiShop\wwwroot\update.js
+C:\Users\יהודית תם\Downloads\api&angular project\API-Angular-Project\WebApi\WebAopiShop\wwwroot\index.html
+C:\Users\יהודית תם\Downloads\api&angular project\API-Angular-Project\WebApi\WebAopiShop\wwwroot\script.js
+C:\Users\יהודית תם\Downloads\api&angular project\API-Angular-Project\WebApi\WebAopiShop\wwwroot\update.js
+C:\Users\יהודית תם\Downloads\api&angular project\API-Angular-Project\WebApi\WebAopiShop\wwwroot\update.html
 wwwroot\img\a.png
 wwwroot\img\aa.png
 wwwroot\img\b.png
@@ -44,16 +44,16 @@ wwwroot\music\ishay_ribo\שמואל פרדניק & ישי ריבו - כל פעם
 wwwroot\music\itzik_dadya\07 בואי בשלום-איציק דדיה.mp3
 wwwroot\music\itzik_dadya\איציק דדיה - כיסא המלך.mp3
 wwwroot\music\itzik_dadya\איציק_דדיה_בסינגל_חדש_נכספתי.mp3
-wwwroot\music\mamtak_leshabat\״אני שבת״ אבי ריימי & יאיר בודנר מארחים את בנצי קלצקין & יענקי לוינגר מתוך פרויקט ״ממתק לשבת״.mp4
-wwwroot\music\mamtak_leshabat\״ושמרו״ אבי ריימי & יאיר בודנר מארחים את מאיר גפני מתוך פרויקט ״ממתק לשבת״.mp4
 wwwroot\music\mamtak_leshabat\אבי ריימי & יאיר בודנר מארחים את אלחנן שטיינמץ - ואני תפילתי.mp3
 wwwroot\music\mamtak_leshabat\אבי ריימי & יאיר בודנר מארחים את אלי פרידמן - ויכולו.mp3
+wwwroot\music\mamtak_leshabat\״אני שבת״ אבי ריימי & יאיר בודנר מארחים את בנצי קלצקין & יענקי לוינגר מתוך פרויקט ״ממתק לשבת״.mp4
+wwwroot\music\mamtak_leshabat\״ושמרו״ אבי ריימי & יאיר בודנר מארחים את מאיר גפני מתוך פרויקט ״ממתק לשבת״.mp4
+wwwroot\music\moshe_klain\משה קליין & הראל טל - ואני אשיר.mp3
 wwwroot\music\moshe_klain\משה קליין - בדרך אמונה בחרתי.mp3
 wwwroot\music\moshe_klain\משה קליין - להביט קדימה.mp3
 wwwroot\music\moshe_klain\משה קליין - מי יאהב.mp3
 wwwroot\music\moshe_klain\משה קליין - שמחה שלמה - רמיקס (Dj Daniel Malka).mp3
 wwwroot\music\moshe_klain\משה קליין - תבוא.mp3
-wwwroot\music\moshe_klain\משה קליין & הראל טל - ואני אשיר.mp3
 wwwroot\music\moti_vais\מוטי_וייס___היום_הרת___חסידי.mp3
 wwwroot\music\moti_vais\מוטי_וייס___הנה_זה_בא___מקורי.mp3
 wwwroot\music\moti_vais\מוטי_וייס___יוסף_מוקיר_שבת___מקורי.mp3

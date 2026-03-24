@@ -18,6 +18,7 @@
     },
     "IIS Express": {
       "commandName": "IISExpress",
+      "workingDirectory": "C:\\Users\\יהודית תם\\Downloads\\api&angular project\\API-Angular-Project\\WebApi",
       "launchBrowser": true,
       "launchUrl": "index.html",
       "environmentVariables": {
@@ -30,7 +31,7 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:61622/",
+      "applicationUrl": "https://localhost:44393/",
       "sslPort": 44393
     }
   }

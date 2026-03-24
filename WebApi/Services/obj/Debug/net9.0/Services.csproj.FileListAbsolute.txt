@@ -162,3 +162,23 @@ C:\Users\user1\Desktop\api-angular\MostlyMusic\WebAopiShop\Services\bin\Debug\ne
 C:\Users\user1\Desktop\api-angular\MostlyMusic\WebAopiShop\Services\bin\Debug\net9.0\Entities.pdb
 C:\Users\user1\Desktop\api-angular\MostlyMusic\WebAopiShop\Services\obj\Debug\net9.0\Services.csproj.Up2Date
 C:\Users\user1\Desktop\api-angular\MostlyMusic\WebAopiShop\Services\obj\Debug\net9.0\ref\Services.dll
+C:\Users\יהודית תם\Downloads\api&angular project\API-Angular-Project\WebApi\Services\obj\Debug\net9.0\Services.csproj.AssemblyReference.cache
+C:\Users\יהודית תם\Downloads\api&angular project\API-Angular-Project\WebApi\Services\obj\Debug\net9.0\Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\יהודית תם\Downloads\api&angular project\API-Angular-Project\WebApi\Services\obj\Debug\net9.0\Services.AssemblyInfoInputs.cache
+C:\Users\יהודית תם\Downloads\api&angular project\API-Angular-Project\WebApi\Services\obj\Debug\net9.0\Services.AssemblyInfo.cs
+C:\Users\יהודית תם\Downloads\api&angular project\API-Angular-Project\WebApi\Services\obj\Debug\net9.0\Services.csproj.CoreCompileInputs.cache
+C:\Users\יהודית תם\Downloads\api&angular project\API-Angular-Project\WebApi\Services\obj\Debug\net9.0\Services.sourcelink.json
+C:\Users\יהודית תם\Downloads\api&angular project\API-Angular-Project\WebApi\Services\obj\Debug\net9.0\Services.dll
+C:\Users\יהודית תם\Downloads\api&angular project\API-Angular-Project\WebApi\Services\obj\Debug\net9.0\refint\Services.dll
+C:\Users\יהודית תם\Downloads\api&angular project\API-Angular-Project\WebApi\Services\obj\Debug\net9.0\Services.pdb
+C:\Users\יהודית תם\Downloads\api&angular project\API-Angular-Project\WebApi\Services\bin\Debug\net9.0\Services.deps.json
+C:\Users\יהודית תם\Downloads\api&angular project\API-Angular-Project\WebApi\Services\bin\Debug\net9.0\Services.dll
+C:\Users\יהודית תם\Downloads\api&angular project\API-Angular-Project\WebApi\Services\bin\Debug\net9.0\Services.pdb
+C:\Users\יהודית תם\Downloads\api&angular project\API-Angular-Project\WebApi\Services\bin\Debug\net9.0\DTOs.dll
+C:\Users\יהודית תם\Downloads\api&angular project\API-Angular-Project\WebApi\Services\bin\Debug\net9.0\Entities.dll
+C:\Users\יהודית תם\Downloads\api&angular project\API-Angular-Project\WebApi\Services\bin\Debug\net9.0\Repositories.dll
+C:\Users\יהודית תם\Downloads\api&angular project\API-Angular-Project\WebApi\Services\bin\Debug\net9.0\DTOs.pdb
+C:\Users\יהודית תם\Downloads\api&angular project\API-Angular-Project\WebApi\Services\bin\Debug\net9.0\Repositories.pdb
+C:\Users\יהודית תם\Downloads\api&angular project\API-Angular-Project\WebApi\Services\bin\Debug\net9.0\Entities.pdb
+C:\Users\יהודית תם\Downloads\api&angular project\API-Angular-Project\WebApi\Services\obj\Debug\net9.0\Services.csproj.Up2Date
+C:\Users\יהודית תם\Downloads\api&angular project\API-Angular-Project\WebApi\Services\obj\Debug\net9.0\ref\Services.dll

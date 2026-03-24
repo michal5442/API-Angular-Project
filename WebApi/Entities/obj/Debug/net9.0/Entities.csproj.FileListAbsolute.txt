@@ -75,3 +75,15 @@ C:\Users\user1\Desktop\api-angular\MostlyMusic\WebAopiShop\Entities\obj\Debug\ne
 C:\Users\user1\Desktop\api-angular\MostlyMusic\WebAopiShop\Entities\obj\Debug\net9.0\refint\Entities.dll
 C:\Users\user1\Desktop\api-angular\MostlyMusic\WebAopiShop\Entities\obj\Debug\net9.0\Entities.pdb
 C:\Users\user1\Desktop\api-angular\MostlyMusic\WebAopiShop\Entities\obj\Debug\net9.0\ref\Entities.dll
+C:\Users\יהודית תם\Downloads\api&angular project\API-Angular-Project\WebApi\Entities\bin\Debug\net9.0\Entities.deps.json
+C:\Users\יהודית תם\Downloads\api&angular project\API-Angular-Project\WebApi\Entities\bin\Debug\net9.0\Entities.dll
+C:\Users\יהודית תם\Downloads\api&angular project\API-Angular-Project\WebApi\Entities\bin\Debug\net9.0\Entities.pdb
+C:\Users\יהודית תם\Downloads\api&angular project\API-Angular-Project\WebApi\Entities\obj\Debug\net9.0\Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\יהודית תם\Downloads\api&angular project\API-Angular-Project\WebApi\Entities\obj\Debug\net9.0\Entities.AssemblyInfoInputs.cache
+C:\Users\יהודית תם\Downloads\api&angular project\API-Angular-Project\WebApi\Entities\obj\Debug\net9.0\Entities.AssemblyInfo.cs
+C:\Users\יהודית תם\Downloads\api&angular project\API-Angular-Project\WebApi\Entities\obj\Debug\net9.0\Entities.csproj.CoreCompileInputs.cache
+C:\Users\יהודית תם\Downloads\api&angular project\API-Angular-Project\WebApi\Entities\obj\Debug\net9.0\Entities.sourcelink.json
+C:\Users\יהודית תם\Downloads\api&angular project\API-Angular-Project\WebApi\Entities\obj\Debug\net9.0\Entities.dll
+C:\Users\יהודית תם\Downloads\api&angular project\API-Angular-Project\WebApi\Entities\obj\Debug\net9.0\refint\Entities.dll
+C:\Users\יהודית תם\Downloads\api&angular project\API-Angular-Project\WebApi\Entities\obj\Debug\net9.0\Entities.pdb
+C:\Users\יהודית תם\Downloads\api&angular project\API-Angular-Project\WebApi\Entities\obj\Debug\net9.0\ref\Entities.dll

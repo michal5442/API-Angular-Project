@@ -1,4 +1,4 @@
-C:\Users\user1\Desktop\MostlyMusic\WebAopiShop\WebAopiShop\wwwroot\script.js
-C:\Users\user1\Desktop\MostlyMusic\WebAopiShop\WebAopiShop\wwwroot\update.html
-C:\Users\user1\Desktop\MostlyMusic\WebAopiShop\WebAopiShop\wwwroot\index.html
-C:\Users\user1\Desktop\MostlyMusic\WebAopiShop\WebAopiShop\wwwroot\update.js
+C:\Users\user1\Desktop\api-angular\MostlyMusic\WebAopiShop\WebAopiShop\wwwroot\script.js
+C:\Users\user1\Desktop\api-angular\MostlyMusic\WebAopiShop\WebAopiShop\wwwroot\update.html
+C:\Users\user1\Desktop\api-angular\MostlyMusic\WebAopiShop\WebAopiShop\wwwroot\index.html
+C:\Users\user1\Desktop\api-angular\MostlyMusic\WebAopiShop\WebAopiShop\wwwroot\update.js

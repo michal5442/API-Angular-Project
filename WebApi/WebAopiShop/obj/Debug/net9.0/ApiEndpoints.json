@@ -164,7 +164,7 @@
     "Parameters": [
       {
         "Name": "order",
-        "Type": "Entities.Order",
+        "Type": "DTOs.OrderDTO",
         "IsRequired": true
       }
     ],
@@ -459,7 +459,7 @@
       },
       {
         "Name": "value",
-        "Type": "Entities.User",
+        "Type": "DTOs.UserInputDTO",
         "IsRequired": true
       }
     ],
@@ -501,7 +501,7 @@
     "Parameters": [
       {
         "Name": "val",
-        "Type": "Entities.User",
+        "Type": "DTOs.UserInputDTO",
         "IsRequired": true
       }
     ],
@@ -527,7 +527,7 @@
     "Parameters": [
       {
         "Name": "val",
-        "Type": "Entities.User",
+        "Type": "DTOs.UserInputDTO",
         "IsRequired": true
       }
     ],

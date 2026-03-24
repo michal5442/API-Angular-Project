@@ -34,7 +34,7 @@ namespace Services
                 throw new Exception("Order sum validation failed.");
             }
             Order orderEntity = mapper.Map<Order>(newOrder);
-            orderEntity.OrderSum = newOrder.OrderSum;
+            orderEntity.OrderSum = newOrder.OrderSum ?? 0;
             Order order = await repository.AddOrder(orderEntity);
             OrderDTO orderDTO = mapper.Map<Order, OrderDTO>(order);
             return orderDTO;
@@ -50,7 +50,7 @@ namespace Services
                     throw new Exception($"Song with ID {item.SongId} not found.");
                 total += song.Price ?? 0;
             }
-            if (total != order.OrderSum)
+            if (total != (order.OrderSum ?? 0))
             {
                 logger.LogWarning("validateOrderSum mismatch for UserId: {UserId}. Client: {ClientSum}, Calculated: {CalculatedSum}", order.UserId, order.OrderSum, total);
                 return false;
