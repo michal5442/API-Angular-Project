@@ -1,0 +1,40 @@
+<button class="chat-toggle" (click)="isOpen = !isOpen">
+  <span *ngIf="!isOpen" class="toggle-icon-open">💬</span>
+  <span *ngIf="isOpen" class="toggle-icon-close">✕</span>
+</button>
+
+<div class="chat-window" *ngIf="isOpen">
+  <div class="chat-header">
+    <div class="chat-header-avatar">🤖</div>
+    <div class="chat-header-info">
+      <span class="chat-header-title">Musix - MY Music 🎵</span>
+      <span class="chat-header-status">
+        <span class="status-dot"></span> Online & ready to help
+      </span>
+    </div>
+  </div>
+
+  <div class="chat-messages" #messagesContainer>
+    <div *ngFor="let m of messages" class="msg-row" [class.user]="m.role === 'user'">
+      <div class="msg-avatar" *ngIf="m.role === 'assistant'">🎵</div>
+      <div class="msg" [class.user]="m.role === 'user'" [class.assistant]="m.role === 'assistant'">
+        {{ m.content }}
+      </div>
+    </div>
+
+    <div class="msg-row" *ngIf="loading">
+      <div class="msg-avatar">🎵</div>
+      <div class="msg assistant">
+        <div class="typing-dots">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="chat-input">
+    <textarea [(ngModel)]="input" (keydown)="onKey($event)"
+              placeholder="Ask about songs, artists, your cart..."></textarea>
+    <button class="send-btn" (click)="send()" [disabled]="loading">➤</button>
+  </div>
+</div>
