@@ -55,7 +55,7 @@ jobs:
           cache-dependency-path: Angular/package-lock.json
 
       - name: Install
-        run: npm ci
+        run: npm ci --legacy-peer-deps
 
       - name: Build
         run: npx ng build --configuration production
