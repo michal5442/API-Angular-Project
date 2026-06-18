@@ -1,5 +1,8 @@
 # Copilot Instructions — MY Music Store
 
+> For detailed endpoint docs see `copilot-controllers.instructions.md`
+> For detailed data access docs see `copilot-repositories.instructions.md`
+
 ## What the App Does
 A full-stack Israeli/Jewish digital music store. Users browse songs, add to cart, purchase, and interact with an AI chatbot. Admins manage songs, artists, and users. A Python AI service handles chat (GPT-4o-mini), automatic genre tagging via audio analysis, and ambient-light-based theme suggestion via camera.
 
