@@ -28,6 +28,8 @@ public partial class UserContext : DbContext
 
   public virtual DbSet<User> Users { get; set; }
 
+  public virtual DbSet<UserHistory> UserHistories { get; set; }
+
 
   protected override void OnModelCreating(ModelBuilder modelBuilder)
   {
@@ -140,6 +142,9 @@ public partial class UserContext : DbContext
       entity.Property(e => e.SongUrl)
           .HasMaxLength(500)
           .HasColumnName("SONG_URL");
+      entity.Property(e => e.GenreStyle)
+          .HasMaxLength(50)
+          .HasColumnName("GENRE_STYLE");
 
       entity.HasOne(d => d.ArtistNavigation).WithMany(p => p.Songs)
           .HasForeignKey(d => d.ArtistId)
@@ -166,6 +171,21 @@ public partial class UserContext : DbContext
       entity.Property(e => e.UserName)
           .HasMaxLength(100)
           .HasColumnName("USER_NAME");
+      entity.Property(e => e.PreferredTheme)
+          .HasMaxLength(10)
+          .HasDefaultValue("LIGHT")
+          .HasColumnName("PREFERRED_THEME");
+    });
+
+    modelBuilder.Entity<UserHistory>(entity =>
+    {
+      entity.HasKey(e => new { e.UserId, e.SongId });
+      entity.ToTable("USER_HISTORY");
+      entity.Property(e => e.UserId).HasColumnName("USER_ID");
+      entity.Property(e => e.SongId).HasColumnName("SONG_ID");
+      entity.Property(e => e.ListenedAt).HasColumnName("LISTENED_AT").HasColumnType("datetime").HasDefaultValueSql("(getdate())");
+      entity.HasOne(e => e.User).WithMany().HasForeignKey(e => e.UserId);
+      entity.HasOne(e => e.Song).WithMany().HasForeignKey(e => e.SongId);
     });
 
     OnModelCreatingPartial(modelBuilder);

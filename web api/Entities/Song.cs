@@ -20,6 +20,8 @@ public partial class Song
 
     public double? Duration { get; set; }
 
+    public string? GenreStyle { get; set; }
+
     public virtual Artist? ArtistNavigation { get; set; }
 
     public virtual ICollection<OrderItem> OrderItems { get; set; } = new List<OrderItem>();

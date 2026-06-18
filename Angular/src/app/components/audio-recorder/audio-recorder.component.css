@@ -1,0 +1,30 @@
+.recorder-wrap {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.rec-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: transparent;
+  color: #9e8aaa;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s, background 0.2s;
+  padding: 0;
+}
+
+.rec-btn:hover {
+  color: #4B2152;
+  background: #f0eaf2;
+}
+
+.rec-btn.active {
+  color: #C2185B;
+  background: #fce4ec;
+}

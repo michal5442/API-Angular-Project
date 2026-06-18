@@ -9,5 +9,6 @@ namespace Repositories
         Task<User> login(User val);
         Task updateUser(User value, int id);
         Task<bool> deleteUser(int id);
+        Task<bool> UpdateUserTheme(int userId, string theme);
     }
 }

@@ -22,6 +22,7 @@ namespace Services
                 .ForCtorParam("SongUrl", opt => opt.MapFrom(src => src.SongUrl ?? string.Empty))
                 .ForCtorParam("ArtistId", opt => opt.MapFrom(src => src.ArtistId))
                 .ForCtorParam("Duration", opt => opt.MapFrom(src => src.Duration ?? 0.0))
+                .ForCtorParam("GenreStyle", opt => opt.MapFrom(src => src.GenreStyle))
                 .ForCtorParam("Artist", opt => opt.MapFrom(src => src.ArtistNavigation != null ? src.ArtistNavigation.ArtistName : string.Empty));
 
             CreateMap<SongDTO, Song>()
@@ -39,7 +40,8 @@ namespace Services
             CreateMap<OrderItem, OrderItemDTO>();
             CreateMap<OrderItemDTO, OrderItem>();
 
-            CreateMap<User, UserDTO>();
+            CreateMap<User, UserDTO>()
+                .ForCtorParam("PreferredTheme", opt => opt.MapFrom(src => src.PreferredTheme));
             CreateMap<UserDTO, User>();
 
             // Artist mapping - property names differ (ArtistId/ArtistName vs Id/Name)

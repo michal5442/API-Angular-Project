@@ -17,7 +17,8 @@ namespace DTOs
         string SongUrl,
         int? ArtistId, 
         string Artist,
-        double Duration
+        double Duration,
+        string? GenreStyle
         )
     {
         public int Id => SongId;

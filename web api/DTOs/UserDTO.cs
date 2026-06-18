@@ -10,7 +10,8 @@ namespace DTOs
             [StringLength(254, ErrorMessage = "Email is too long")]
             string UserName,
             string FirstName,
-            string LastName
+            string LastName,
+            string PreferredTheme = "LIGHT"
         )
     {
         public int Id => UserId;

@@ -1,15 +1,13 @@
 using DTOs;
 using Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Services;
 using System.Text.Json;
 using WebAopiShop;
 
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-
 namespace WebApiShop.Controllers
 {
-    
     [Route("api/[controller]")]
     [ApiController]
     public class UserController : ControllerBase
@@ -17,14 +15,14 @@ namespace WebApiShop.Controllers
         IUserService service;
         ILogger<UserController> logger;
 
-    public UserController(IUserService service, ILogger<UserController> logger)
+        public UserController(IUserService service, ILogger<UserController> logger)
         {
             this.service = service;
             this.logger = logger;
         }
 
-        // GET: api/<UsersController>
         [HttpGet]
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult<IEnumerable<UserDTO>>> Get()
         {
             var users = await service.GetAllUsers();
@@ -35,8 +33,8 @@ namespace WebApiShop.Controllers
             return Ok(users);
         }
 
-        // GET api/<UsersController>/5
         [HttpGet("{id}")]
+        [Authorize]
         public async Task<ActionResult<UserDTO>> Get(int id)
         {
             UserDTO user = await service.GetUserById(id);
@@ -49,6 +47,7 @@ namespace WebApiShop.Controllers
 
         // POST api/<UsersController>
         [HttpPost("Login")]
+        [AllowAnonymous]
         public async Task<ActionResult<UserDTO>> Login([FromBody] UserInputDTO val)
         {
             var userEntity = new User
@@ -60,16 +59,24 @@ namespace WebApiShop.Controllers
                 Password = val.Password
             };
 
-            UserDTO user = await service.LogIn(userEntity);
-            if (user == null)
-            {
+            var loginResult = await service.LogIn(userEntity);
+            if (loginResult.user == null)
                 return Unauthorized("Invalid email or password");
-            }
-            logger.LogInformation(user.UserName, user.FirstName,user.LastName);
-            return Ok(user);
+
+            Response.Cookies.Append("auth_token", loginResult.token, new CookieOptions
+            {
+                HttpOnly = true,
+                Secure = true,
+                SameSite = SameSiteMode.None,
+                Expires = DateTimeOffset.UtcNow.AddHours(1)
+            });
+
+            logger.LogInformation("{Email} logged in.", loginResult.user.UserName);
+            return Ok(new { user = loginResult.user, token = loginResult.token });
         }
 
         [HttpPost("Register")]
+        [AllowAnonymous]
         public async Task<ActionResult<UserDTO>> Register([FromBody] UserInputDTO val)
         {
             var userEntity = new User
@@ -81,16 +88,23 @@ namespace WebApiShop.Controllers
                 Password = val.Password
             };
 
-            var created = await service.AddUser(userEntity);
-            if (created == null)
-            {
+            var registerResult = await service.AddUserWithToken(userEntity);
+            if (registerResult.user == null)
                 return BadRequest("Password too weak");
-            }
-            return CreatedAtAction(nameof(Get), new { id = created.UserId }, created);
+
+            Response.Cookies.Append("auth_token", registerResult.token, new CookieOptions
+            {
+                HttpOnly = true,
+                Secure = true,
+                SameSite = SameSiteMode.None,
+                Expires = DateTimeOffset.UtcNow.AddHours(1)
+            });
+
+            return CreatedAtAction(nameof(Get), new { id = registerResult.user.UserId }, new { user = registerResult.user, token = registerResult.token });
         }
 
-        // PUT api/<UsersController>/5
         [HttpPut("{id}")]
+        [Authorize]
         public async Task<ActionResult<UserDTO>> Put(int id, [FromBody] UserInputDTO value)
         {
            var userEntity = new User
@@ -111,8 +125,8 @@ namespace WebApiShop.Controllers
            return Ok(updatedUser);
         }
 
-        // DELETE api/<UsersController>/5
         [HttpDelete("{id}")]
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult> Delete(int id)
         {
             bool result = await service.DeleteUser(id);
@@ -120,6 +134,16 @@ namespace WebApiShop.Controllers
             {
                 return NotFound();
             }
+            return NoContent();
+        }
+
+        [HttpPatch("{id}/theme")]
+        [Authorize]
+        public async Task<ActionResult> UpdateTheme(int id, [FromBody] string theme)
+        {
+            var success = await service.UpdateUserTheme(id, theme);
+            if (!success)
+                return BadRequest("Invalid theme value. Accepted: LIGHT, DARK");
             return NoContent();
         }
 

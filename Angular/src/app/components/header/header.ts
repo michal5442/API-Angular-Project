@@ -1,4 +1,4 @@
-import { Component, signal,inject, OnInit } from '@angular/core';
+import { Component, signal, inject, OnInit } from '@angular/core';
 import { RouterLink, Router, NavigationEnd } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -10,6 +10,7 @@ import { MatBadgeModule } from '@angular/material/badge';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { SongService } from '../../services/song.service';
+import { UserService } from '../../services/user';
 import { Song } from '../../models/song.model';
 import { filter } from 'rxjs';
 
@@ -27,6 +28,7 @@ export class HeaderComponent implements OnInit {
   cartItemsCount = signal(0);
   isLoggedIn = signal(false);
   private songsService = inject(SongService);
+  private userService  = inject(UserService);
   private router = inject(Router);
   songs = signal<Song[]>([]);
 
@@ -48,9 +50,7 @@ export class HeaderComponent implements OnInit {
 
   checkLoginStatus() {
     const user = localStorage.getItem('currentUser');
-    console.log('Checking login status - user from localStorage:', user);
     this.isLoggedIn.set(!!user);
-    console.log('isLoggedIn set to:', !!user);
   }
 
   updateCartCount() {
@@ -98,7 +98,7 @@ export class HeaderComponent implements OnInit {
 
   onLoginLogout() {
     if (this.isLoggedIn()) {
-      localStorage.removeItem('currentUser');
+      this.userService.logout();
       this.isLoggedIn.set(false);
       this.router.navigate(['/']);
     } else {

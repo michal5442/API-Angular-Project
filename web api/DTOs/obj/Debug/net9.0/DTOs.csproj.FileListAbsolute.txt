@@ -88,3 +88,15 @@ C:\Users\יהודית תם\Documents\API-Angular-Project\web api\DTOs\obj\Debug\
 C:\Users\יהודית תם\Documents\API-Angular-Project\web api\DTOs\obj\Debug\net9.0\refint\DTOs.dll
 C:\Users\יהודית תם\Documents\API-Angular-Project\web api\DTOs\obj\Debug\net9.0\DTOs.pdb
 C:\Users\יהודית תם\Documents\API-Angular-Project\web api\DTOs\obj\Debug\net9.0\ref\DTOs.dll
+C:\API-Angular-Project\web api\DTOs\bin\Debug\net9.0\DTOs.deps.json
+C:\API-Angular-Project\web api\DTOs\bin\Debug\net9.0\DTOs.dll
+C:\API-Angular-Project\web api\DTOs\bin\Debug\net9.0\DTOs.pdb
+C:\API-Angular-Project\web api\DTOs\obj\Debug\net9.0\DTOs.GeneratedMSBuildEditorConfig.editorconfig
+C:\API-Angular-Project\web api\DTOs\obj\Debug\net9.0\DTOs.AssemblyInfoInputs.cache
+C:\API-Angular-Project\web api\DTOs\obj\Debug\net9.0\DTOs.AssemblyInfo.cs
+C:\API-Angular-Project\web api\DTOs\obj\Debug\net9.0\DTOs.csproj.CoreCompileInputs.cache
+C:\API-Angular-Project\web api\DTOs\obj\Debug\net9.0\DTOs.sourcelink.json
+C:\API-Angular-Project\web api\DTOs\obj\Debug\net9.0\DTOs.dll
+C:\API-Angular-Project\web api\DTOs\obj\Debug\net9.0\refint\DTOs.dll
+C:\API-Angular-Project\web api\DTOs\obj\Debug\net9.0\DTOs.pdb
+C:\API-Angular-Project\web api\DTOs\obj\Debug\net9.0\ref\DTOs.dll

@@ -77,3 +77,21 @@
     <p>Loading song data...</p>
   </div>
 }
+
+@if (nextSong(); as next) {
+<div class="next-song-bar">
+  <span class="next-label">🎵 הבא בתור</span>
+  <img [src]="'https://localhost:44393/' + next.imageUrl" [alt]="next.songName" class="next-thumb" />
+  <div class="next-info">
+    <strong>{{ next.songName }}</strong>
+    <span>{{ next.artist }}</span>
+  </div>
+  <button mat-raised-button class="next-play-btn" (click)="playNextSong()">
+    <mat-icon>play_arrow</mat-icon>
+    נגן
+  </button>
+  <button mat-icon-button [routerLink]="['/song-detail', next.id]">
+    <mat-icon>open_in_new</mat-icon>
+  </button>
+</div>
+}

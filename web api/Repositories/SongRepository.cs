@@ -66,6 +66,16 @@ namespace Repositories
         {
             return await _userContext.Songs.FindAsync(id);
         }
+
+        public async Task UpdateGenreAsync(int songId, string genre)
+        {
+            var song = await _userContext.Songs.FindAsync(songId);
+            if (song != null)
+            {
+                song.GenreStyle = genre;
+                await _userContext.SaveChangesAsync();
+            }
+        }
         
 
     }

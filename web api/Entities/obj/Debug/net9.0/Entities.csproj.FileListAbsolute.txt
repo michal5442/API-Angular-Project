@@ -99,3 +99,15 @@ C:\Users\יהודית תם\Documents\API-Angular-Project\web api\Entities\obj\De
 C:\Users\יהודית תם\Documents\API-Angular-Project\web api\Entities\obj\Debug\net9.0\refint\Entities.dll
 C:\Users\יהודית תם\Documents\API-Angular-Project\web api\Entities\obj\Debug\net9.0\Entities.pdb
 C:\Users\יהודית תם\Documents\API-Angular-Project\web api\Entities\obj\Debug\net9.0\ref\Entities.dll
+C:\API-Angular-Project\web api\Entities\bin\Debug\net9.0\Entities.deps.json
+C:\API-Angular-Project\web api\Entities\bin\Debug\net9.0\Entities.dll
+C:\API-Angular-Project\web api\Entities\bin\Debug\net9.0\Entities.pdb
+C:\API-Angular-Project\web api\Entities\obj\Debug\net9.0\Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\API-Angular-Project\web api\Entities\obj\Debug\net9.0\Entities.AssemblyInfoInputs.cache
+C:\API-Angular-Project\web api\Entities\obj\Debug\net9.0\Entities.AssemblyInfo.cs
+C:\API-Angular-Project\web api\Entities\obj\Debug\net9.0\Entities.csproj.CoreCompileInputs.cache
+C:\API-Angular-Project\web api\Entities\obj\Debug\net9.0\Entities.sourcelink.json
+C:\API-Angular-Project\web api\Entities\obj\Debug\net9.0\Entities.dll
+C:\API-Angular-Project\web api\Entities\obj\Debug\net9.0\refint\Entities.dll
+C:\API-Angular-Project\web api\Entities\obj\Debug\net9.0\Entities.pdb
+C:\API-Angular-Project\web api\Entities\obj\Debug\net9.0\ref\Entities.dll

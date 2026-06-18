@@ -1,5 +1,6 @@
 using Entities;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Data.SqlClient;
 using System.Text.Json;
 using System.Threading.Tasks;
 namespace Repositories
@@ -77,6 +78,14 @@ namespace Repositories
             _userContext.Users.Remove(user);
             await _userContext.SaveChangesAsync();
             return true;
+        }
+        public async Task<bool> UpdateUserTheme(int userId, string theme)
+        {
+            var userIdParam  = new SqlParameter("@USER_ID", userId);
+            var themeParam   = new SqlParameter("@THEME",   theme);
+            var rows = await _userContext.Database
+                .ExecuteSqlRawAsync("EXEC sp_UpdateUserTheme @USER_ID, @THEME", userIdParam, themeParam);
+            return rows >= 0;
         }
     }
 }

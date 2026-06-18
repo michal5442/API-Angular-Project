@@ -33,10 +33,7 @@ export class Songs implements OnInit {
   constructor(private router: Router) {}
 
   ngOnInit() {
-    console.log('=== Songs ngOnInit ===');
-    
     this.route.queryParams.subscribe(params => {
-      console.log('Query params:', params);
       const artistId = params['artistId'];
       const search = params['search'];
       const minPrice = params['minPrice'];
@@ -44,20 +41,16 @@ export class Songs implements OnInit {
       
       this.route.data.subscribe(data => {
         this.mode = data['mode'] || 'songs';
-        console.log('Mode set to:', this.mode);
         this.title.set(this.mode === 'favorites' ? 'Favorites' : 'Songs');
       });
       
       if (artistId) {
-        console.log('Loading songs for artist:', artistId);
         this.loadSongsByArtist(Number(artistId));
       } else if (this.mode === 'favorites') {
         this.loadFavorites();
       } else if (search || minPrice || maxPrice) {
-        console.log('Loading songs with search params');
         this.loadSongsWithFilters(search, minPrice, maxPrice);
       } else {
-        console.log('Loading all songs');
         this.loadSongs();
       }
     });
@@ -69,17 +62,9 @@ export class Songs implements OnInit {
     } else {
       this.songsService.getSongs().subscribe({
         next: (res) => {
-          console.log('Raw response:', res);
-          console.log('Response type:', typeof res);
-          console.log('Is array:', Array.isArray(res));
           if (res && res.songs) {
-            console.log('First song full object:', res.songs[0]);
             const adaptedSongs = res.songs.map((song: any) => {
-              console.log('Song keys:', Object.keys(song));
-              console.log('Original song imgUrl:', song.imgUrl);
-              console.log('Original song imageUrl:', song.imageUrl);
               const cleaned = (song.imgUrl || song.imageUrl || '').replace(/&quot;/g, '').replace(/\\/g, '/');
-              console.log('Cleaned imageUrl:', cleaned);
               return {
                 id: song.songId || song.id,
                 songName: song.songName,
@@ -95,7 +80,6 @@ export class Songs implements OnInit {
             this.allSongs.set(adaptedSongs);
             this.songs.set(this.shuffleArray(adaptedSongs));
           } else {
-            console.error('Invalid response format:', res);
             this.allSongs.set([]);
             this.songs.set([]);
           }
@@ -140,16 +124,12 @@ export class Songs implements OnInit {
   }
 
   loadSongsByArtist(artistId: number) {
-    console.log('loadSongsByArtist called with:', artistId);
     this.title.set(`Songs by Artist`);
     this.songsService.getSongs(artistId).subscribe({
       next: (res) => {
-        console.log('Artist songs response:', res);
         if (res && res.songs) {
           const adaptedSongs = res.songs.map((song: any) => {
-            console.log('Original song imageUrl:', song.imgUrl || song.imageUrl);
             const cleaned = (song.imgUrl || song.imageUrl || '').replace(/&quot;/g, '').replace(/\\/g, '/');
-            console.log('Cleaned imageUrl:', cleaned);
             return {
               id: song.songId || song.id,
               songName: song.songName,
@@ -162,11 +142,9 @@ export class Songs implements OnInit {
               duration: song.duration
             };
           });
-          console.log('Adapted songs:', adaptedSongs);
           this.allSongs.set(adaptedSongs);
           this.songs.set(adaptedSongs);
         } else {
-          console.error('Invalid response format:', res);
           this.allSongs.set([]);
           this.songs.set([]);
         }
@@ -179,16 +157,8 @@ export class Songs implements OnInit {
     const user = localStorage.getItem('currentUser');
     const userId = user ? JSON.parse(user).id : null;
     if (!userId) return;
-    
     const key = `favorites_${userId}`;
     const favorites = JSON.parse(localStorage.getItem(key) || '[]');
-    console.log('=== FAVORITES DEBUG ===');
-    console.log('Raw favorites:', favorites);
-    if (favorites.length > 0) {
-      console.log('First favorite imageUrl:', favorites[0].imageUrl);
-      console.log('First favorite full object:', favorites[0]);
-    }
-    console.log('======================');
     this.songs.set(favorites);
   }
 
@@ -234,7 +204,6 @@ export class Songs implements OnInit {
       this.snackBar.open('Removed from favorites!', '', { duration: 2000 });
     } else {
       if (!favorites.find((s: Song) => s.id === song.id)) {
-        console.log('Adding to favorites, imageUrl:', song.imageUrl);
         favorites.push(song);
         localStorage.setItem(key, JSON.stringify(favorites));
         this.snackBar.open('Added to favorites!', '', { duration: 2000 });
@@ -260,18 +229,13 @@ export class Songs implements OnInit {
   }
 
   getImageUrl(song: Song): string {
-    console.log('getImageUrl called for:', song.songName, 'imageUrl:', song.imageUrl);
     if (!song.imageUrl || song.imageUrl.length === 0) {
-      console.log('No imageUrl, using placeholder');
       return 'https://placehold.co/300x200/4B2152/white?text=No+Image';
     }
     if (song.imageUrl.startsWith('http')) {
-      console.log('Already full URL:', song.imageUrl);
       return song.imageUrl;
     }
-    const fullUrl = `https://localhost:44393/${song.imageUrl}`;
-    console.log('Building full URL:', fullUrl);
-    return fullUrl;
+    return `https://localhost:44393/${song.imageUrl}`;
   }
 
   shuffleArray<T>(array: T[]): T[] {

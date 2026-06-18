@@ -19,5 +19,7 @@ public partial class User
 
     public string Password { get; set; } = null!;
 
+    public string PreferredTheme { get; set; } = "LIGHT";
+
     public virtual ICollection<Order> Orders { get; set; } = new List<Order>();
 }

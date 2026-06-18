@@ -1,5 +1,6 @@
 using DTOs;
 using Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Services;
@@ -18,28 +19,27 @@ namespace WebAopiShop.Controllers
         }
 
         [HttpGet]
-    public async Task<ActionResult<List<SongDTO>>> GetSongs([FromQuery] int? artistId, [FromQuery] string? Description, [FromQuery] double? minPrice, [FromQuery] double? maxPrice, [FromQuery] int position = 1, [FromQuery] int skip = 10)
-    {
+        [AllowAnonymous]
+        public async Task<ActionResult<List<SongDTO>>> GetSongs([FromQuery] int? artistId, [FromQuery] string? Description, [FromQuery] double? minPrice, [FromQuery] double? maxPrice, [FromQuery] int position = 1, [FromQuery] int skip = 10)
+        {
             var (songs, total) = await service.GetSongs(artistId, Description, minPrice, maxPrice, skip, position);
             if (songs == null || songs.Count == 0)
-            {
                 return Ok(new { songs = new List<SongDTO>(), total = 0 });
-            }
             return Ok(new { songs, total });
         }
 
         [HttpGet("{id}")]
+        [AllowAnonymous]
         public async Task<ActionResult<SongDTO>> GetById(int id)
         {
             SongDTO song = await service.GetSongById(id);
             if (song == null)
-            {
                 return NotFound();
-            }
             return Ok(song);
         }
 
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult<SongDTO>> AddSong([FromBody] Song song)
         {
             SongDTO song2 = await service.AddSong(song);
@@ -47,15 +47,17 @@ namespace WebAopiShop.Controllers
         }
 
         [HttpPut("{id}")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Put(int id, [FromBody] Song value)
         {
             bool updatedSong = await service.UpdateSong(value, id);
             if (!updatedSong)
-            { return NotFound($"Song with ID {id} not found."); }
+                return NotFound($"Song with ID {id} not found.");
             return Ok(updatedSong);
         }
 
         [HttpDelete("{id}")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Delete(int id)
         {
             var success = await service.DeleteSong(id);

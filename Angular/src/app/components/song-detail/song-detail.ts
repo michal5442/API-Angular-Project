@@ -7,14 +7,16 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { SongService } from '../../services/song.service';
 import { Song } from '../../models/song.model';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { UserService } from '../../services/user';
 import { ArtistService } from '../../services/artist';
 import { AudioService } from '../../services/audio.service';
+import { UserHistoryService } from '../../services/user-history.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-song-detail',
-  imports: [CommonModule, MatCardModule, MatButtonModule, MatIconModule, MatProgressSpinnerModule],
+  imports: [CommonModule, MatCardModule, MatButtonModule, MatIconModule, MatProgressSpinnerModule, RouterLink],
   templateUrl: './song-detail.html',
   styleUrl: './song-detail-new.css',
 })
@@ -25,22 +27,24 @@ export class SongDetail {
   private userService = inject(UserService);
   private snackBar = inject(MatSnackBar); 
   public audioService = inject(AudioService);
+  private userHistoryService = inject(UserHistoryService);
+  private router = inject(Router);
+  private listenRecorded = false;
+  nextSong = signal<Song | undefined>(undefined);
   
   song = signal<Song | undefined>(undefined);
   artistName = signal<string>('');
   isPlaying = signal<boolean>(false);
   currentTime = signal<number>(0);
   progressPercentage = signal<number>(0);
-  audioInitialized = signal<boolean>(false);
   private audioEl: HTMLAudioElement | null = null;
 
   ngOnInit() {
-    const id = this.route.snapshot.paramMap.get('id');
-    if (id) {
-      this.loadSong(Number(id));
-    }
+    this.route.paramMap.subscribe(params => {
+      const id = params.get('id');
+      if (id) this.loadSong(Number(id));
+    });
 
-    // Attach to shared audio element for progress updates
     try {
       this.audioEl = this.audioService.getAudioElement();
       this.audioEl.addEventListener('timeupdate', () => this.onTimeUpdate());
@@ -51,14 +55,20 @@ export class SongDetail {
   }
 
   loadSong(id:number){
+    this.listenRecorded = false;
+    this.nextSong.set(undefined);
     this.songsService.getSongById(id).subscribe(res => {
-      console.log('Song from server:', res);
-      console.log('ImageUrl:', res.imageUrl);
+      const userId = this.userService.getCurrentUserId();
+      if (userId) {
+        this.userHistoryService.getRecommendations(userId).subscribe(songs => {
+          const next = songs.find(s => s.id !== id);
+          this.nextSong.set(next);
+        });
+      }
       const cleanedSong = {
         ...res,
         imageUrl: (res.imageUrl || '').replace(/&quot;/g, '').replace(/\\/g, '/')
       };
-      console.log('Cleaned imageUrl:', cleanedSong.imageUrl);
       this.song.set(cleanedSong);
       if (res.artistId) {
         this.artistService.getArtistById(res.artistId).subscribe(
@@ -113,12 +123,6 @@ export class SongDetail {
     }
   }
 
-  getArtistName(id: number){
-    this.artistService.getArtistById(id).subscribe(
-      artist => this.artistName.set(artist.name)
-    );
-  }
-
   togglePlay() {
     const currentSong = this.song();
     if (!currentSong) return;
@@ -141,6 +145,19 @@ export class SongDetail {
       if (duration > 0) {
         const percentage = (audio.currentTime / duration) * 100;
         this.progressPercentage.set(percentage);
+
+        if (!this.listenRecorded && percentage >= 50) {
+          this.listenRecorded = true;
+          const userId = this.userService.getCurrentUserId();
+          const songId = this.song()?.id;
+          if (userId && songId) {
+            this.userHistoryService.recordListen(userId, songId).subscribe();
+            this.userHistoryService.getRecommendations(userId).subscribe(songs => {
+              const next = songs.find(s => s.id !== songId);
+              this.nextSong.set(next);
+            });
+          }
+        }
       }
     }
   }
@@ -156,5 +173,13 @@ export class SongDetail {
     const percentage = clickX / width;
     
     audio.currentTime = duration * percentage;
+  }
+
+  playNextSong() {
+    const next = this.nextSong();
+    if (next) {
+      this.audioService.togglePlay(next);
+      this.router.navigate(['/song-detail', next.id]);
+    }
   }
 }

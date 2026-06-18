@@ -143,3 +143,21 @@ C:\Users\יהודית תם\Documents\API-Angular-Project\web api\Repositories\ob
 C:\Users\יהודית תם\Documents\API-Angular-Project\web api\Repositories\obj\Debug\net9.0\Repositories.pdb
 C:\Users\יהודית תם\Documents\API-Angular-Project\web api\Repositories\obj\Debug\net9.0\Repositories.genruntimeconfig.cache
 C:\Users\יהודית תם\Documents\API-Angular-Project\web api\Repositories\obj\Debug\net9.0\ref\Repositories.dll
+C:\API-Angular-Project\web api\Repositories\bin\Debug\net9.0\Repositories.deps.json
+C:\API-Angular-Project\web api\Repositories\bin\Debug\net9.0\Repositories.runtimeconfig.json
+C:\API-Angular-Project\web api\Repositories\bin\Debug\net9.0\Repositories.dll
+C:\API-Angular-Project\web api\Repositories\bin\Debug\net9.0\Repositories.pdb
+C:\API-Angular-Project\web api\Repositories\bin\Debug\net9.0\Entities.dll
+C:\API-Angular-Project\web api\Repositories\bin\Debug\net9.0\Entities.pdb
+C:\API-Angular-Project\web api\Repositories\obj\Debug\net9.0\Repositories.csproj.AssemblyReference.cache
+C:\API-Angular-Project\web api\Repositories\obj\Debug\net9.0\Repositories.GeneratedMSBuildEditorConfig.editorconfig
+C:\API-Angular-Project\web api\Repositories\obj\Debug\net9.0\Repositories.AssemblyInfoInputs.cache
+C:\API-Angular-Project\web api\Repositories\obj\Debug\net9.0\Repositories.AssemblyInfo.cs
+C:\API-Angular-Project\web api\Repositories\obj\Debug\net9.0\Repositories.csproj.CoreCompileInputs.cache
+C:\API-Angular-Project\web api\Repositories\obj\Debug\net9.0\Repositories.sourcelink.json
+C:\API-Angular-Project\web api\Repositories\obj\Debug\net9.0\Reposito.787EC4B2.Up2Date
+C:\API-Angular-Project\web api\Repositories\obj\Debug\net9.0\Repositories.dll
+C:\API-Angular-Project\web api\Repositories\obj\Debug\net9.0\refint\Repositories.dll
+C:\API-Angular-Project\web api\Repositories\obj\Debug\net9.0\Repositories.pdb
+C:\API-Angular-Project\web api\Repositories\obj\Debug\net9.0\Repositories.genruntimeconfig.cache
+C:\API-Angular-Project\web api\Repositories\obj\Debug\net9.0\ref\Repositories.dll

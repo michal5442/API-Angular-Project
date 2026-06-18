@@ -3,6 +3,9 @@
   <span *ngIf="isOpen" class="toggle-icon-close">✕</span>
 </button>
 
+<!-- Toast notification -->
+<div class="toast" *ngIf="toastMsg">{{ toastMsg }}</div>
+
 <div class="chat-window" *ngIf="isOpen">
   <div class="chat-header">
     <div class="chat-header-avatar">🤖</div>
@@ -15,10 +18,16 @@
   </div>
 
   <div class="chat-messages" #messagesContainer>
-    <div *ngFor="let m of messages" class="msg-row" [class.user]="m.role === 'user'">
+    <div *ngFor="let m of messages; let i = index" class="msg-row" [class.user]="m.role === 'user'">
       <div class="msg-avatar" *ngIf="m.role === 'assistant'">🎵</div>
-      <div class="msg" [class.user]="m.role === 'user'" [class.assistant]="m.role === 'assistant'">
-        {{ m.content }}
+      <div class="msg-wrapper" [class.user]="m.role === 'user'">
+        <div class="msg" [class.user]="m.role === 'user'" [class.assistant]="m.role === 'assistant'">
+          {{ m.content }}<span class="cursor" *ngIf="m.role === 'assistant' && loading && i === messages.length - 1">▌</span>
+        </div>
+        <div class="msg-footer">
+          <span class="msg-time">{{ m.time }}</span>
+          <button class="copy-btn" *ngIf="m.role === 'assistant'" (click)="copy(m.content)" title="Copy">📋</button>
+        </div>
       </div>
     </div>
 
@@ -32,9 +41,41 @@
     </div>
   </div>
 
+  <!-- Camera consent banner — shown once to logged-in users who haven't decided yet -->
+  <div class="consent-banner" *ngIf="isLoggedIn && showConsentPrompt">
+    <span class="consent-icon">📷</span>
+    <p class="consent-msg">
+      Enable smart ambient theme detection? I'll use your camera to adjust the store's
+      lighting based on your environment.
+    </p>
+    <div class="consent-actions">
+      <button class="theme-btn accept" (click)="grantCameraConsent()">Yes, enable</button>
+      <button class="theme-btn dismiss" (click)="denyCameraConsent()">No thanks</button>
+    </div>
+  </div>
+
+  <!-- Theme suggestion banner — shown when camera detects a mismatch -->
+  <div class="theme-suggestion" *ngIf="isLoggedIn && showThemeSuggestion">
+    <span class="theme-suggestion-msg">{{ themeSuggestionMsg }}</span>
+    <div class="theme-suggestion-actions">
+      <button class="theme-btn accept" (click)="acceptThemeSuggestion()">Yes, switch!</button>
+      <button class="theme-btn dismiss" (click)="dismissThemeSuggestion()">No thanks</button>
+    </div>
+  </div>
+
+  <!-- Suggested questions — shown only before first user message -->
+  <div class="suggestions" *ngIf="messages.length === 1 && !loading">
+    <button class="suggestion-btn" *ngFor="let s of suggestions" (click)="sendSuggestion(s.text)">
+      {{ s.icon }} {{ s.text }}
+    </button>
+  </div>
+
   <div class="chat-input">
-    <textarea [(ngModel)]="input" (keydown)="onKey($event)"
-              placeholder="Ask about songs, artists, your cart..."></textarea>
-    <button class="send-btn" (click)="send()" [disabled]="loading">➤</button>
+    <div class="chat-input-row">
+      <app-audio-recorder [existingText]="input" (transcribed)="onTranscribed($event)"></app-audio-recorder>
+      <textarea [(ngModel)]="input" (keydown)="onKey($event)"
+                placeholder="Ask about songs, artists, your cart..."></textarea>
+      <button class="send-btn" (click)="send()" [disabled]="loading">➤</button>
+    </div>
   </div>
 </div>

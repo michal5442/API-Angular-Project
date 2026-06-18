@@ -21,6 +21,33 @@
     <div class="hero-wave"></div>
   </section>
 
+  <!-- AI Recommendations Section -->
+  @if (isLoggedIn() && recommendations().length > 0) {
+  <section class="recommendations-section">
+    <h2 class="section-title">🎵 הבחירות של הבינה</h2>
+    <p class="section-subtitle">בהתבסס על מה שהאזנת לאחרונה</p>
+    <div class="recommendations-grid">
+      @for (song of recommendations(); track song.id) {
+      <mat-card class="recommendation-card">
+        <div class="rec-image-wrapper">
+          <img [src]="'https://localhost:44393/' + song.imageUrl" [alt]="song.songName" class="rec-image" />
+          <div class="rec-play-overlay">
+            <button mat-mini-fab class="rec-play-btn" (click)="playSong(song); $event.stopPropagation()">
+              <mat-icon>{{ audioService.isPlayingSong(song.id) ? 'pause' : 'play_arrow' }}</mat-icon>
+            </button>
+          </div>
+        </div>
+        <div class="rec-info" [routerLink]="['/song-detail', song.id]" style="cursor:pointer">
+          <h4>{{ song.songName }}</h4>
+          <p>{{ song.artist }}</p>
+          <span class="genre-badge">{{ song.genreStyle }}</span>
+        </div>
+      </mat-card>
+      }
+    </div>
+  </section>
+  }
+
   <!-- Features Section -->
   <section class="features-section">
     <h2 class="section-title">Why Choose MY Music?</h2>

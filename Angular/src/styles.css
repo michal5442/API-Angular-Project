@@ -3,9 +3,343 @@
 body {
   margin: 0;
   padding: 0;
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
 
-/* Add top margin to all main content to account for sticky header */
+/* Light theme */
+body.theme-light {
+  background-color: #ffffff;
+  color: #1a1a1a;
+}
+
+/* Dark theme — soft deep purple */
+body.theme-dark {
+  background-color: #1f1b2e;
+  color: #e8e0f0;
+}
+
+/* Containers */
+body.theme-dark .songs-container,
+body.theme-dark .artists-container,
+body.theme-dark .home-container,
+body.theme-dark .cart-container,
+body.theme-dark .profile-container,
+body.theme-dark .song-detail-container,
+body.theme-dark .about-container,
+body.theme-dark .contact-container,
+body.theme-dark .checkout-container,
+body.theme-dark .login-container,
+body.theme-dark .register-container {
+  background: #1f1b2e !important;
+  color: #e8e0f0 !important;
+}
+
+body.theme-dark .songs-container,
+body.theme-dark .artists-container {
+  background: linear-gradient(135deg, #1f1b2e 0%, #2a2040 100%) !important;
+}
+
+/* Cards */
+body.theme-dark .mat-mdc-card,
+body.theme-dark .mat-card,
+body.theme-dark .song-card,
+body.theme-dark .artist-card,
+body.theme-dark .cart-item,
+body.theme-dark .profile-card,
+body.theme-dark .order-card,
+body.theme-dark .feature-card,
+body.theme-dark .filter-section {
+  background: #2c2541 !important;
+  background-image: none !important;
+  color: #e8e0f0 !important;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3) !important;
+  border-color: #3d3157 !important;
+}
+
+body.theme-dark .song-card mat-card-content,
+body.theme-dark .artist-card mat-card-content {
+  background: linear-gradient(to bottom, #2c2541 0%, #312958 100%) !important;
+}
+
+body.theme-dark .song-card mat-card-actions {
+  background: #2c2541 !important;
+  border-top-color: #3d3157 !important;
+}
+
+/* Headings */
+body.theme-dark h1,
+body.theme-dark h2,
+body.theme-dark h3,
+body.theme-dark h4,
+body.theme-dark .section-title,
+body.theme-dark .filter-title,
+body.theme-dark .card-header h2,
+body.theme-dark .order-info h3 {
+  color: #f0e8ff !important;
+}
+
+/* Subtext */
+body.theme-dark p,
+body.theme-dark .song-card p,
+body.theme-dark .artist-card p,
+body.theme-dark .order-date,
+body.theme-dark .duration,
+body.theme-dark .artist {
+  color: #c0aee0 !important;
+}
+
+/* Header */
+body.theme-dark .header-toolbar,
+body.theme-dark .mat-toolbar {
+  background: #17132a !important;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.4) !important;
+}
+
+body.theme-dark .logo-text { color: #f0e8ff !important; }
+body.theme-dark .nav-link  { color: #c0aee0 !important; }
+
+body.theme-dark .nav-link:hover {
+  background: rgba(194, 24, 91, 0.15) !important;
+  color: #f0e8ff !important;
+}
+
+body.theme-dark .action-btn {
+  background: rgba(240, 232, 255, 0.1) !important;
+  color: #e8e0f0 !important;
+}
+
+/* Search */
+body.theme-dark .search-container {
+  background: #2c2541 !important;
+  border-color: #3d3157 !important;
+}
+
+body.theme-dark .search-input {
+  color: #e8e0f0 !important;
+  background: transparent !important;
+}
+
+body.theme-dark .search-input::placeholder { color: #8070a8 !important; }
+
+/* Inputs */
+body.theme-dark input,
+body.theme-dark textarea {
+  background-color: #2c2541 !important;
+  color: #e8e0f0 !important;
+  border-color: #3d3157 !important;
+}
+
+body.theme-dark .mat-mdc-form-field,
+body.theme-dark .mat-mdc-input-element { color: #e8e0f0 !important; }
+
+body.theme-dark .mdc-text-field--filled { background-color: #2c2541 !important; }
+
+body.theme-dark .mdc-text-field--outlined .mdc-notched-outline__leading,
+body.theme-dark .mdc-text-field--outlined .mdc-notched-outline__notch,
+body.theme-dark .mdc-text-field--outlined .mdc-notched-outline__trailing {
+  border-color: #4d3d6b !important;
+}
+
+body.theme-dark .mat-mdc-floating-label { color: #c0aee0 !important; }
+
+/* Home sections */
+body.theme-dark .categories-section {
+  background: linear-gradient(135deg, #231d38, #2a2040) !important;
+}
+
+body.theme-dark .hero-wave {
+  filter: brightness(0.25) sepia(1) hue-rotate(240deg);
+}
+
+/* Cart summary keeps its gradient */
+body.theme-dark .cart-summary {
+  background: linear-gradient(135deg, #4B2152 0%, #C2185B 100%) !important;
+}
+
+/* Order items */
+body.theme-dark .order-item            { background: #3d3157 !important; }
+body.theme-dark .order-item span       { color: #c8bae0 !important; }
+body.theme-dark .card-header           { border-bottom-color: #C2185B !important; }
+body.theme-dark .order-details         { border-top-color: #3d3157 !important; }
+
+/* Song detail */
+body.theme-dark .progress-container   { background: rgba(44,37,65,0.95) !important; }
+body.theme-dark .progress-bar         { background-color: #3d3157 !important; }
+body.theme-dark .time-display         { color: #c0aee0 !important; }
+
+/* Scrollbar */
+body.theme-dark ::-webkit-scrollbar              { width: 8px; }
+body.theme-dark ::-webkit-scrollbar-track        { background: #17132a; }
+body.theme-dark ::-webkit-scrollbar-thumb        { background: #4d3d6b; border-radius: 4px; }
+body.theme-dark ::-webkit-scrollbar-thumb:hover  { background: #6b5a8a; }
+
+/* =============================================
+   CHAT COMPONENT
+   ============================================= */
+body.theme-dark app-chat .chat-window {
+  background: #2c2541 !important;
+}
+
+body.theme-dark app-chat .chat-messages {
+  background: #231d38 !important;
+}
+
+body.theme-dark app-chat .msg.assistant {
+  background: #3d3157 !important;
+  color: #f0e8ff !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3) !important;
+}
+
+body.theme-dark app-chat .msg-time {
+  color: #8070a8 !important;
+}
+
+body.theme-dark app-chat .chat-input {
+  background: #2c2541 !important;
+  border-top-color: #3d3157 !important;
+}
+
+body.theme-dark app-chat .chat-input textarea {
+  background: #3d3157 !important;
+  color: #f0e8ff !important;
+  border-color: #4d3d6b !important;
+}
+
+body.theme-dark app-chat .suggestions {
+  background: #2c2541 !important;
+  border-top-color: #3d3157 !important;
+}
+
+body.theme-dark app-chat .suggestion-btn {
+  background: #3d3157 !important;
+  border-color: #4d3d6b !important;
+  color: #e8e0f0 !important;
+}
+
+body.theme-dark app-chat .consent-banner {
+  background: #1e3a5f !important;
+  border-color: #2a5298 !important;
+}
+
+body.theme-dark app-chat .consent-msg {
+  color: #c8dcf5 !important;
+}
+
+body.theme-dark app-chat .theme-suggestion {
+  background: #3d2f10 !important;
+  border-color: #7a5c1e !important;
+}
+
+body.theme-dark app-chat .theme-suggestion-msg {
+  color: #f5d98a !important;
+}
+
+body.theme-dark app-chat .theme-btn.dismiss {
+  background: #4d3d6b !important;
+  color: #e8e0f0 !important;
+}
+
+/* =============================================
+   ABOUT & CONTACT
+   ============================================= */
+body.theme-dark .about-container,
+body.theme-dark .contact-container {
+  background: linear-gradient(135deg, #1f1b2e 0%, #2a2040 100%) !important;
+}
+
+body.theme-dark .story-card,
+body.theme-dark .mission-card,
+body.theme-dark .info-card,
+body.theme-dark .form-card {
+  background: #2c2541 !important;
+  color: #e8e0f0 !important;
+}
+
+body.theme-dark .story-card p,
+body.theme-dark .mission-card p,
+body.theme-dark .info-card p,
+body.theme-dark .form-subtitle,
+body.theme-dark .form-card h2 + p {
+  color: #c0aee0 !important;
+}
+
+body.theme-dark .icon-header h2,
+body.theme-dark .form-card h2 {
+  color: #f0e8ff !important;
+}
+
+body.theme-dark .stat-item {
+  background: #3d3157 !important;
+}
+
+body.theme-dark .stat-item p {
+  color: #c0aee0 !important;
+}
+
+/* =============================================
+   LOGIN & REGISTER
+   ============================================= */
+body.theme-dark .login-container,
+body.theme-dark .register-container {
+  background: linear-gradient(135deg, #17132a 0%, #2a1540 100%) !important;
+}
+
+body.theme-dark .login-card,
+body.theme-dark .register-card {
+  background: #2c2541 !important;
+  color: #e8e0f0 !important;
+}
+
+body.theme-dark .login-header h1,
+body.theme-dark .register-header h1 {
+  color: #f0e8ff !important;
+}
+
+body.theme-dark .login-header p,
+body.theme-dark .register-header p,
+body.theme-dark .register-link,
+body.theme-dark .login-link {
+  color: #c0aee0 !important;
+}
+
+/* =============================================
+   CHECKOUT
+   ============================================= */
+body.theme-dark .checkout-container {
+  background: #1f1b2e !important;
+}
+
+body.theme-dark .order-details,
+body.theme-dark .delivery-info {
+  background: #2c2541 !important;
+  color: #e8e0f0 !important;
+}
+
+body.theme-dark .delivery-info {
+  background: #231d38 !important;
+}
+
+body.theme-dark .product-item {
+  border-bottom-color: #3d3157 !important;
+}
+
+body.theme-dark .product-info h3 {
+  color: #f0e8ff !important;
+}
+
+body.theme-dark .total-section {
+  border-top-color: #C2185B !important;
+}
+
+body.theme-dark .delivery-info h3 {
+  color: #f0e8ff !important;
+}
+
+body.theme-dark .delivery-info p {
+  color: #c0aee0 !important;
+}
+
+/* Sticky header spacing */
 .admin-dashboard,
 .songs-container,
 .artists-container,

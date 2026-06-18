@@ -8,4 +8,5 @@ export interface Song{
     songUrl: string
     description: string
     duration: number
+    genreStyle?: string
 }

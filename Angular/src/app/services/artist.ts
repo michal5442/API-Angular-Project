@@ -23,28 +23,19 @@ export class ArtistService {
 
   addArtist(artist: Artist): Observable<Artist> {
     return this.http.post<Artist>(this.apiUrl, artist).pipe(
-      catchError(error => {
-        console.error('Error adding artist:', error);
-        throw error;
-      })
+      catchError(error => { throw error; })
     );
   }
 
   updateArtist(id: number, artist: Artist): Observable<Artist> {
     return this.http.put<Artist>(`${this.apiUrl}/${id}`, artist).pipe(
-      catchError(error => {
-        console.error('Error updating artist:', error);
-        throw error;
-      })
+      catchError(error => { throw error; })
     );
   }
 
   deleteArtist(id: number): Observable<void> {
     return this.http.delete<void>(`${this.apiUrl}/${id}`).pipe(
-      catchError(error => {
-        console.error('Error deleting artist:', error);
-        throw error;
-      })
+      catchError(error => { throw error; })
     );
   }
 }

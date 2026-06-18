@@ -1,7 +1,7 @@
-C:\Users\יהודית תם\Documents\API-Angular-Project\web api\WebAopiShop\wwwroot\index.html
-C:\Users\יהודית תם\Documents\API-Angular-Project\web api\WebAopiShop\wwwroot\script.js
-C:\Users\יהודית תם\Documents\API-Angular-Project\web api\WebAopiShop\wwwroot\update.js
-C:\Users\יהודית תם\Documents\API-Angular-Project\web api\WebAopiShop\wwwroot\update.html
+C:\API-Angular-Project\web api\WebAopiShop\wwwroot\index.html
+C:\API-Angular-Project\web api\WebAopiShop\wwwroot\script.js
+C:\API-Angular-Project\web api\WebAopiShop\wwwroot\update.js
+C:\API-Angular-Project\web api\WebAopiShop\wwwroot\update.html
 wwwroot\img\a.png
 wwwroot\img\aa.png
 wwwroot\img\b.png

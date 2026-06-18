@@ -14,7 +14,6 @@ export class SongService{
     
     if (artistId) {
       params = params.set('artistId', artistId.toString());
-      console.log('Setting artistId param:', artistId);
     }
     if (description) params = params.set('description', description);
     if (minPrice !== undefined) params = params.set('minPrice', minPrice.toString());
@@ -22,14 +21,8 @@ export class SongService{
     params = params.set('skip', '1000');
     params = params.set('position', '1');
     
-    const url = `${this.apiUrl}?${params.toString()}`;
-    console.log('Request URL:', url);
-    
     return this.http.get<{ songs: Song[], total: number }>(this.apiUrl, { params }).pipe(
-      catchError(error => {
-        console.error('SongService error:', error);
-        return of({ songs: [], total: 0 });
-      })
+      catchError(() => of({ songs: [], total: 0 }))
     );
   }
 

@@ -202,3 +202,23 @@ C:\Users\יהודית תם\Documents\API-Angular-Project\web api\Services\obj\De
 C:\Users\יהודית תם\Documents\API-Angular-Project\web api\Services\obj\Debug\net9.0\refint\Services.dll
 C:\Users\יהודית תם\Documents\API-Angular-Project\web api\Services\obj\Debug\net9.0\Services.pdb
 C:\Users\יהודית תם\Documents\API-Angular-Project\web api\Services\obj\Debug\net9.0\ref\Services.dll
+C:\API-Angular-Project\web api\Services\obj\Debug\net9.0\Services.csproj.AssemblyReference.cache
+C:\API-Angular-Project\web api\Services\obj\Debug\net9.0\Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\API-Angular-Project\web api\Services\obj\Debug\net9.0\Services.AssemblyInfoInputs.cache
+C:\API-Angular-Project\web api\Services\obj\Debug\net9.0\Services.AssemblyInfo.cs
+C:\API-Angular-Project\web api\Services\obj\Debug\net9.0\Services.csproj.CoreCompileInputs.cache
+C:\API-Angular-Project\web api\Services\obj\Debug\net9.0\Services.sourcelink.json
+C:\API-Angular-Project\web api\Services\obj\Debug\net9.0\Services.dll
+C:\API-Angular-Project\web api\Services\obj\Debug\net9.0\refint\Services.dll
+C:\API-Angular-Project\web api\Services\obj\Debug\net9.0\Services.pdb
+C:\API-Angular-Project\web api\Services\bin\Debug\net9.0\Services.deps.json
+C:\API-Angular-Project\web api\Services\bin\Debug\net9.0\Services.dll
+C:\API-Angular-Project\web api\Services\bin\Debug\net9.0\Services.pdb
+C:\API-Angular-Project\web api\Services\bin\Debug\net9.0\DTOs.dll
+C:\API-Angular-Project\web api\Services\bin\Debug\net9.0\Entities.dll
+C:\API-Angular-Project\web api\Services\bin\Debug\net9.0\Repositories.dll
+C:\API-Angular-Project\web api\Services\bin\Debug\net9.0\DTOs.pdb
+C:\API-Angular-Project\web api\Services\bin\Debug\net9.0\Repositories.pdb
+C:\API-Angular-Project\web api\Services\bin\Debug\net9.0\Entities.pdb
+C:\API-Angular-Project\web api\Services\obj\Debug\net9.0\Services.csproj.Up2Date
+C:\API-Angular-Project\web api\Services\obj\Debug\net9.0\ref\Services.dll

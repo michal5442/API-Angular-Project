@@ -9,5 +9,6 @@ namespace Repositories
         Task<bool> updateSong(Song song, int id);
         Task<bool> deleteSong(int id);
         Task<Song> getSongById(int id);
+        Task UpdateGenreAsync(int songId, string genre);
     }
 }

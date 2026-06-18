@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Services;
 
 namespace WebAopiShop.Controllers
 {
@@ -7,15 +8,30 @@ namespace WebAopiShop.Controllers
     public class AdminController : ControllerBase
     {
         private const string ADMIN_PASSWORD = "admin123";
+        private readonly IUserService _userService;
+
+        public AdminController(IUserService userService)
+        {
+            _userService = userService;
+        }
 
         [HttpPost("Login")]
         public ActionResult Login([FromBody] AdminLoginRequest request)
         {
-            if (request.Password == ADMIN_PASSWORD)
+            if (request.Password != ADMIN_PASSWORD)
+                return Unauthorized(new { success = false });
+
+            var token = _userService.GenerateAdminToken();
+
+            Response.Cookies.Append("auth_token", token, new CookieOptions
             {
-                return Ok(new { success = true });
-            }
-            return Unauthorized(new { success = false });
+                HttpOnly = true,
+                Secure = true,
+                SameSite = SameSiteMode.None,
+                Expires = DateTimeOffset.UtcNow.AddHours(1)
+            });
+
+            return Ok(new { success = true, token = token });
         }
     }
 

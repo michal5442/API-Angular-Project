@@ -97,18 +97,6 @@
   box-shadow: 0 2px 6px rgba(75,33,82,0.2);
 }
 
-.msg {
-  padding: 10px 14px;
-  border-radius: 16px;
-  max-width: 78%;
-  font-size: 14px;
-  line-height: 1.55;
-  word-break: break-word;
-  white-space: pre-wrap;
-  unicode-bidi: plaintext;
-  text-align: left;
-}
-
 .msg.user {
   background: var(--gradient);
   color: white;
@@ -142,27 +130,35 @@
 }
 
 .chat-input {
-  display: flex; gap: 8px; padding: 12px 14px;
+  padding: 10px 14px;
   border-top: 1px solid #f0eaf2;
   background: white;
   flex-shrink: 0;
 }
 
-.chat-input textarea {
-  flex: 1; resize: none;
+.chat-input-row {
+  display: flex; gap: 4px; align-items: center;
   border: 1.5px solid #e0d6e8;
   border-radius: 12px;
-  padding: 9px 12px;
-  font-size: 14px;
-  height: 42px;
-  outline: none;
+  padding: 2px 6px 2px 2px;
   transition: border-color 0.2s;
-  font-family: inherit;
-  color: #333;
 }
 
-.chat-input textarea:focus {
-  border-color: var(--plum);
+.chat-input-row:focus-within {
+  border-color: #4B2152;
+}
+
+.chat-input textarea {
+  flex: 1; resize: none;
+  border: none;
+  border-radius: 10px;
+  padding: 8px 8px;
+  font-size: 14px;
+  height: 36px;
+  outline: none;
+  font-family: inherit;
+  color: #333;
+  background: transparent;
 }
 
 .send-btn {
@@ -186,3 +182,164 @@
 
 .toggle-icon-open { font-size: 26px; line-height: 1; }
 .toggle-icon-close { font-size: 22px; line-height: 1; font-style: normal; }
+
+/* Toast */
+.toast {
+  position: fixed; bottom: 100px; right: 28px;
+  background: #333; color: white;
+  padding: 10px 18px; border-radius: 20px;
+  font-size: 13px; z-index: 1001;
+  animation: fadeInOut 3s ease forwards;
+  pointer-events: none;
+}
+
+@keyframes fadeInOut {
+  0%   { opacity: 0; transform: translateY(10px); }
+  15%  { opacity: 1; transform: translateY(0); }
+  80%  { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* Msg wrapper */
+.msg-wrapper {
+  display: flex; flex-direction: column; gap: 3px;
+  max-width: 78%;
+}
+
+.msg-wrapper.user { align-items: flex-end; }
+
+.msg {
+  padding: 10px 14px;
+  border-radius: 16px;
+  max-width: 100%;
+  font-size: 14px;
+  line-height: 1.55;
+  word-break: break-word;
+  white-space: pre-wrap;
+  unicode-bidi: plaintext;
+  text-align: left;
+}
+
+/* Msg footer: time + copy */
+.msg-footer {
+  display: flex; align-items: center; gap: 6px;
+  padding: 0 4px;
+}
+
+.msg-time {
+  font-size: 10px; color: #aaa;
+}
+
+.copy-btn {
+  background: none; border: none; cursor: pointer;
+  font-size: 12px; opacity: 0.4; padding: 0;
+  transition: opacity 0.2s;
+}
+
+.copy-btn:hover { opacity: 1; }
+
+/* Typing cursor */
+.cursor {
+  display: inline-block;
+  color: #C2185B;
+  font-weight: 100;
+  animation: blink 0.7s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+/* Suggested questions */
+.suggestions {
+  display: flex; flex-wrap: wrap; gap: 6px;
+  padding: 8px 14px;
+  border-top: 1px solid #f0eaf2;
+  background: white;
+}
+
+.suggestion-btn {
+  background: #f5f0f7;
+  border: 1px solid #e0d6e8;
+  border-radius: 20px;
+  padding: 6px 12px;
+  font-size: 12px;
+  cursor: pointer;
+  color: #4B2152;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.suggestion-btn:hover {
+  background: var(--gradient);
+  color: white;
+  border-color: transparent;
+}
+
+/* Camera consent banner */
+.consent-banner {
+  display: flex; flex-direction: column; gap: 8px;
+  padding: 12px 14px;
+  background: #e8f4fd;
+  border-top: 1px solid #90caf9;
+  border-bottom: 1px solid #90caf9;
+  flex-shrink: 0;
+}
+
+.consent-icon {
+  font-size: 20px;
+}
+
+.consent-msg {
+  font-size: 13px;
+  color: #1a3c5e;
+  line-height: 1.45;
+  margin: 0;
+}
+
+.consent-actions {
+  display: flex; gap: 8px;
+}
+
+/* Theme suggestion banner */
+.theme-suggestion {
+  display: flex; flex-direction: column; gap: 8px;
+  padding: 10px 14px;
+  background: #fff8e1;
+  border-top: 1px solid #ffe082;
+  border-bottom: 1px solid #ffe082;
+  flex-shrink: 0;
+}
+
+.theme-suggestion-msg {
+  font-size: 13px;
+  color: #5d4037;
+  line-height: 1.4;
+}
+
+.theme-suggestion-actions {
+  display: flex; gap: 8px;
+}
+
+.theme-btn {
+  padding: 5px 14px;
+  border-radius: 20px;
+  border: none;
+  font-size: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: opacity 0.2s;
+}
+
+.theme-btn.accept {
+  background: var(--gradient);
+  color: white;
+}
+
+.theme-btn.dismiss {
+  background: #f0eaf2;
+  color: #4B2152;
+}
+
+.theme-btn:hover { opacity: 0.85; }
