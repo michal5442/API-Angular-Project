@@ -1,7 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
-import { Observable, catchError, of } from 'rxjs';
+import { Observable, catchError, of, retry, timer } from 'rxjs';
 import { Song } from '../models/song.model';
+
+const RETRY_CONFIG = { count: 3, delay: (n: number) => timer(n * 1000) };
 
 @Injectable({ providedIn: 'root' })
 export class SongService{
@@ -22,12 +24,14 @@ export class SongService{
     params = params.set('position', '1');
     
     return this.http.get<{ songs: Song[], total: number }>(this.apiUrl, { params }).pipe(
+      retry(RETRY_CONFIG),
       catchError(() => of({ songs: [], total: 0 }))
     );
   }
 
   getSongById(id: number): Observable<Song> {
     return this.http.get<Song>(`${this.apiUrl}/${id}`).pipe(
+      retry(RETRY_CONFIG),
       catchError(error => {
         console.error('Error fetching song:', error);
         return of({} as Song);

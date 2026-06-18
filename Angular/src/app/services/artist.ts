@@ -1,7 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, catchError, of } from 'rxjs';
+import { Observable, catchError, of, retry, timer } from 'rxjs';
 import { Artist } from '../models/artist.model';
+
+const RETRY_CONFIG = { count: 3, delay: (n: number) => timer(n * 1000) };
 
 @Injectable({ providedIn: 'root' })
 export class ArtistService {
@@ -11,12 +13,14 @@ export class ArtistService {
   
   getArtists(): Observable<Artist[]> {
     return this.http.get<Artist[]>(this.apiUrl).pipe(
+      retry(RETRY_CONFIG),
       catchError(() => of([]))
     );
   }
 
   getArtistById(id: number): Observable<Artist> {
     return this.http.get<Artist>(`${this.apiUrl}/${id}`).pipe(
+      retry(RETRY_CONFIG),
       catchError(() => of({} as Artist))
     );
   }
