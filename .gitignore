@@ -1,8 +1,33 @@
+# IDE
 .vs/
 .vscode/
+*.user
+*.suo
+
+# .NET build output
+**/bin/
+**/obj/
+
+# Node / Angular
 node_modules/
 dist/
-.env
-*.env
+.angular/cache/
+
+# Python
 __pycache__/
 *.pyc
+*.pyo
+.venv/
+venv/
+
+# Environment / secrets
+.env
+*.env
+
+# Logs
+*.log
+c:/temp/
+
+# OS
+.DS_Store
+Thumbs.db
