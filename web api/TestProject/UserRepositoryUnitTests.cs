@@ -3,7 +3,6 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Moq;
 using Repositories;
-using Repositories.Models;
 using System.Linq.Expressions;
 
 namespace TestProject

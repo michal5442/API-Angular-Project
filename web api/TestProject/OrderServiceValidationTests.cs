@@ -31,8 +31,8 @@ namespace TestProject
         {
             var order = new OrderDTO(0, 1, null, 50.0, new List<OrderItemDTO>
             {
-                new OrderItemDTO(0, 0, 1, 1),
-                new OrderItemDTO(0, 0, 2, 1)
+                new OrderItemDTO(0, 1, 0),
+                new OrderItemDTO(0, 2, 0)
             });
 
             _mockSongRepo.Setup(r => r.getSongById(1)).ReturnsAsync(new Song { SongId = 1, Price = 30.0 });
@@ -49,12 +49,12 @@ namespace TestProject
         {
             var order = new OrderDTO(0, 1, null, 999.0, new List<OrderItemDTO>
             {
-                new OrderItemDTO(0, 0, 1, 1),
-                new OrderItemDTO(0, 0, 2, 1)
+                new OrderItemDTO(0, 1, 0),
+                new OrderItemDTO(0, 2, 0)
             });
 
             _mockSongRepo.Setup(r => r.getSongById(1)).ReturnsAsync(new Song { SongId = 1, Price = 30.0 });
-            _mockSongRepo.Setup(r => r.getSongById(2)).ReturnsAsync(new Song { SongId = 2, Price = 20.0 });
+            _mockSongRepo.Setup(r => r.getSongById(2)).ReturnsAsync(new Song { SongId = 2, Price = 20.0 });;
 
             var result = await _service.validateOrderSum(order);
 
@@ -67,7 +67,7 @@ namespace TestProject
         {
             var order = new OrderDTO(0, 1, null, 999.0, new List<OrderItemDTO>
             {
-                new OrderItemDTO(0, 0, 1, 1)
+                new OrderItemDTO(0, 1, 0)
             });
 
             _mockSongRepo.Setup(r => r.getSongById(1)).ReturnsAsync(new Song { SongId = 1, Price = 30.0 });
@@ -81,7 +81,7 @@ namespace TestProject
         {
             var order = new OrderDTO(0, 1, null, 50.0, new List<OrderItemDTO>
             {
-                new OrderItemDTO(0, 0, 99, 1)
+                new OrderItemDTO(0, 99, 0)
             });
 
             _mockSongRepo.Setup(r => r.getSongById(99)).ReturnsAsync((Song?)null);
