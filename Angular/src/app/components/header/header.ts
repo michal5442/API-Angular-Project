@@ -27,12 +27,18 @@ export class HeaderComponent implements OnInit {
   maxPrice = signal(100);
   cartItemsCount = signal(0);
   isLoggedIn = signal(false);
+  isDarkMode = signal(false);
   private songsService = inject(SongService);
   private userService  = inject(UserService);
   private router = inject(Router);
   songs = signal<Song[]>([]);
 
   ngOnInit() {
+    const saved = localStorage.getItem('theme');
+    const dark = saved === 'dark';
+    this.isDarkMode.set(dark);
+    document.body.classList.toggle('theme-dark', dark);
+    document.body.classList.toggle('theme-light', !dark);
     this.checkLoginStatus();
     this.updateCartCount();
     
@@ -108,5 +114,13 @@ export class HeaderComponent implements OnInit {
 
   onCart() {
     this.router.navigate(['/cart']);
+  }
+
+  toggleTheme() {
+    const dark = !this.isDarkMode();
+    this.isDarkMode.set(dark);
+    document.body.classList.toggle('theme-dark', dark);
+    document.body.classList.toggle('theme-light', !dark);
+    localStorage.setItem('theme', dark ? 'dark' : 'light');
   }
 }

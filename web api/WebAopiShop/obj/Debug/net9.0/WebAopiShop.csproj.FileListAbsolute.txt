@@ -1417,3 +1417,5 @@ C:\API-Angular-Project\web api\WebAopiShop\obj\Debug\net9.0\staticwebassets.upTo
 C:\API-Angular-Project\web api\WebAopiShop\obj\Debug\net9.0\WebAopiS.AD0B4DD4.Up2Date
 C:\API-Angular-Project\web api\WebAopiShop\obj\Debug\net9.0\WebAopiShop.genruntimeconfig.cache
 C:\API-Angular-Project\web api\WebAopiShop\obj\Debug\net9.0\ref\WebAopiShop.dll
+C:\Users\יהודית תם\Documents\API-Angular-Project\web api\WebAopiShop\bin\Debug\net9.0\BCrypt-Net-Next.dll
+C:\Users\יהודית תם\Documents\API-Angular-Project\web api\WebAopiShop\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

@@ -84,6 +84,15 @@
       </button>
       
       <button 
+        mat-icon-button 
+        (click)="toggleTheme()" 
+        class="action-btn"
+        [matTooltip]="isDarkMode() ? 'Light mode' : 'Dark mode'"
+      >
+        <mat-icon>{{ isDarkMode() ? 'light_mode' : 'dark_mode' }}</mat-icon>
+      </button>
+
+      <button 
         mat-raised-button 
         (click)="onLoginLogout()" 
         class="login-btn"
