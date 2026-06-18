@@ -119,7 +119,7 @@ builder.Services.AddRateLimiter(options =>
         var clientId = httpContext.Connection.RemoteIpAddress?.ToString() ?? "anonymous";
         return RateLimitPartition.GetSlidingWindowLimiter(clientId, _ => new SlidingWindowRateLimiterOptions
         {
-            PermitLimit = 60, // requests
+            PermitLimit = 60,
             Window = TimeSpan.FromMinutes(1),
             SegmentsPerWindow = 6,
             QueueProcessingOrder = QueueProcessingOrder.OldestFirst,
