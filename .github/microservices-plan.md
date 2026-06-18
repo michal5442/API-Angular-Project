@@ -134,6 +134,8 @@ The existing monolith (`WebAopiShop`) contains users/auth, songs/catalog, artist
 - **CI/CD**: separate pipeline per service (GitHub Actions — `.github/workflows/`).
 - **Orchestration**: Kubernetes for production; Docker Compose for development.
 
+
+
 ---
 
 ## 6. Operational Concerns

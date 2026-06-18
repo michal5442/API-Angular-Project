@@ -1213,7 +1213,6 @@ C:\Users\יהודית תם\Documents\API-Angular-Project\web api\WebAopiShop\obj
 C:\Users\יהודית תם\Documents\API-Angular-Project\web api\WebAopiShop\obj\Debug\net9.0\staticwebassets.development.json
 C:\Users\יהודית תם\Documents\API-Angular-Project\web api\WebAopiShop\obj\Debug\net9.0\staticwebassets.build.endpoints.json
 C:\Users\יהודית תם\Documents\API-Angular-Project\web api\WebAopiShop\obj\Debug\net9.0\swae.build.ex.cache
-C:\Users\יהודית תם\Documents\API-Angular-Project\web api\WebAopiShop\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
 C:\Users\יהודית תם\Documents\API-Angular-Project\web api\WebAopiShop\obj\Debug\net9.0\WebAopiS.AD0B4DD4.Up2Date
 C:\Users\יהודית תם\Documents\API-Angular-Project\web api\WebAopiShop\obj\Debug\net9.0\WebAopiShop.dll
 C:\Users\יהודית תם\Documents\API-Angular-Project\web api\WebAopiShop\obj\Debug\net9.0\refint\WebAopiShop.dll
@@ -1419,3 +1418,4 @@ C:\API-Angular-Project\web api\WebAopiShop\obj\Debug\net9.0\WebAopiShop.genrunti
 C:\API-Angular-Project\web api\WebAopiShop\obj\Debug\net9.0\ref\WebAopiShop.dll
 C:\Users\יהודית תם\Documents\API-Angular-Project\web api\WebAopiShop\bin\Debug\net9.0\BCrypt-Net-Next.dll
 C:\Users\יהודית תם\Documents\API-Angular-Project\web api\WebAopiShop\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\יהודית תם\Documents\API-Angular-Project\web api\WebAopiShop\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt

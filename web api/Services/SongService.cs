@@ -4,6 +4,7 @@ using Entities;
 using Microsoft.Extensions.Caching.Distributed;
 using Microsoft.Extensions.Configuration;
 using Repositories;
+using StackExchange.Redis;
 using System.Text.Json;
 
 namespace Services
@@ -13,6 +14,7 @@ namespace Services
         private readonly ISongRepository repository;
         private readonly IMapper mapper;
         private readonly IDistributedCache cache;
+        private readonly IConnectionMultiplexer redis;
         private readonly int ttlMinutes;
         private readonly string aiServiceUrl;
         private readonly IHttpClientFactory httpClientFactory;
@@ -20,11 +22,12 @@ namespace Services
         private const string AllSongsPrefix = "songs:all";
         private const string SongByIdPrefix = "songs:id:";
 
-        public SongService(ISongRepository repository, IMapper mapper, IDistributedCache cache, IConfiguration config, IHttpClientFactory httpClientFactory)
+        public SongService(ISongRepository repository, IMapper mapper, IDistributedCache cache, IConnectionMultiplexer redis, IConfiguration config, IHttpClientFactory httpClientFactory)
         {
             this.repository = repository;
             this.mapper = mapper;
             this.cache = cache;
+            this.redis = redis;
             this.httpClientFactory = httpClientFactory;
             ttlMinutes = config.GetValue<int>("Redis:SongsTTLMinutes", 5);
             aiServiceUrl = config.GetValue<string>("AiService:BaseUrl", "http://localhost:8000")!;
@@ -121,7 +124,11 @@ namespace Services
 
         private async Task InvalidateAllSongsCache()
         {
-            await cache.RemoveAsync(AllSongsPrefix);
+            var db = redis.GetDatabase();
+            var server = redis.GetServer(redis.GetEndPoints()[0]);
+            var keys = server.Keys(pattern: $"{AllSongsPrefix}:*").ToArray();
+            if (keys.Length > 0)
+                await db.KeyDeleteAsync(keys);
         }
     }
 }

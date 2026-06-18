@@ -161,3 +161,14 @@ C:\Users\user1\Desktop\MostlyMusic\WebAopiShop\TestProject\obj\Debug\net9.0\refi
 C:\Users\user1\Desktop\MostlyMusic\WebAopiShop\TestProject\obj\Debug\net9.0\TestProject.pdb
 C:\Users\user1\Desktop\MostlyMusic\WebAopiShop\TestProject\obj\Debug\net9.0\TestProject.genruntimeconfig.cache
 C:\Users\user1\Desktop\MostlyMusic\WebAopiShop\TestProject\obj\Debug\net9.0\ref\TestProject.dll
+C:\Users\יהודית תם\Documents\API-Angular-Project\web api\TestProject\bin\Debug\net9.0\.msCoverageSourceRootsMapping_TestProject
+C:\Users\יהודית תם\Documents\API-Angular-Project\web api\TestProject\bin\Debug\net9.0\CoverletSourceRootsMapping_TestProject
+C:\Users\יהודית תם\Documents\API-Angular-Project\web api\TestProject\obj\Debug\net9.0\TestProject.csproj.AssemblyReference.cache
+C:\Users\יהודית תם\Documents\API-Angular-Project\web api\TestProject\obj\Debug\net9.0\TestProject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\יהודית תם\Documents\API-Angular-Project\web api\TestProject\obj\Debug\net9.0\TestProject.AssemblyInfoInputs.cache
+C:\Users\יהודית תם\Documents\API-Angular-Project\web api\TestProject\obj\Debug\net9.0\TestProject.AssemblyInfo.cs
+C:\Users\יהודית תם\Documents\API-Angular-Project\web api\TestProject\obj\Debug\net9.0\TestProject.csproj.CoreCompileInputs.cache
+C:\Users\יהודית תם\Documents\API-Angular-Project\web api\TestProject\obj\Debug\net9.0\TestProject.sourcelink.json
+C:\Users\יהודית תם\Documents\API-Angular-Project\web api\TestProject\obj\Debug\net9.0\TestProject.dll
+C:\Users\יהודית תם\Documents\API-Angular-Project\web api\TestProject\obj\Debug\net9.0\refint\TestProject.dll
+C:\Users\יהודית תם\Documents\API-Angular-Project\web api\TestProject\obj\Debug\net9.0\TestProject.pdb

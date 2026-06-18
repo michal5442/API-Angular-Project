@@ -1,11 +1,6 @@
 **/bin/
 **/obj/
-**/.vs/
 **/*.user
+**/*.suo
+**/.vs/
 **/TestProject/
-.github/
-README.MD
-
-# Never bake secrets into the image
-**/appsettings.Development.json
-**/users.txt
