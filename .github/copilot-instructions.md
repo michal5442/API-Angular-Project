@@ -1,231 +1,97 @@
-# Copilot Instructions — MY Music Full-Stack Project
+# Copilot Instructions — MY Music Store
 
-> **For detailed Repositories guidance see** `.github/repositories-instructions.md`
-> **For detailed Controllers guidance see** `.github/controllers-instructions.md`
+## What the App Does
+A full-stack Israeli/Jewish digital music store. Users browse songs, add to cart, purchase, and interact with an AI chatbot. Admins manage songs, artists, and users. A Python AI service handles chat (GPT-4o-mini), automatic genre tagging via audio analysis, and ambient-light-based theme suggestion via camera.
 
 ---
 
-## Project Overview
+## Tech Stack
 
-A full-stack digital Jewish/Israeli music store.
-
-| Layer | Tech |
+| Layer | Technology |
 |---|---|
 | Backend API | ASP.NET Core Web API (.NET 8), C# |
-| Frontend | Angular 19 (standalone components) |
-| AI Service | Python FastAPI (OpenAI GPT-4o-mini) |
-| Database | SQL Server via Entity Framework Core |
-| Cache | Redis (StackExchange) |
-| Messaging | Kafka consumer (separate project) |
-| Auth | JWT Bearer tokens + HttpOnly cookie |
+| Frontend | Angular 19, standalone components, Angular Material, Bootstrap 5 |
+| AI Service | Python FastAPI + OpenAI GPT-4o-mini + librosa + OpenCV |
+| Database | SQL Server (EF Core, `UserContext`), stored proc `sp_UpdateUserTheme` |
+| Cache | Redis via StackExchange (`localhost:6379`) |
+| Messaging | Kafka consumer (separate `KafkaConsumer` project) |
+| Auth | JWT Bearer + HttpOnly cookie `auth_token` |
+| Logging | NLog → `c:\temp\WebAopiShop\` + email on Error |
+| Testing | xUnit (`TestProject/`) |
 
 ---
 
-## Solution Structure (`web api/`)
+## Project Structure
 
 ```
-Entities/          — EF entity classes (User, Song, Artist, Order, OrderItem, Rating, UserHistory)
-DTOs/              — Data transfer objects (records, immutable)
-Repositories/      — EF data access, interfaces + implementations
-Services/          — Business logic, interfaces + implementations
-WebAopiShop/       — ASP.NET Core entry point (Controllers, Middlewares, Program.cs)
-KafkaConsumer/     — Standalone Kafka consumer app
-TestProject/       — xUnit integration + unit tests
+web api/
+  Entities/          EF entity classes (User, Song, Artist, Order, OrderItem, Rating, UserHistory)
+  DTOs/              C# records (immutable, constructor params) — never expose Entities from Controllers
+  Repositories/      EF data access; interfaces + implementations; use UserContext
+  Services/          Business logic; inject repositories; use AutoMapper (MappingProfile.cs)
+  WebAopiShop/       ASP.NET entry point: Controllers/, Middlewares/, Program.cs, appsettings.json
+  KafkaConsumer/     Standalone consumer app
+  TestProject/       Integration + unit tests per entity
+Angular/
+  src/app/
+    components/      Standalone feature components (songs, cart, checkout, profile, admin/*, auth/*, chat, audio-recorder)
+    services/        One Angular service per domain (user.ts, song.service.ts, artist.ts, order.ts, cart.service.ts, chat.service.ts, admin.service.ts, audio.service.ts, user-history.service.ts, rating.ts)
+    models/          TypeScript interfaces (*.model.ts)
+    guards/          Route guards
+ai_service/
+  chat_service.py    FastAPI app (ports 8000 genre/theme, 8001 chat)
+  .env               OPENAI_API_KEY — never hardcode
+  requirements.txt   fastapi uvicorn openai python-dotenv httpx pydantic opencv-python librosa soundfile
 ```
 
 ---
 
-## Naming Conventions
+## How to Run
 
-- **Entities**: PascalCase properties. DB columns are UPPER_SNAKE_CASE (mapped in `UserContext`).
-- **Repositories**: interfaces prefixed with `I` (e.g. `IUserRepository`). Many repos have both camelCase originals and PascalCase compatibility wrappers — keep both when editing.
-- **Services**: same `I`-prefix pattern. Services receive repositories via constructor DI.
-- **DTOs**: most are C# `record` types with constructor parameters. When adding fields, update `MappingProfile.cs` (AutoMapper).
-- **Controllers**: route is `api/[controller]`. Return `ActionResult<T>`. See controllers file for details.
+**API:** `cd "web api/WebAopiShop" && dotnet run` (HTTPS on port 44393)
+**Angular:** `cd Angular && npm install && ng serve` (port 4200)
+**AI service:** `cd ai_service && pip install -r requirements.txt && uvicorn chat_service:app --port 8001`
+**Quick start (Windows):** `Angular/start.bat` launches API + Angular together.
 
----
-
-## Dependency Injection (Program.cs)
-
-All services and repositories are registered as **Scoped**:
-
-```csharp
-builder.Services.AddScoped<IUserService, UserService>();
-builder.Services.AddScoped<IUserRepository, UserRepository>();
-// etc.
-```
-
-When adding a new feature always register both the interface and implementation.
+Requires: SQL Server (connection string in `appsettings.json`), Redis on `localhost:6379`, `.env` with `OPENAI_API_KEY`.
 
 ---
 
-## Authentication & Authorization
+## Coding Guidelines
 
-- JWT issued on Login/Register, also set as `HttpOnly` cookie `auth_token`.
-- Token is read from cookie via `OnMessageReceived` event in `Program.cs`.
-- `[Authorize]` — requires any logged-in user.
-- `[Authorize(Roles = "Admin")]` — admin only.
-- `[AllowAnonymous]` — public endpoints.
-- Admin token generated by `UserService.GenerateAdminToken()` (hardcoded role claim `"Admin"`).
+### C# / ASP.NET
+- Always `async/await` — never `.Result` or `.Wait()`.
+- Layer rule: Controller → Service → Repository. Never inject a Repository into a Controller.
+- DTOs are `record` types with constructor params. When adding a field update `Services/MappingProfile.cs`.
+- Return `ActionResult<T>` from controllers. Use `NoContent()` for empty GETs, `NotFound()` when resource definitively absent.
+- Do **not** catch exceptions in controllers — `ErrorHandlingMiddleware` handles them globally.
+- Register every new service/repository as `Scoped` in `Program.cs`.
+- Invalidate Redis cache (`songs:all:*` and `songs:id:<id>`) on any Song write.
 
----
+### Known Workarounds (preserve these)
+- `UserRepository` and `ArtistRepository` have duplicate camelCase + PascalCase methods (e.g. `addUser`/`AddUser`) for test compatibility — keep both when editing.
+- `UserService.getCurrentUserId()` (Angular) checks three field names (`userId`, `id`, `Id`) — defensive coding for backend field name inconsistency.
+- `ChatController` has triple `[HttpPost]` attribute — redundant but harmless, do not remove without testing.
+- `UserDTO` exposes `Id => UserId` alias property for frontend compatibility.
+- `SongDTO` exposes `Id => SongId` alias property.
 
-## Database — Entities
+### Angular / TypeScript
+- TypeScript strict mode is on (`strict: true`, `noImplicitReturns`, `strictTemplates`).
+- Prettier config: `printWidth: 100`, `singleQuote: true`.
+- All components are standalone — do **not** use NgModules.
+- HTTP calls follow pattern: `.pipe(catchError(err => throwError(() => err)))`.
+- Theme (LIGHT/DARK) stored in `localStorage['currentUser'].preferredTheme` and applied as CSS class on `<body>`.
+- API base URLs are hardcoded in each service (`https://localhost:44393/api/...`).
 
-All entities live in the `Entities` project.
-
-| Entity | PK | Key fields |
-|---|---|---|
-| `User` | `UserId` | `UserName` (email), `Password`, `PreferredTheme` (LIGHT/DARK) |
-| `Song` | `SongId` | `SongName`, `Price`, `ArtistId`, `SongUrl`, `ImageUrl`, `GenreStyle`, `Duration` |
-| `Artist` | `ArtistId` | `ArtistName`, `ImageUrl`, `SongsCount` |
-| `Order` | `OrderId` | `UserId`, `OrderSum`, `OrderDate` |
-| `OrderItem` | `OrderItemId` | `OrderId`, `SongId` |
-| `Rating` | `RatingId` | `Host`, `Method`, `Path`, `Referer`, `UserAgent`, `RecordDate` |
-| `UserHistory` | `(UserId, SongId)` | `ListenedAt` |
-
----
-
-## AutoMapper — MappingProfile
-
-File: `Services/MappingProfile.cs`
-
-- `Song ↔ SongDTO` — uses `ForCtorParam` for record constructor.
-- `Artist ↔ ArtistDTO` — maps `ArtistId→Id`, `ArtistName→Name`.
-- `User ↔ UserDTO` — maps `PreferredTheme`.
-- `Order ↔ OrderDTO`, `OrderItem ↔ OrderItemDTO`.
-
-**Always update this file when adding DTO fields.**
+### AI Service (Python)
+- `OPENAI_API_KEY` must be in `ai_service/.env`.
+- Chat endpoint returns either streaming plain text or structured JSON `{action, artistId, message}` for artist navigation.
+- Genre categories are Hebrew: `תפילה, שבת, חסידי, רגשי, שמחה, ישראלי`.
 
 ---
 
-## Redis Caching (SongService)
-
-- Cache keys: `songs:all:<filters>` and `songs:id:<id>`.
-- TTL configured via `Redis:SongsTTLMinutes` in appsettings (default 5 min).
-- On Add/Update/Delete a song, the relevant cache keys are invalidated.
-- Other services do **not** currently use Redis.
-
----
-
-## Middlewares
-
-| Middleware | Purpose |
-|---|---|
-| `ErrorHandlingMiddleware` | Global exception → structured JSON error response |
-| `RatingMiddleware` | Logs every request to the `RATING` table in DB |
-
-Middleware order in `Program.cs` matters — `ErrorHandlingMiddleware` must be first.
-
----
-
-## Rate Limiting
-
-Sliding window: **60 requests/min per client IP**, 6 segments. Returns HTTP 429 on exceed.
-
----
-
-## AI Service (`ai_service/chat_service.py`)
-
-FastAPI app on port 8001 (chat) / 8000 (genre analysis).
-
-### Endpoints
-
-| Endpoint | Method | Purpose |
-|---|---|---|
-| `/chat` | POST | Chat with GPT-4o-mini. Returns streaming text or `navigate_artist` JSON action. |
-| `/analyze-genre` | POST | Upload audio file → librosa features → GPT classifies into Hebrew genre. |
-| `/suggest-theme` | POST | Upload camera frame → brightness check → suggest LIGHT/DARK theme. |
-| `/update-theme` | POST | Calls C# PATCH `/api/user/{id}/theme` to persist theme change. |
-
-### Chat System Prompt
-
-Built dynamically from: songs list, artists list, cart, favorites, login state, username, pending theme change.
-
-Response format is always JSON: `{"action": "text", "message": "..."}` or `{"action": "navigate_artist", "artistId": ..., "artistName": "...", "message": "..."}`.
-
----
-
-## Angular Frontend (`Angular/src/app/`)
-
-### Structure
-
-```
-components/     — Feature components (standalone)
-  admin/        — admin-dashboard, admin-songs, admin-artists, admin-users, admin-login
-  auth/         — login, register
-  songs/        — song list with filters + pagination
-  song-detail/  — single song view
-  artists/      — artist list
-  cart/         — shopping cart
-  checkout/     — place order
-  profile/      — user profile + order history
-  chat/         — AI chatbot component
-  audio-recorder/ — microphone recording for genre analysis
-  header/       — navigation bar
-  home-page/    — landing page
-  about/        — about page
-  contact/      — contact page
-models/         — TypeScript interfaces (user.model, song.model, artist.model, order.model, etc.)
-services/       — Angular services (one per domain)
-guards/         — Route guards
-```
-
-### Services (Angular)
-
-| Service | API base URL |
-|---|---|
-| `UserService` | `https://localhost:44393/api/User` |
-| `SongService` (song.service.ts) | `https://localhost:44393/api/Song` |
-| `ArtistService` (artist.ts) | `https://localhost:44393/api/Artist` |
-| `OrderService` (order.ts) | `https://localhost:44393/api/Order` |
-| `CartService` | local state (localStorage / BehaviorSubject) |
-| `ChatService` | `http://localhost:8001/chat` |
-| `AdminService` | `https://localhost:44393/api/Admin` |
-| `UserHistoryService` | `https://localhost:44393/api/UserHistory` |
-| `AudioService` | `http://localhost:8000/analyze-genre` |
-| `RatingService` (rating.ts) | `https://localhost:44393/api/Rating` |
-
-### UserService key methods
-
-- `login()` — stores `{ ...user, token }` in `localStorage['currentUser']`
-- `getCurrentUserId()` — checks `userId`, `id`, `Id` fields (defensive, multiple backends)
-- `getPreferredTheme()` — returns `'LIGHT'` or `'DARK'`
-- `updateTheme(userId, theme)` — PATCH `/api/User/{id}/theme` + updates localStorage
-
-### Routing (`app.routes.ts`)
-
-Standard Angular routing with lazy-loaded standalone components. Admin routes protected by admin guard.
-
-### Angular Conventions
-
-- All components are **standalone** (no NgModules).
-- Material Design components imported via `material.module.ts`.
-- HTTP calls always use `catchError(err => throwError(() => err))` pattern.
-- Theme (LIGHT/DARK) applied as CSS class on `<body>`.
-
----
-
-## Kafka (`KafkaConsumer/`)
-
-Standalone consumer app. Listens for music store events. Has its own `appsettings.json` with Kafka broker config.
-
----
-
-## Tests (`TestProject/`)
-
-xUnit tests. Pattern: `*IntegrationTests.cs` and `*UnitTests.cs` per entity.
-Uses `DatabaseFixture.cs` for shared DB context setup.
-
----
-
-## Key Rules for Copilot
-
-1. Never store passwords in plain text — currently the app does store them; if refactoring, use hashing.
-2. Always use `async/await` for all DB and HTTP operations.
-3. Keep Entity and DTO separate — never expose Entity directly from a Controller.
-4. When adding a new endpoint, update both the C# Controller and the corresponding Angular service.
-5. Redis cache must be invalidated on any write operation to Songs.
-6. JWT token expiry is 60 minutes (configurable via `Jwt:ExpiresInMinutes`).
-7. CORS is configured for `http://localhost:4200` only.
-8. The AI service reads `OPENAI_API_KEY` from `.env` — never hardcode it.
+## Key Config Values (`appsettings.json`)
+- `Jwt:ExpiresInMinutes` = 60 | `Redis:SongsTTLMinutes` = 5
+- `AiService:BaseUrl` = `http://localhost:8000`
+- CORS: `http://localhost:4200` only, `AllowCredentials`
+- Rate limit: 60 req/min sliding window per IP → HTTP 429
