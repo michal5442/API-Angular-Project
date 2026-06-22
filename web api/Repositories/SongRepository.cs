@@ -22,7 +22,7 @@ namespace Repositories
 
             var query = _userContext.Songs
                         .Where(song =>
-                            (description == null ? true : song.Description.Contains(description))
+                            (description == null || (song.Description != null && song.Description.Contains(description)))
                             && (minPrice == null ? true : song.Price >= minPrice)
                             && (maxPrice == null ? true : song.Price <= maxPrice)
                             && (artistId == null ? true : song.ArtistId == artistId))

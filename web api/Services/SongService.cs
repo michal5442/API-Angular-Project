@@ -38,13 +38,18 @@ namespace Services
             string cacheKey = $"{AllSongsPrefix}:{artistId}:{description}:{minPrice}:{maxPrice}:{skip}:{position}";
             var cached = await cache.GetStringAsync(cacheKey);
             if (cached != null)
-                return JsonSerializer.Deserialize<(List<SongDTO>, int)>(cached);
+            {
+                var cachedResult = JsonSerializer.Deserialize<(List<SongDTO>, int)>(cached);
+                if (cachedResult.Item2 > 0)
+                    return cachedResult;
+            }
 
             var (songs, total) = await repository.getSongs(artistId, description, (int?)minPrice, (int?)maxPrice, skip, position);
             var songsDTO = mapper.Map<IEnumerable<Song>, List<SongDTO>>(songs);
 
-            await cache.SetStringAsync(cacheKey, JsonSerializer.Serialize((songsDTO, total)),
-                new DistributedCacheEntryOptions { AbsoluteExpirationRelativeToNow = TimeSpan.FromMinutes(ttlMinutes) });
+            if (total > 0)
+                await cache.SetStringAsync(cacheKey, JsonSerializer.Serialize((songsDTO, total)),
+                    new DistributedCacheEntryOptions { AbsoluteExpirationRelativeToNow = TimeSpan.FromMinutes(ttlMinutes) });
 
             return (songsDTO, total);
         }

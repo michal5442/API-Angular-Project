@@ -14,6 +14,7 @@ namespace TestProject
         private readonly Mock<ISongRepository> _mockSongRepo;
         private readonly Mock<IMapper> _mockMapper;
         private readonly Mock<ILogger<OrderService>> _mockLogger;
+        private readonly Mock<IKafkaProducerService> _mockKafka;
         private readonly OrderService _service;
 
         public OrderServiceValidationTests()
@@ -22,7 +23,8 @@ namespace TestProject
             _mockSongRepo = new Mock<ISongRepository>();
             _mockMapper = new Mock<IMapper>();
             _mockLogger = new Mock<ILogger<OrderService>>();
-            _service = new OrderService(_mockOrderRepo.Object, _mockMapper.Object, _mockSongRepo.Object, _mockLogger.Object);
+            _mockKafka = new Mock<IKafkaProducerService>();
+            _service = new OrderService(_mockOrderRepo.Object, _mockMapper.Object, _mockSongRepo.Object, _mockLogger.Object, _mockKafka.Object);
         }
 
         // מסלול תקין: הסכום שהלקוח שלח תואם לסכום האמיתי

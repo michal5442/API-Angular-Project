@@ -3,6 +3,7 @@ using DTOs;
 using Entities;
 using Repositories;
 using Microsoft.Extensions.Logging;
+using System.Text.Json;
 namespace Services
 {
     public class OrderService : IOrderService
@@ -11,12 +12,14 @@ namespace Services
         ISongRepository songRepository;
         IMapper mapper;
         ILogger<OrderService> logger;
-        public OrderService(IOrderRepository repository,IMapper mapper,ISongRepository songRepository, ILogger<OrderService> logger)
+        IKafkaProducerService kafkaProducer;
+        public OrderService(IOrderRepository repository, IMapper mapper, ISongRepository songRepository, ILogger<OrderService> logger, IKafkaProducerService kafkaProducer)
         {
             this.repository = repository;
-            this.mapper=mapper;
-            this.songRepository=songRepository;
+            this.mapper = mapper;
+            this.songRepository = songRepository;
             this.logger = logger;
+            this.kafkaProducer = kafkaProducer;
         }
         public async Task<OrderDTO> GetOrderByID(int id)
         {
@@ -37,6 +40,7 @@ namespace Services
             orderEntity.OrderSum = newOrder.OrderSum ?? 0;
             Order order = await repository.AddOrder(orderEntity);
             OrderDTO orderDTO = mapper.Map<Order, OrderDTO>(order);
+            await kafkaProducer.PublishOrderAsync(JsonSerializer.Serialize(orderDTO));
             return orderDTO;
         }
             

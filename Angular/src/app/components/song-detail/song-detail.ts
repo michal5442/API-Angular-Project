@@ -30,6 +30,7 @@ export class SongDetail {
   private userHistoryService = inject(UserHistoryService);
   private router = inject(Router);
   private listenRecorded = false;
+  private shownNextIds = new Set<number>();
   nextSong = signal<Song | undefined>(undefined);
   
   song = signal<Song | undefined>(undefined);
@@ -57,11 +58,12 @@ export class SongDetail {
   loadSong(id:number){
     this.listenRecorded = false;
     this.nextSong.set(undefined);
+    this.shownNextIds.add(id);
     this.songsService.getSongById(id).subscribe(res => {
       const userId = this.userService.getCurrentUserId();
       if (userId) {
         this.userHistoryService.getRecommendations(userId).subscribe(songs => {
-          const next = songs.find(s => s.id !== id);
+          const next = songs.find(s => !this.shownNextIds.has(s.id));
           this.nextSong.set(next);
         });
       }
@@ -153,7 +155,7 @@ export class SongDetail {
           if (userId && songId) {
             this.userHistoryService.recordListen(userId, songId).subscribe();
             this.userHistoryService.getRecommendations(userId).subscribe(songs => {
-              const next = songs.find(s => s.id !== songId);
+              const next = songs.find(s => !this.shownNextIds.has(s.id));
               this.nextSong.set(next);
             });
           }

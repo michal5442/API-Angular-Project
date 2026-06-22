@@ -1,4 +1,0 @@
-C:\API-Angular-Project\web api\WebAopiShop\wwwroot\index.html
-C:\API-Angular-Project\web api\WebAopiShop\wwwroot\script.js
-C:\API-Angular-Project\web api\WebAopiShop\wwwroot\update.js
-C:\API-Angular-Project\web api\WebAopiShop\wwwroot\update.html

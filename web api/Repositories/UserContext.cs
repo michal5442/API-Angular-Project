@@ -143,7 +143,7 @@ public partial class UserContext : DbContext
           .HasMaxLength(500)
           .HasColumnName("SONG_URL");
       entity.Property(e => e.GenreStyle)
-          .HasMaxLength(50)
+          .HasMaxLength(200)
           .HasColumnName("GENRE_STYLE");
 
       entity.HasOne(d => d.ArtistNavigation).WithMany(p => p.Songs)

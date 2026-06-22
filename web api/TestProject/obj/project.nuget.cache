@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Rlf5bsXL18U=",
+  "dgSpecHash": "uNnoOA2UqC8=",
   "success": true,
-  "projectFilePath": "c:\\Users\\יהודית תם\\Documents\\API-Angular-Project\\web api\\TestProject\\TestProject.csproj",
+  "projectFilePath": "C:\\Users\\יהודית תם\\Documents\\API-Angular-Project\\web api\\TestProject\\TestProject.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\יהודית תם\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\יהודית תם\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
@@ -10,7 +10,9 @@
     "C:\\Users\\יהודית תם\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
     "C:\\Users\\יהודית תם\\.nuget\\packages\\bcrypt.net-next\\4.2.0\\bcrypt.net-next.4.2.0.nupkg.sha512",
     "C:\\Users\\יהודית תם\\.nuget\\packages\\castle.core\\5.1.1\\castle.core.5.1.1.nupkg.sha512",
+    "C:\\Users\\יהודית תם\\.nuget\\packages\\confluent.kafka\\2.14.2\\confluent.kafka.2.14.2.nupkg.sha512",
     "C:\\Users\\יהודית תם\\.nuget\\packages\\coverlet.collector\\6.0.2\\coverlet.collector.6.0.2.nupkg.sha512",
+    "C:\\Users\\יהודית תם\\.nuget\\packages\\librdkafka.redist\\2.14.2\\librdkafka.redist.2.14.2.nupkg.sha512",
     "C:\\Users\\יהודית תם\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\9.0.0\\microsoft.aspnetcore.authentication.jwtbearer.9.0.0.nupkg.sha512",
     "C:\\Users\\יהודית תם\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.11\\microsoft.aspnetcore.openapi.9.0.11.nupkg.sha512",
     "C:\\Users\\יהודית תם\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",

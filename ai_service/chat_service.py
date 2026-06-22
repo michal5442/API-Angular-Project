@@ -211,10 +211,10 @@ Audio features:
 - Spectral Centroid: {spectral_centroid:.1f} Hz
 - Zero Crossing Rate: {zcr:.4f}
 
-Classify this song into EXACTLY ONE of these categories:
-תפילה, שבת, חסידי, רגשי, שמחה, ישראלי
+Available tags: תפילה, שבת, חסידי, רגשי, שמחה, ישראלי
 
-Reply with only the category name in Hebrew, nothing else."""
+Assign 1 to 3 tags that best describe this song.
+Reply with ONLY the tags separated by commas, nothing else. Example: שבת,רגשי"""
 
         response = client.chat.completions.create(
             model="gpt-4o-mini",
@@ -222,7 +222,10 @@ Reply with only the category name in Hebrew, nothing else."""
             max_tokens=10,
             temperature=0,
         )
-        genre = response.choices[0].message.content.strip()
+        raw = response.choices[0].message.content.strip()
+        allowed = {"תפילה", "שבת", "חסידי", "רגשי", "שמחה", "ישראלי"}
+        tags = [t.strip() for t in raw.split(",") if t.strip() in allowed]
+        genre = ",".join(tags) if tags else raw
         return {"genre_style": genre}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "DvlD0gR8CAo=",
+  "dgSpecHash": "HARiW/8sZhs=",
   "success": true,
   "projectFilePath": "C:\\Users\\יהודית תם\\Documents\\API-Angular-Project\\web api\\Services\\Services.csproj",
   "expectedPackageFiles": [
@@ -9,6 +9,8 @@
     "C:\\Users\\יהודית תם\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\יהודית תם\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
     "C:\\Users\\יהודית תם\\.nuget\\packages\\bcrypt.net-next\\4.2.0\\bcrypt.net-next.4.2.0.nupkg.sha512",
+    "C:\\Users\\יהודית תם\\.nuget\\packages\\confluent.kafka\\2.14.2\\confluent.kafka.2.14.2.nupkg.sha512",
+    "C:\\Users\\יהודית תם\\.nuget\\packages\\librdkafka.redist\\2.14.2\\librdkafka.redist.2.14.2.nupkg.sha512",
     "C:\\Users\\יהודית תם\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\9.0.0\\microsoft.aspnetcore.authentication.jwtbearer.9.0.0.nupkg.sha512",
     "C:\\Users\\יהודית תם\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.11\\microsoft.aspnetcore.openapi.9.0.11.nupkg.sha512",
     "C:\\Users\\יהודית תם\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",

@@ -33,26 +33,26 @@ export class Songs implements OnInit {
   constructor(private router: Router) {}
 
   ngOnInit() {
-    this.route.queryParams.subscribe(params => {
-      const artistId = params['artistId'];
-      const search = params['search'];
-      const minPrice = params['minPrice'];
-      const maxPrice = params['maxPrice'];
-      
-      this.route.data.subscribe(data => {
-        this.mode = data['mode'] || 'songs';
-        this.title.set(this.mode === 'favorites' ? 'Favorites' : 'Songs');
+    this.route.data.subscribe(data => {
+      this.mode = data['mode'] || 'songs';
+      this.title.set(this.mode === 'favorites' ? 'Favorites' : 'Songs');
+
+      this.route.queryParams.subscribe(params => {
+        const artistId = params['artistId'];
+        const search = params['search'];
+        const minPrice = params['minPrice'];
+        const maxPrice = params['maxPrice'];
+
+        if (artistId) {
+          this.loadSongsByArtist(Number(artistId));
+        } else if (this.mode === 'favorites') {
+          this.loadFavorites();
+        } else if (search || minPrice || maxPrice) {
+          this.loadSongsWithFilters(search, minPrice, maxPrice);
+        } else {
+          this.loadSongs();
+        }
       });
-      
-      if (artistId) {
-        this.loadSongsByArtist(Number(artistId));
-      } else if (this.mode === 'favorites') {
-        this.loadFavorites();
-      } else if (search || minPrice || maxPrice) {
-        this.loadSongsWithFilters(search, minPrice, maxPrice);
-      } else {
-        this.loadSongs();
-      }
     });
   }
 

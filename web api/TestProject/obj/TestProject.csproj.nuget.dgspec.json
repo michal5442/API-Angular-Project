@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\יהודית תם\\Documents\\API-Angular-Project\\web api\\TestProject\\TestProject.csproj": {}
+    "C:\\Users\\יהודית תם\\Documents\\API-Angular-Project\\web api\\TestProject\\TestProject.csproj": {}
   },
   "projects": {
-    "c:\\Users\\יהודית תם\\Documents\\API-Angular-Project\\web api\\DTOs\\DTOs.csproj": {
+    "C:\\Users\\יהודית תם\\Documents\\API-Angular-Project\\web api\\DTOs\\DTOs.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\יהודית תם\\Documents\\API-Angular-Project\\web api\\DTOs\\DTOs.csproj",
+        "projectUniqueName": "C:\\Users\\יהודית תם\\Documents\\API-Angular-Project\\web api\\DTOs\\DTOs.csproj",
         "projectName": "DTOs",
-        "projectPath": "c:\\Users\\יהודית תם\\Documents\\API-Angular-Project\\web api\\DTOs\\DTOs.csproj",
+        "projectPath": "C:\\Users\\יהודית תם\\Documents\\API-Angular-Project\\web api\\DTOs\\DTOs.csproj",
         "packagesPath": "C:\\Users\\יהודית תם\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\יהודית תם\\Documents\\API-Angular-Project\\web api\\DTOs\\obj\\",
+        "outputPath": "C:\\Users\\יהודית תם\\Documents\\API-Angular-Project\\web api\\DTOs\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -70,14 +70,14 @@
         }
       }
     },
-    "c:\\Users\\יהודית תם\\Documents\\API-Angular-Project\\web api\\Entities\\Entities.csproj": {
+    "C:\\Users\\יהודית תם\\Documents\\API-Angular-Project\\web api\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\יהודית תם\\Documents\\API-Angular-Project\\web api\\Entities\\Entities.csproj",
+        "projectUniqueName": "C:\\Users\\יהודית תם\\Documents\\API-Angular-Project\\web api\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "c:\\Users\\יהודית תם\\Documents\\API-Angular-Project\\web api\\Entities\\Entities.csproj",
+        "projectPath": "C:\\Users\\יהודית תם\\Documents\\API-Angular-Project\\web api\\Entities\\Entities.csproj",
         "packagesPath": "C:\\Users\\יהודית תם\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\יהודית תם\\Documents\\API-Angular-Project\\web api\\Entities\\obj\\",
+        "outputPath": "C:\\Users\\יהודית תם\\Documents\\API-Angular-Project\\web api\\Entities\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -136,14 +136,14 @@
         }
       }
     },
-    "c:\\Users\\יהודית תם\\Documents\\API-Angular-Project\\web api\\Repositories\\Repositories.csproj": {
+    "C:\\Users\\יהודית תם\\Documents\\API-Angular-Project\\web api\\Repositories\\Repositories.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\יהודית תם\\Documents\\API-Angular-Project\\web api\\Repositories\\Repositories.csproj",
+        "projectUniqueName": "C:\\Users\\יהודית תם\\Documents\\API-Angular-Project\\web api\\Repositories\\Repositories.csproj",
         "projectName": "Repositories",
-        "projectPath": "c:\\Users\\יהודית תם\\Documents\\API-Angular-Project\\web api\\Repositories\\Repositories.csproj",
+        "projectPath": "C:\\Users\\יהודית תם\\Documents\\API-Angular-Project\\web api\\Repositories\\Repositories.csproj",
         "packagesPath": "C:\\Users\\יהודית תם\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\יהודית תם\\Documents\\API-Angular-Project\\web api\\Repositories\\obj\\",
+        "outputPath": "C:\\Users\\יהודית תם\\Documents\\API-Angular-Project\\web api\\Repositories\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -165,8 +165,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "c:\\Users\\יהודית תם\\Documents\\API-Angular-Project\\web api\\Entities\\Entities.csproj": {
-                "projectPath": "c:\\Users\\יהודית תם\\Documents\\API-Angular-Project\\web api\\Entities\\Entities.csproj"
+              "C:\\Users\\יהודית תם\\Documents\\API-Angular-Project\\web api\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\יהודית תם\\Documents\\API-Angular-Project\\web api\\Entities\\Entities.csproj"
               }
             }
           }
@@ -226,14 +226,14 @@
         }
       }
     },
-    "c:\\Users\\יהודית תם\\Documents\\API-Angular-Project\\web api\\Services\\Services.csproj": {
+    "C:\\Users\\יהודית תם\\Documents\\API-Angular-Project\\web api\\Services\\Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\יהודית תם\\Documents\\API-Angular-Project\\web api\\Services\\Services.csproj",
+        "projectUniqueName": "C:\\Users\\יהודית תם\\Documents\\API-Angular-Project\\web api\\Services\\Services.csproj",
         "projectName": "Services",
-        "projectPath": "c:\\Users\\יהודית תם\\Documents\\API-Angular-Project\\web api\\Services\\Services.csproj",
+        "projectPath": "C:\\Users\\יהודית תם\\Documents\\API-Angular-Project\\web api\\Services\\Services.csproj",
         "packagesPath": "C:\\Users\\יהודית תם\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\יהודית תם\\Documents\\API-Angular-Project\\web api\\Services\\obj\\",
+        "outputPath": "C:\\Users\\יהודית תם\\Documents\\API-Angular-Project\\web api\\Services\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -255,11 +255,11 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "c:\\Users\\יהודית תם\\Documents\\API-Angular-Project\\web api\\DTOs\\DTOs.csproj": {
-                "projectPath": "c:\\Users\\יהודית תם\\Documents\\API-Angular-Project\\web api\\DTOs\\DTOs.csproj"
+              "C:\\Users\\יהודית תם\\Documents\\API-Angular-Project\\web api\\DTOs\\DTOs.csproj": {
+                "projectPath": "C:\\Users\\יהודית תם\\Documents\\API-Angular-Project\\web api\\DTOs\\DTOs.csproj"
               },
-              "c:\\Users\\יהודית תם\\Documents\\API-Angular-Project\\web api\\Repositories\\Repositories.csproj": {
-                "projectPath": "c:\\Users\\יהודית תם\\Documents\\API-Angular-Project\\web api\\Repositories\\Repositories.csproj"
+              "C:\\Users\\יהודית תם\\Documents\\API-Angular-Project\\web api\\Repositories\\Repositories.csproj": {
+                "projectPath": "C:\\Users\\יהודית תם\\Documents\\API-Angular-Project\\web api\\Repositories\\Repositories.csproj"
               }
             }
           }
@@ -287,6 +287,10 @@
             "BCrypt.Net-Next": {
               "target": "Package",
               "version": "[4.2.0, )"
+            },
+            "Confluent.Kafka": {
+              "target": "Package",
+              "version": "[2.14.2, )"
             },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
@@ -329,14 +333,14 @@
         }
       }
     },
-    "c:\\Users\\יהודית תם\\Documents\\API-Angular-Project\\web api\\TestProject\\TestProject.csproj": {
+    "C:\\Users\\יהודית תם\\Documents\\API-Angular-Project\\web api\\TestProject\\TestProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\יהודית תם\\Documents\\API-Angular-Project\\web api\\TestProject\\TestProject.csproj",
+        "projectUniqueName": "C:\\Users\\יהודית תם\\Documents\\API-Angular-Project\\web api\\TestProject\\TestProject.csproj",
         "projectName": "TestProject",
-        "projectPath": "c:\\Users\\יהודית תם\\Documents\\API-Angular-Project\\web api\\TestProject\\TestProject.csproj",
+        "projectPath": "C:\\Users\\יהודית תם\\Documents\\API-Angular-Project\\web api\\TestProject\\TestProject.csproj",
         "packagesPath": "C:\\Users\\יהודית תם\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\יהודית תם\\Documents\\API-Angular-Project\\web api\\TestProject\\obj\\",
+        "outputPath": "C:\\Users\\יהודית תם\\Documents\\API-Angular-Project\\web api\\TestProject\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -358,17 +362,17 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "c:\\Users\\יהודית תם\\Documents\\API-Angular-Project\\web api\\DTOs\\DTOs.csproj": {
-                "projectPath": "c:\\Users\\יהודית תם\\Documents\\API-Angular-Project\\web api\\DTOs\\DTOs.csproj"
+              "C:\\Users\\יהודית תם\\Documents\\API-Angular-Project\\web api\\DTOs\\DTOs.csproj": {
+                "projectPath": "C:\\Users\\יהודית תם\\Documents\\API-Angular-Project\\web api\\DTOs\\DTOs.csproj"
               },
-              "c:\\Users\\יהודית תם\\Documents\\API-Angular-Project\\web api\\Entities\\Entities.csproj": {
-                "projectPath": "c:\\Users\\יהודית תם\\Documents\\API-Angular-Project\\web api\\Entities\\Entities.csproj"
+              "C:\\Users\\יהודית תם\\Documents\\API-Angular-Project\\web api\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\יהודית תם\\Documents\\API-Angular-Project\\web api\\Entities\\Entities.csproj"
               },
-              "c:\\Users\\יהודית תם\\Documents\\API-Angular-Project\\web api\\Repositories\\Repositories.csproj": {
-                "projectPath": "c:\\Users\\יהודית תם\\Documents\\API-Angular-Project\\web api\\Repositories\\Repositories.csproj"
+              "C:\\Users\\יהודית תם\\Documents\\API-Angular-Project\\web api\\Repositories\\Repositories.csproj": {
+                "projectPath": "C:\\Users\\יהודית תם\\Documents\\API-Angular-Project\\web api\\Repositories\\Repositories.csproj"
               },
-              "c:\\Users\\יהודית תם\\Documents\\API-Angular-Project\\web api\\Services\\Services.csproj": {
-                "projectPath": "c:\\Users\\יהודית תם\\Documents\\API-Angular-Project\\web api\\Services\\Services.csproj"
+              "C:\\Users\\יהודית תם\\Documents\\API-Angular-Project\\web api\\Services\\Services.csproj": {
+                "projectPath": "C:\\Users\\יהודית תם\\Documents\\API-Angular-Project\\web api\\Services\\Services.csproj"
               }
             }
           }
